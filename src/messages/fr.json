@@ -24,13 +24,21 @@
     "stat_cities": "4",
     "stat_cities_label": "Villes",
     "stat_response": "< 2h",
-    "stat_response_label": "Réponse"
+    "stat_response_label": "Réponse",
+    "panel_aria": "Points clés",
+    "panel_valuation_label": "Devis gratuit"
   },
   "PromiseStrip": {
     "ariaLabel": "Nos engagements",
     "calls": "Nous gérons tous les appels et visites",
     "qualify": "Nous qualifions acheteurs et locataires",
     "notary": "Nous coordonnons les documents chez le notaire"
+  },
+  "ExploreProperties": {
+    "eyebrow": "Catégories",
+    "title": "Explorez les meilleurs biens avec nos services d’experts.",
+    "description": "Découvrez une gamme variée de biens premium, des appartements de standing aux villas spacieuses, adaptés à vos besoins.",
+    "cta": "Voir les biens"
   },
   "Problems": {
     "eyebrow": "PROBLÈMES QUE NOUS RÉSOLVONS",
@@ -63,6 +71,7 @@
     "eyebrow": "NOTRE MODÈLE",
     "title": "3 piliers",
     "description": "Représentation complète : vente, location longue et courte durée.",
+    "cta": "En savoir plus",
     "learnMore": "En savoir plus",
     "pillars": {
       "sell": {
@@ -91,27 +100,56 @@
     }
   },
   "HowItWorks": {
-    "eyebrow": "LA BONNE FAÇON DE GÉRER",
-    "title": "Simplifiez la gestion de vos biens",
-    "description": "A simple, transparent process for remote owners.",
+    "eyebrow": "VENDEZ VOTRE BIEN",
+    "title": "On gère tout. Vous signez chez le notaire.",
+    "description": "De l'estimation à la signature — nous gérons la vente complète pour que vous n'ayez pas à vous déplacer, prendre d'appels ou courir après les papiers.",
+    "cta": "Estimation gratuite",
+    "ctaSecondary": "Discuter sur WhatsApp",
     "steps": {
       "onboarding": {
         "badge": "01",
-        "title": "Onboarding",
-        "description": "We set up access, checklists, and house rules."
+        "title": "On prépare votre bien",
+        "subtitle": "On positionne votre bien pour vendre vite et au bon prix.",
+        "bullets": ["Estimation de marché & stratégie de prix", "Visite 3D & photographie professionnelle", "Revue des documents légaux", "Diffusion sur toutes les plateformes"]
       },
       "stay": {
         "badge": "02",
-        "title": "After each stay",
-        "description": "Cleaning, detailed inspection, and photo documentation."
+        "title": "On trouve & qualifie les acheteurs",
+        "subtitle": "Chaque visite, chaque négociation — gérée par nous.",
+        "bullets": ["Sélection & qualification des acheteurs", "Toutes les visites gérées sur place", "Négociation des offres en votre nom", "Mises à jour régulières"]
       },
       "reporting": {
         "badge": "03",
-        "title": "Owner reporting",
-        "description": "Receive a full report via WhatsApp instantly."
+        "title": "Vous signez chez le notaire",
+        "subtitle": "On coordonne tout avec le notaire. Vous venez et vous signez.",
+        "bullets": ["Coordination notaire complète", "Préparation & vérification des documents", "Logistique du jour de signature", "Remise des clés & rapport final"]
+      }
+    }
+  },
+  "MasterProcess": {
+    "eyebrow": "GESTION LOCATION COURTE DURÉE",
+    "title": "Votre appartement. Publié partout. Entièrement géré.",
+    "description": "Nous publions votre bien sur Airbnb, Booking.com, Hotels.com, Facebook et plus — puis gérons chaque voyageur du premier message au ménage final.",
+    "platformsLabel": "Nous vous listons sur",
+    "steps": {
+      "list": {
+        "title": "On publie & on optimise",
+        "subtitle": "Votre bien est en ligne sur toutes les plateformes majeures — optimisé pour réserver.",
+        "items": ["Photographie professionnelle & rédaction", "Airbnb, Booking.com, Hotels.com, Expedia", "Facebook Marketplace & plateformes locales", "Tarification dynamique pour maximiser les revenus"]
+      },
+      "manage": {
+        "title": "On gère chaque voyageur",
+        "subtitle": "De la première demande au dernier au revoir — on gère tout.",
+        "items": ["Toute la communication voyageurs", "Coordination check-in & remise des clés", "Inspection check-out & rapport", "Support voyageur 24/7 en 3 langues"]
+      },
+      "report": {
+        "title": "Vous gagnez & suivez tout",
+        "subtitle": "Transparence totale. Vous voyez chaque réservation, chaque dépense, chaque détail.",
+        "items": ["Ménage professionnel après chaque séjour", "Rapports mensuels revenus & occupation", "Détail des dépenses & justificatifs", "Accès tableau de bord en temps réel"]
       }
     },
-    "cta": "See full workflow"
+    "cta": "Lister mon bien",
+    "ctaSecondary": "Voir les tarifs"
   },
   "Areas": {
     "eyebrow": "NOS ZONES",

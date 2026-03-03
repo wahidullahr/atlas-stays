@@ -66,7 +66,7 @@ export const ContactForm = () => {
                     </label>
                     <input type="text" id="name" name="name" required className={inputClass} />
                     {state.errors?.name && (
-                      <p className="text-red-500 text-sm mt-1.5">{state.errors.name[0]}</p>
+                      <p className="text-foreground text-sm mt-1.5">{state.errors.name[0]}</p>
                     )}
                   </div>
                   <div>
@@ -75,7 +75,7 @@ export const ContactForm = () => {
                     </label>
                     <input type="email" id="email" name="email" required className={inputClass} />
                     {state.errors?.email && (
-                      <p className="text-red-500 text-sm mt-1.5">{state.errors.email[0]}</p>
+                      <p className="text-foreground text-sm mt-1.5">{state.errors.email[0]}</p>
                     )}
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export const ContactForm = () => {
                     </label>
                     <input type="tel" id="phone" name="phone" required className={inputClass} />
                     {state.errors?.phone && (
-                      <p className="text-red-500 text-sm mt-1.5">{state.errors.phone[0]}</p>
+                      <p className="text-foreground text-sm mt-1.5">{state.errors.phone[0]}</p>
                     )}
                   </div>
                   <div>
@@ -103,7 +103,7 @@ export const ContactForm = () => {
                       <option value="Other">Other</option>
                     </select>
                     {state.errors?.city && (
-                      <p className="text-red-500 text-sm mt-1.5">{state.errors.city[0]}</p>
+                      <p className="text-foreground text-sm mt-1.5">{state.errors.city[0]}</p>
                     )}
                   </div>
                 </div>
@@ -121,14 +121,14 @@ export const ContactForm = () => {
                   </label>
                   <textarea id="message" name="message" rows={4} required className={`${inputClass} resize-none`} />
                   {state.errors?.message && (
-                    <p className="text-red-500 text-sm mt-1.5">{state.errors.message[0]}</p>
+                    <p className="text-foreground text-sm mt-1.5">{state.errors.message[0]}</p>
                   )}
                 </div>
 
                 <SubmitButton />
 
                 {state.message && !state.success && (
-                  <div className="text-center text-red-500 text-sm mt-3">{state.message}</div>
+                  <div className="text-center text-foreground text-sm mt-3">{state.message}</div>
                 )}
               </form>
             )}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
+import { MapPin } from 'lucide-react';
 
 interface CityCardProps {
   city: string;
@@ -18,7 +19,7 @@ export const CityCard: React.FC<CityCardProps> = ({
   return (
     <Link
       href={`/areas/${city}`}
-      className="group relative block overflow-hidden rounded-2xl aspect-[4/5] bg-surface card-interactive focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
+      className="group relative block overflow-hidden rounded-2xl aspect-3/2 bg-surface focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
     >
       <Image
         src={imageSrc}
@@ -27,12 +28,15 @@ export const CityCard: React.FC<CityCardProps> = ({
         className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         sizes="(max-width: 810px) 50vw, 300px"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-      <div className="absolute bottom-0 start-0 end-0 p-6">
-        <h3 className="text-white text-xl font-bold mb-1 tracking-tight">
-          {name}
-        </h3>
-        <p className="text-white/80 text-sm font-medium">{metric}</p>
+      <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
+      <div className="absolute bottom-0 inset-s-0 inset-e-0 p-5">
+        <div className="flex items-center gap-2 mb-1">
+          <MapPin className="w-3.5 h-3.5 text-accent shrink-0" />
+          <h3 className="text-white text-[17px] framer:text-[18px] font-bold tracking-tight">
+            {name}
+          </h3>
+        </div>
+        <p className="text-white/70 text-[13px] framer:text-[14px]">{metric}</p>
       </div>
     </Link>
   );

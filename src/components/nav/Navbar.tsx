@@ -2,11 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import clsx from "clsx";
+import { Menu as MenuIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { Container } from "@/components/layout/Container";
 import { LOCALES, NAV_ITEMS, type Locale } from "./navConfig";
+
+const SCROLL_THRESHOLD = 20;
+const NAV_MENU_DIALOG_ID = "nav-menu-dialog";
 
 function buildLocalizedHref(locale: Locale, pathname: string) {
   const parts = pathname.split("/").filter(Boolean);
@@ -34,8 +37,8 @@ export function Navbar() {
   const pathname = usePathname();
 
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const dialogId = useId();
   const drawerRef = useRef<HTMLDivElement | null>(null);
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
   const lastActiveRef = useRef<HTMLElement | null>(null);
@@ -95,73 +98,59 @@ export function Navbar() {
     };
   }, [open]);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > SCROLL_THRESHOLD);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const isLight = !scrolled;
+
   return (
-    <header className="sticky top-0 z-40 bg-bg/90 backdrop-blur border-b border-border">
-      <Container>
-        <div className="h-[72px] flex items-center justify-between relative">
-          <div className="flex items-center shrink-0">
-            <Link
-              href={`/${locale}`}
-              className="text-[18px] font-semibold tracking-[-0.02em] text-fg"
-            >
-              AtlasStays
-            </Link>
-          </div>
-
-          <nav className="hidden framer:flex items-center gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.key}
-                href={`/${locale}${item.href}`}
-                className="text-[15px] font-medium text-fg hover:opacity-70 transition"
-              >
-                {t(item.key)}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-3 shrink-0">
-            <div className="hidden framer:flex items-center gap-3">
-              <div className="flex items-center rounded-md border border-border bg-surface-soft p-1">
-                {localeLinks.map((l) => (
-                  <Link
-                    key={l.locale}
-                    href={l.href}
-                    className={clsx(
-                      "px-3 py-1.5 text-[13px] rounded-md transition",
-                      l.active
-                        ? "bg-bg text-fg shadow-card"
-                        : "text-muted hover:text-fg"
-                    )}
-                  >
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
-
-              <a
-                href={waHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-medium bg-[#25D366]/10 text-[#128C7E] border border-[#25D366]/25 hover:bg-[#25D366]/20 transition"
-              >
-                {t("whatsapp")}
-              </a>
-            </div>
-
-            <button
-              type="button"
-              className="framer:hidden inline-flex items-center justify-center rounded-md border border-border px-3 py-2 text-[14px] text-fg"
-              aria-haspopup="dialog"
-              aria-controls={dialogId}
-              aria-expanded={open}
-              onClick={() => setOpen(true)}
-            >
-              {t("menu")}
-            </button>
-          </div>
+    <header
+      className={clsx(
+        "sticky top-0 z-40 transition-all duration-300 pt-2 pb-2 px-4 framer:px-6",
+        !scrolled && "bg-transparent border-b border-transparent"
+      )}
+    >
+      <div
+        className={clsx(
+          "mx-auto max-w-container h-[72px] flex items-center justify-between relative px-6 framer:px-10 transition-all duration-300",
+          scrolled && "rounded-full bg-white/95 backdrop-blur shadow-md"
+        )}
+      >
+        <div className="flex items-center shrink-0">
+          <Link
+            href={`/${locale}`}
+            className={clsx(
+              "text-[18px] font-semibold tracking-[-0.02em] transition-colors",
+              isLight ? "text-white" : "text-fg"
+            )}
+          >
+            AtlasStays
+          </Link>
         </div>
-      </Container>
+
+        <div className="flex items-center gap-3 shrink-0">
+          <button
+            type="button"
+            className={clsx(
+              "inline-flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-[14px] font-medium transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+              isLight
+                ? "bg-white/15 border-2 border-white text-white focus-visible:ring-white backdrop-blur-sm"
+                : "bg-fg border-2 border-transparent text-white focus-visible:ring-foreground"
+            )}
+            aria-haspopup="dialog"
+            aria-controls={NAV_MENU_DIALOG_ID}
+            aria-expanded={open ? "true" : "false"}
+            onClick={() => setOpen(true)}
+          >
+            <MenuIcon className="w-4 h-4" aria-hidden />
+            {t("menu")}
+          </button>
+        </div>
+      </div>
 
       {open && (
         <div
@@ -169,7 +158,7 @@ export function Navbar() {
           role="dialog"
           aria-modal="true"
           aria-label={t("mobileMenu")}
-          id={dialogId}
+          id={NAV_MENU_DIALOG_ID}
         >
           <button
             type="button"
@@ -234,7 +223,7 @@ export function Navbar() {
                   href={waHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-medium bg-[#25D366]/10 text-[#128C7E] border border-[#25D366]/25 hover:bg-[#25D366]/20 transition"
+                  className="w-full inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-medium bg-accent/10 text-accent border border-accent/25 hover:bg-accent/20 transition"
                 >
                   {t("whatsapp")}
                 </a>

@@ -24,13 +24,21 @@
     "stat_cities": "4",
     "stat_cities_label": "Cities",
     "stat_response": "< 2h",
-    "stat_response_label": "Response"
+    "stat_response_label": "Response",
+    "panel_aria": "Key highlights",
+    "panel_valuation_label": "For a free quote"
   },
   "PromiseStrip": {
     "ariaLabel": "Our promises",
     "calls": "We handle all calls and visits",
     "qualify": "We qualify buyers and tenants",
     "notary": "We coordinate documents to notary"
+  },
+  "ExploreProperties": {
+    "eyebrow": "Categories",
+    "title": "Explore best properties with expert services.",
+    "description": "Discover a diverse range of premium properties, from luxurious apartments to spacious villas, tailored to your needs.",
+    "cta": "View Properties"
   },
   "Problems": {
     "eyebrow": "PROBLEMS WE SOLVE",
@@ -63,6 +71,7 @@
     "eyebrow": "OUR MODEL",
     "title": "3 Core Pillars",
     "description": "Full-service representation for sell, long-term, and short-term.",
+    "cta": "Learn more",
     "learnMore": "Learn more",
     "pillars": {
       "sell": {
@@ -91,27 +100,56 @@
     }
   },
   "HowItWorks": {
-    "eyebrow": "THE RIGHT WAY TO HOST",
-    "title": "Simplify your property operations",
-    "description": "A simple, transparent process for remote owners.",
+    "eyebrow": "SELL YOUR PROPERTY",
+    "title": "We handle everything. You just sign at the notary.",
+    "description": "From valuation to closing — we manage the entire sale so you don't have to fly in, take calls, or chase paperwork.",
+    "cta": "Get a free valuation",
+    "ctaSecondary": "Talk to us on WhatsApp",
     "steps": {
       "onboarding": {
         "badge": "01",
-        "title": "Onboarding",
-        "description": "We set up access, checklists, and house rules."
+        "title": "We Prepare Your Property",
+        "subtitle": "We position your property to sell fast and at the right price.",
+        "bullets": ["Market valuation & pricing strategy", "3D tour & professional photography", "Legal document review", "Listing on all major platforms"]
       },
       "stay": {
         "badge": "02",
-        "title": "After each stay",
-        "description": "Cleaning, detailed inspection, and photo documentation."
+        "title": "We Find & Qualify Buyers",
+        "subtitle": "Every viewing, every negotiation — handled by us.",
+        "bullets": ["Buyer screening & qualification", "All viewings managed on-site", "Offer negotiation on your behalf", "Regular progress updates"]
       },
       "reporting": {
         "badge": "03",
-        "title": "Owner reporting",
-        "description": "Receive a full report via WhatsApp instantly."
+        "title": "You Sign at the Notary",
+        "subtitle": "We coordinate everything with the notary. You show up and sign.",
+        "bullets": ["Full notary coordination", "Document preparation & verification", "Closing day logistics", "Keys handover & final reporting"]
+      }
+    }
+  },
+  "MasterProcess": {
+    "eyebrow": "SHORT-TERM RENTAL MANAGEMENT",
+    "title": "Your apartment. Listed everywhere. Fully managed.",
+    "description": "We publish your property on Airbnb, Booking.com, Hotels.com, Facebook and more — then handle every guest from first message to final cleaning.",
+    "platformsLabel": "We list you on",
+    "steps": {
+      "list": {
+        "title": "We List & Publish",
+        "subtitle": "Your property goes live on every major platform — optimized to book.",
+        "items": ["Professional photography & listing copy", "Airbnb, Booking.com, Hotels.com, Expedia", "Facebook Marketplace & local platforms", "Dynamic pricing to maximize revenue"]
+      },
+      "manage": {
+        "title": "We Manage Every Guest",
+        "subtitle": "From the first inquiry to the last goodbye — we handle it all.",
+        "items": ["All guest communication & inquiries", "Check-in coordination & key handover", "Check-out inspection & reporting", "24/7 guest support in 3 languages"]
+      },
+      "report": {
+        "title": "You Earn & Track Everything",
+        "subtitle": "Full transparency. You see every booking, every expense, every detail.",
+        "items": ["Professional cleaning after every stay", "Monthly revenue & occupancy reports", "Expense breakdown & receipts", "Real-time dashboard access"]
       }
     },
-    "cta": "See full workflow"
+    "cta": "List my property",
+    "ctaSecondary": "See pricing"
   },
   "Areas": {
     "eyebrow": "EXPLORE OUR AREAS",

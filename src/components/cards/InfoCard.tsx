@@ -28,11 +28,11 @@ export const InfoCard: React.FC<InfoCardProps> = ({
       <div className="relative z-10 flex-1 flex flex-col">
         {/* Header: Icon + Title (Problem) */}
         <div className="flex items-start gap-4 mb-6">
-          <div className="w-12 h-12 rounded-xl bg-red-50 border border-red-100 text-red-500 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+          <div className="w-12 h-12 rounded-xl bg-foreground/5 border border-foreground/10 text-foreground flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
             {icon}
           </div>
           <div>
-            <p className="text-[11px] font-bold text-red-500 uppercase tracking-wider mb-1 opacity-80">The Pain</p>
+            <p className="text-[11px] font-bold text-foreground uppercase tracking-wider mb-1 opacity-80">The Pain</p>
             <h3 className="text-lg font-bold text-foreground leading-tight">{title}</h3>
           </div>
         </div>

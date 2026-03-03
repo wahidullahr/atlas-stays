@@ -1,10 +1,9 @@
 import { Navbar } from '@/components/nav/Navbar';
 import { Hero } from '@/components/hero/Hero';
-import { PromiseStrip } from '@/components/sections/PromiseStrip';
-import { ProblemGrid } from '@/components/cards/ProblemGrid';
+import { ExplorePropertiesSection } from '@/components/sections/ExplorePropertiesSection';
 import { CorePillars } from '@/components/sections/CorePillars';
-import { ServiceGrid } from '@/components/services/ServiceGrid';
 import { HowItWorks } from '@/components/process/HowItWorks';
+import { MasterProcess } from '@/components/process/MasterProcess';
 import { CityGrid } from '@/components/cities/CityGrid';
 import { FullWidthTrust } from '@/components/sections/FullWidthTrust';
 import { PricingTabs } from '@/components/tabs/PricingTabs';
@@ -20,13 +19,12 @@ export default function HomePage() {
     <>
       <JsonLdLocalBusiness />
       <Navbar />
-      <main>
+      <main className="-mt-[88px]">
         <Hero />
-        <PromiseStrip />
-        <ProblemGrid />
+        <ExplorePropertiesSection />
         <CorePillars />
         <HowItWorks />
-        <ServiceGrid />
+        <MasterProcess />
         <CityGrid />
         <FullWidthTrust />
         <PricingTabs />

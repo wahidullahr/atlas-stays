@@ -22,7 +22,7 @@ export const FullWidthTrust = () => {
 
       <div className="relative max-w-[1200px] mx-auto px-6 framer:px-10 py-20 framer:py-28 flex flex-col justify-center min-h-[420px] framer:min-h-[520px]">
         <div className="max-w-[500px]">
-          <p className="text-amber-400 text-xs font-bold tracking-[0.15em] uppercase mb-4">
+          <p className="text-accent text-xs font-bold tracking-[0.15em] uppercase mb-4">
             {t('eyebrow')}
           </p>
           <h2 className="text-white text-3xl framer:text-[2.75rem] font-bold tracking-tight leading-tight mb-4">
