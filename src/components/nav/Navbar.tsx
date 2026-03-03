@@ -1,0 +1,248 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
+import clsx from "clsx";
+import { useLocale, useTranslations } from "next-intl";
+import { Container } from "@/components/layout/Container";
+import { LOCALES, NAV_ITEMS, type Locale } from "./navConfig";
+
+function buildLocalizedHref(locale: Locale, pathname: string) {
+  const parts = pathname.split("/").filter(Boolean);
+  if (parts.length === 0) return `/${locale}`;
+  parts[0] = locale;
+  return "/" + parts.join("/");
+}
+
+function buildWhatsAppHref(locale: Locale) {
+  const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "212600000000";
+
+  const msg =
+    locale === "fr"
+      ? "Bonjour AtlasStays, je souhaite un devis pour gérer le ménage et les turnovers de mon appartement."
+      : locale === "ar"
+      ? "سلام AtlasStays، بغيت عرض ثمن باش تعاونوني فتنظيم النظافة والتبديل فالشقة ديالي."
+      : "Hi AtlasStays, I’d like a quote for cleaning and turnover operations for my apartment.";
+
+  return `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
+}
+
+export function Navbar() {
+  const t = useTranslations("nav");
+  const locale = useLocale() as Locale;
+  const pathname = usePathname();
+
+  const [open, setOpen] = useState(false);
+
+  const dialogId = useId();
+  const drawerRef = useRef<HTMLDivElement | null>(null);
+  const closeBtnRef = useRef<HTMLButtonElement | null>(null);
+  const lastActiveRef = useRef<HTMLElement | null>(null);
+
+  const localeLinks = useMemo(() => {
+    return LOCALES.map((l) => ({
+      locale: l,
+      href: buildLocalizedHref(l, pathname),
+      label: l === "en" ? "EN" : l === "fr" ? "FR" : "العربية",
+      active: l === locale,
+    }));
+  }, [locale, pathname]);
+
+  const waHref = useMemo(() => buildWhatsAppHref(locale), [locale]);
+
+  useEffect(() => {
+    if (!open) return;
+
+    lastActiveRef.current = document.activeElement as HTMLElement | null;
+    closeBtnRef.current?.focus();
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+
+      if (e.key === "Tab") {
+        const root = drawerRef.current;
+        if (!root) return;
+
+        const focusables = Array.from(
+          root.querySelectorAll<HTMLElement>(
+            'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+          )
+        );
+
+        if (focusables.length === 0) return;
+
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+      lastActiveRef.current?.focus?.();
+    };
+  }, [open]);
+
+  return (
+    <header className="sticky top-0 z-40 bg-bg/90 backdrop-blur border-b border-border">
+      <Container>
+        <div className="h-[72px] flex items-center justify-between relative">
+          <div className="flex items-center shrink-0">
+            <Link
+              href={`/${locale}`}
+              className="text-[18px] font-semibold tracking-[-0.02em] text-fg"
+            >
+              AtlasStays
+            </Link>
+          </div>
+
+          <nav className="hidden framer:flex items-center gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.key}
+                href={`/${locale}${item.href}`}
+                className="text-[15px] font-medium text-fg hover:opacity-70 transition"
+              >
+                {t(item.key)}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-3 shrink-0">
+            <div className="hidden framer:flex items-center gap-3">
+              <div className="flex items-center rounded-md border border-border bg-surface-soft p-1">
+                {localeLinks.map((l) => (
+                  <Link
+                    key={l.locale}
+                    href={l.href}
+                    className={clsx(
+                      "px-3 py-1.5 text-[13px] rounded-md transition",
+                      l.active
+                        ? "bg-bg text-fg shadow-card"
+                        : "text-muted hover:text-fg"
+                    )}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+
+              <a
+                href={waHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-medium bg-[#25D366]/10 text-[#128C7E] border border-[#25D366]/25 hover:bg-[#25D366]/20 transition"
+              >
+                {t("whatsapp")}
+              </a>
+            </div>
+
+            <button
+              type="button"
+              className="framer:hidden inline-flex items-center justify-center rounded-md border border-border px-3 py-2 text-[14px] text-fg"
+              aria-haspopup="dialog"
+              aria-controls={dialogId}
+              aria-expanded={open}
+              onClick={() => setOpen(true)}
+            >
+              {t("menu")}
+            </button>
+          </div>
+        </div>
+      </Container>
+
+      {open && (
+        <div
+          className="fixed inset-0 z-50"
+          role="dialog"
+          aria-modal="true"
+          aria-label={t("mobileMenu")}
+          id={dialogId}
+        >
+          <button
+            type="button"
+            className="absolute inset-0 bg-overlay"
+            aria-label={t("close")}
+            onClick={() => setOpen(false)}
+          />
+
+          <div
+            ref={drawerRef}
+            className={clsx(
+              "absolute top-0 h-full w-[86%] max-w-[360px] bg-bg border-border shadow-card",
+              locale === "ar" ? "left-0 border-e" : "right-0 border-s"
+            )}
+          >
+            <div className="h-[72px] px-4 flex items-center justify-between border-b border-border">
+              <span className="text-[16px] font-semibold text-fg">
+                AtlasStays
+              </span>
+              <button
+                ref={closeBtnRef}
+                type="button"
+                className="rounded-md border border-border px-3 py-2 text-[14px] text-fg"
+                onClick={() => setOpen(false)}
+              >
+                {t("close")}
+              </button>
+            </div>
+
+            <div className="px-4 py-4 flex flex-col gap-2">
+              {NAV_ITEMS.map((item) => (
+                <Link
+                  key={item.key}
+                  href={`/${locale}${item.href}`}
+                  className="rounded-md px-3 py-3 text-[15px] text-fg hover:bg-surface transition"
+                  onClick={() => setOpen(false)}
+                >
+                  {t(item.key)}
+                </Link>
+              ))}
+
+              <div className="mt-4 flex items-center gap-2 rounded-md border border-border bg-surface-soft p-2">
+                {localeLinks.map((l) => (
+                  <Link
+                    key={l.locale}
+                    href={l.href}
+                    className={clsx(
+                      "flex-1 text-center px-3 py-2 text-[13px] rounded-md transition",
+                      l.active
+                        ? "bg-bg text-fg shadow-card"
+                        : "text-muted hover:text-fg"
+                    )}
+                    onClick={() => setOpen(false)}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+
+              <div className="mt-4">
+                <a
+                  href={waHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-medium bg-[#25D366]/10 text-[#128C7E] border border-[#25D366]/25 hover:bg-[#25D366]/20 transition"
+                >
+                  {t("whatsapp")}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}

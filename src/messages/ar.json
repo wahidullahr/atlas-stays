@@ -1,0 +1,212 @@
+{
+  "nav": {
+    "services": "الخدمات",
+    "howItWorks": "كيفاش كنخدمو",
+    "pricing": "الأثمنة",
+    "areas": "المناطق",
+    "faq": "أسئلة شائعة",
+    "about": "علينا",
+    "contact": "تواصل",
+    "whatsapp": "واتساب",
+    "menu": "اللائحة",
+    "mobileMenu": "لائحة الهاتف",
+    "close": "سد"
+  },
+  "Hero": {
+    "eyebrow": "تمثيل المالك في المغرب",
+    "title": "بيع أو كراء عقارك في المغرب دون أن يُزعجك أحد.",
+    "description": "نهتم بكل شيء من التسويق وانتقاء المشترين/المستأجرين إلى التشغيل وتنسيق الموثق. نقطة اتصال واحدة. تقارير كاملة.",
+    "cta_primary": "الحصول على تقدير",
+    "cta_secondary": "الدردشة على واتساب",
+    "trust_line": "كيثقو فينا المالكين فـ 4 مدن فالمغرب",
+    "stat_turnovers": "+500",
+    "stat_turnovers_label": "تبديل",
+    "stat_cities": "4",
+    "stat_cities_label": "مدن",
+    "stat_response": "< 2س",
+    "stat_response_label": "وقت الرد"
+  },
+  "PromiseStrip": {
+    "ariaLabel": "وعودنا",
+    "calls": "نهتم بجميع المكالمات والزيارات",
+    "qualify": "نؤهل المشترين والمستأجرين",
+    "notary": "ننسق المستندات إلى الموثق"
+  },
+  "Problems": {
+    "eyebrow": "المشاكل اللي كنحلّو",
+    "title": "واش كنصلحوه لمالكين",
+    "viewAll": "عرف المزيد",
+    "cards": {
+      "reliability": {
+        "title": "No-show cleaners",
+        "description": "Never worry about if the cleaner actually showed up."
+      },
+      "damage": {
+        "title": "Damage and surprises",
+        "description": "Catch issues early with detailed inspection reports."
+      },
+      "support": {
+        "title": "3AM guest issues",
+        "description": "Optional 24/7 guest support for emergencies."
+      },
+      "keys": {
+        "title": "Key chaos",
+        "description": "Secure key handling and smart lock management."
+      },
+      "visibility": {
+        "title": "No visibility",
+        "description": "Photo report sent after every single turnover."
+      }
+    }
+  },
+  "CorePillars": {
+    "eyebrow": "موديلنا",
+    "title": "3 أعمدة أساسية",
+    "description": "تمثيل كامل: البيع، الكراء طويل وقصير المدى.",
+    "learnMore": "اعرف المزيد",
+    "pillars": {
+      "sell": {
+        "title": "البيع لدى الموثق",
+        "description": "التسعير، الوسائط ثلاثية الأبعاد، الزيارات، التفاوض، الموثق."
+      },
+      "longTerm": {
+        "title": "الكراء طويل المدى",
+        "description": "انتقاء المستأجرين، العقود، التفتيشات، المتابعة الشهرية."
+      },
+      "shortTerm": {
+        "title": "الكراء القصير المدى",
+        "description": "الإعلانات، الضيوف، تسجيل الوصول/الخروج، النظافة، الصيانة."
+      }
+    }
+  },
+  "Services": {
+    "eyebrow": "خدماتنا",
+    "title": "Core Services",
+    "items": {
+      "cleaning": "Turnover Cleaning",
+      "inspection": "Inspection & Photo Report",
+      "keys": "Keys / Check-in",
+      "linen": "Linen & Towels",
+      "restocking": "Restocking"
+    }
+  },
+  "HowItWorks": {
+    "eyebrow": "الطريقة الصحيحة للتسيير",
+    "title": "بساطة التسيير ديال العقار",
+    "description": "A simple, transparent process for remote owners.",
+    "steps": {
+      "onboarding": {
+        "badge": "01",
+        "title": "Onboarding",
+        "description": "We set up access, checklists, and house rules."
+      },
+      "stay": {
+        "badge": "02",
+        "title": "After each stay",
+        "description": "Cleaning, detailed inspection, and photo documentation."
+      },
+      "reporting": {
+        "badge": "03",
+        "title": "Owner reporting",
+        "description": "Receive a full report via WhatsApp instantly."
+      }
+    },
+    "cta": "See full workflow"
+  },
+  "Areas": {
+    "eyebrow": "المناطق اللي كنغطيو",
+    "title": "اكتشف السوق الجاية",
+    "cities": {
+      "marrakech": {
+        "name": "Marrakech",
+        "metric": "Fast response in city center"
+      },
+      "casablanca": {
+        "name": "Casablanca",
+        "metric": "Key business districts"
+      },
+      "tangier": {
+        "name": "Tangier",
+        "metric": "Coastal coverage"
+      },
+      "agadir": {
+        "name": "Agadir",
+        "metric": "Tourist zones"
+      }
+    }
+  },
+  "Trust": {
+    "eyebrow": "عيش الحلم",
+    "title": "لقاء الشريك المناسب",
+    "subtitle": "مصمم لمالكين برا البلا",
+    "proofs": {
+      "report": "Photo report after every stay",
+      "checklist": "Inspection checklist every turnover",
+      "response": "Clear response times and escalation"
+    },
+    "cta": "Request a quote"
+  },
+  "Pricing": {
+    "eyebrow": "اختار العرض المناسب",
+    "title": "آخر العروض",
+    "tabs": {
+      "starter": "Starter",
+      "care": "Care",
+      "full": "Full Management",
+      "custom": "Custom"
+    },
+    "packages": {
+      "starter": {
+        "includes": ["Turnover cleaning", "Inspection checklist", "Photo report"]
+      },
+      "care": {
+        "includes": ["Everything in Starter", "Linen coordination", "Restocking"]
+      },
+      "full": {
+        "includes": ["Revenue-based %", "Guest messaging optional", "Priority escalation"]
+      },
+      "custom": {
+        "includes": ["Villas / multi-units", "Custom schedule", "Dedicated supervisor"]
+      }
+    },
+    "cta": "Get a quote"
+  },
+  "Home": {
+    "testimonialsEyebrow": "علاش يختارونا",
+    "testimonialsTitle": "ثقة وشفافية",
+    "statsEyebrow": "التأثير ديالنا",
+    "categoriesEyebrow": "خدماتنا",
+    "categoriesTitle": "لقى اللي يوافقك"
+  },
+  "CTA": {
+    "text": "واش جاهز تلقي دار أحلامك؟",
+    "subtext": "يلا نبداو.",
+    "button": "بداو",
+    "whatsapp": "Chat on WhatsApp",
+    "quote": "Request a quote"
+  },
+  "Footer": {
+    "description": "تسيير مريح للكراء القصير فالمغرب.",
+    "quickLinks": "روابط سريعة",
+    "support": "الدعم",
+    "contactUs": "اتصل بنا",
+    "newsletter": "النشرة",
+    "newsletterPrompt": "سجل باش توصل آخر الأخبار.",
+    "subscribe": "سجل"
+  },
+  "Contact": {
+    "title": "اتصل بنا",
+    "subtitle": "تواصل معنا للحصول على عرض أسعار.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone / WhatsApp",
+      "city": "City",
+      "units": "Number of units",
+      "message": "Message",
+      "submit": "Send Request",
+      "success": "Message sent successfully!",
+      "error": "Something went wrong. Please try again."
+    }
+  }
+}

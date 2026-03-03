@@ -1,0 +1,212 @@
+{
+  "nav": {
+    "services": "Services",
+    "howItWorks": "Comment ça marche",
+    "pricing": "Tarifs",
+    "areas": "Zones",
+    "faq": "FAQ",
+    "about": "À propos",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "menu": "Menu",
+    "mobileMenu": "Menu mobile",
+    "close": "Fermer"
+  },
+  "Hero": {
+    "eyebrow": "Représentation du propriétaire au Maroc",
+    "title": "Vendez ou louez votre bien au Maroc sans être dérangé.",
+    "description": "Nous gérons tout : marketing, sélection acheteurs/locataires, opérations et coordination notariale. Un seul interlocuteur. Rapports complets.",
+    "cta_primary": "Obtenir une estimation",
+    "cta_secondary": "Chat sur WhatsApp",
+    "trust_line": "Reconnus par des propriétaires dans 4 villes au Maroc",
+    "stat_turnovers": "500+",
+    "stat_turnovers_label": "Turnovers",
+    "stat_cities": "4",
+    "stat_cities_label": "Villes",
+    "stat_response": "< 2h",
+    "stat_response_label": "Réponse"
+  },
+  "PromiseStrip": {
+    "ariaLabel": "Nos engagements",
+    "calls": "Nous gérons tous les appels et visites",
+    "qualify": "Nous qualifions acheteurs et locataires",
+    "notary": "Nous coordonnons les documents chez le notaire"
+  },
+  "Problems": {
+    "eyebrow": "PROBLÈMES QUE NOUS RÉSOLVONS",
+    "title": "Ce que nous corrigeons",
+    "viewAll": "En savoir plus",
+    "cards": {
+      "reliability": {
+        "title": "No-show cleaners",
+        "description": "Never worry about if the cleaner actually showed up."
+      },
+      "damage": {
+        "title": "Damage and surprises",
+        "description": "Catch issues early with detailed inspection reports."
+      },
+      "support": {
+        "title": "3AM guest issues",
+        "description": "Optional 24/7 guest support for emergencies."
+      },
+      "keys": {
+        "title": "Key chaos",
+        "description": "Secure key handling and smart lock management."
+      },
+      "visibility": {
+        "title": "No visibility",
+        "description": "Photo report sent after every single turnover."
+      }
+    }
+  },
+  "CorePillars": {
+    "eyebrow": "NOTRE MODÈLE",
+    "title": "3 piliers",
+    "description": "Représentation complète : vente, location longue et courte durée.",
+    "learnMore": "En savoir plus",
+    "pillars": {
+      "sell": {
+        "title": "Vente chez le notaire",
+        "description": "Prix, médias 3D, visites, négociation, notaire."
+      },
+      "longTerm": {
+        "title": "Location longue durée",
+        "description": "Sélection locataires, contrats, inspections, suivi mensuel."
+      },
+      "shortTerm": {
+        "title": "Location courte durée",
+        "description": "Annonces, voyageurs, check-in/out, ménage, entretien."
+      }
+    }
+  },
+  "Services": {
+    "eyebrow": "NOS SERVICES",
+    "title": "Core Services",
+    "items": {
+      "cleaning": "Turnover Cleaning",
+      "inspection": "Inspection & Photo Report",
+      "keys": "Keys / Check-in",
+      "linen": "Linen & Towels",
+      "restocking": "Restocking"
+    }
+  },
+  "HowItWorks": {
+    "eyebrow": "LA BONNE FAÇON DE GÉRER",
+    "title": "Simplifiez la gestion de vos biens",
+    "description": "A simple, transparent process for remote owners.",
+    "steps": {
+      "onboarding": {
+        "badge": "01",
+        "title": "Onboarding",
+        "description": "We set up access, checklists, and house rules."
+      },
+      "stay": {
+        "badge": "02",
+        "title": "After each stay",
+        "description": "Cleaning, detailed inspection, and photo documentation."
+      },
+      "reporting": {
+        "badge": "03",
+        "title": "Owner reporting",
+        "description": "Receive a full report via WhatsApp instantly."
+      }
+    },
+    "cta": "See full workflow"
+  },
+  "Areas": {
+    "eyebrow": "NOS ZONES",
+    "title": "Découvrez vos marchés",
+    "cities": {
+      "marrakech": {
+        "name": "Marrakech",
+        "metric": "Fast response in city center"
+      },
+      "casablanca": {
+        "name": "Casablanca",
+        "metric": "Key business districts"
+      },
+      "tangier": {
+        "name": "Tangier",
+        "metric": "Coastal coverage"
+      },
+      "agadir": {
+        "name": "Agadir",
+        "metric": "Tourist zones"
+      }
+    }
+  },
+  "Trust": {
+    "eyebrow": "VIVEZ VOTRE RÊVE",
+    "title": "Trouvez le partenaire idéal",
+    "subtitle": "Conçu pour les propriétaires à l'étranger",
+    "proofs": {
+      "report": "Photo report after every stay",
+      "checklist": "Inspection checklist every turnover",
+      "response": "Clear response times and escalation"
+    },
+    "cta": "Request a quote"
+  },
+  "Pricing": {
+    "eyebrow": "TROUVEZ LA MEILLEURE OFFRE",
+    "title": "Nos formules",
+    "tabs": {
+      "starter": "Starter",
+      "care": "Care",
+      "full": "Full Management",
+      "custom": "Custom"
+    },
+    "packages": {
+      "starter": {
+        "includes": ["Turnover cleaning", "Inspection checklist", "Photo report"]
+      },
+      "care": {
+        "includes": ["Everything in Starter", "Linen coordination", "Restocking"]
+      },
+      "full": {
+        "includes": ["Revenue-based %", "Guest messaging optional", "Priority escalation"]
+      },
+      "custom": {
+        "includes": ["Villas / multi-units", "Custom schedule", "Dedicated supervisor"]
+      }
+    },
+    "cta": "Get a quote"
+  },
+  "Home": {
+    "testimonialsEyebrow": "POURQUOI NOUS CHOISIR",
+    "testimonialsTitle": "Confiance et transparence",
+    "statsEyebrow": "NOTRE IMPACT",
+    "categoriesEyebrow": "NOS SERVICES",
+    "categoriesTitle": "Trouvez ce qui vous convient"
+  },
+  "CTA": {
+    "text": "Prêt à trouver la maison de vos rêves ?",
+    "subtext": "C'est parti.",
+    "button": "Commencer",
+    "whatsapp": "Chat sur WhatsApp",
+    "quote": "Demander un devis"
+  },
+  "Footer": {
+    "description": "Gestion sereine de la location courte durée au Maroc.",
+    "quickLinks": "Liens rapides",
+    "support": "Support",
+    "contactUs": "Nous contacter",
+    "newsletter": "Newsletter",
+    "newsletterPrompt": "Inscrivez-vous pour les actualités.",
+    "subscribe": "S'inscrire"
+  },
+  "Contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Contactez-nous pour un devis.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone / WhatsApp",
+      "city": "City",
+      "units": "Number of units",
+      "message": "Message",
+      "submit": "Send Request",
+      "success": "Message sent successfully!",
+      "error": "Something went wrong. Please try again."
+    }
+  }
+}
