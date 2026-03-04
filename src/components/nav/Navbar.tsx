@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import clsx from "clsx";
-import { Menu as MenuIcon, MessageCircle, X } from "lucide-react";
+import { Menu as MenuIcon, MessageCircle, Phone, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { LOCALES, NAV_ITEMS, type Locale } from "./navConfig";
 
@@ -116,7 +116,7 @@ export function Navbar() {
     >
       <div
         className={clsx(
-          "mx-auto max-w-container h-[72px] flex items-center justify-between relative px-6 framer:px-10 transition-all duration-300",
+          "mx-auto max-w-[1200px] h-[72px] flex items-center justify-between relative px-6 framer:px-10 transition-all duration-300",
           scrolled && "rounded-full bg-white/95 backdrop-blur shadow-md"
         )}
       >
@@ -133,6 +133,25 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-3 shrink-0">
+          <a
+            href="tel:+4741351547"
+            className={clsx(
+              "inline-flex items-center gap-2 text-[14px] framer:text-[15px] font-semibold tabular-nums focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 rounded-md",
+              isLight ? "text-white focus-visible:ring-white" : "text-fg focus-visible:ring-foreground"
+            )}
+          >
+            <Phone className="w-4 h-4 shrink-0" aria-hidden />
+            +47 413 51 547
+          </a>
+          <span
+            className={clsx(
+              "text-[14px] font-normal select-none",
+              isLight ? "text-white/60" : "text-fg/50"
+            )}
+            aria-hidden
+          >
+            |
+          </span>
           <button
             type="button"
             className={clsx(

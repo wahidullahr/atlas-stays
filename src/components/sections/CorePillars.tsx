@@ -29,9 +29,9 @@ export const CorePillars = () => {
         <div className="absolute inset-0 bg-black/30 framer:bg-transparent" aria-hidden />
       </div>
 
-      {/* Card container */}
-      <div className="relative z-10 flex items-center min-h-auto framer:min-h-[800px] px-4 py-10 framer:px-10 framer:py-0">
-        <div className="w-full max-w-none framer:max-w-[600px] bg-white rounded-xl framer:rounded-2xl p-6 framer:p-14 shadow-[0_8px_30px_rgba(0,0,0,0.12)] framer:ms-[8%]">
+      {/* Card container with 3D perspective */}
+      <div className="relative z-10 flex items-center min-h-auto framer:min-h-[800px] px-4 py-10 framer:px-10 framer:py-0 [perspective:1000px]">
+        <div className="card-3d-premium w-full max-w-none framer:max-w-[600px] bg-white rounded-2xl framer:rounded-3xl p-6 framer:p-14 framer:ms-[8%]">
           {/* Eyebrow */}
           <div className="flex items-center gap-2.5 framer:gap-3 mb-5 framer:mb-8">
             <Circle className="w-3 h-3 framer:w-3.5 framer:h-3.5 text-foreground fill-foreground" />

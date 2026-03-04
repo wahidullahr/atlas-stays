@@ -10,13 +10,13 @@ const STEP_KEYS = ['list', 'manage', 'report'] as const;
 
 const STEP_ICONS = [Globe, Users, BarChart3];
 
-const PLATFORMS = [
-  'Airbnb',
-  'Booking.com',
-  'Hotels.com',
-  'Expedia',
-  'Facebook',
-  'VRBO',
+const PLATFORMS: { name: string; bg: string; text: string }[] = [
+  { name: 'Airbnb', bg: '#FF5A5F', text: '#FFFFFF' },
+  { name: 'Booking.com', bg: '#003580', text: '#FFFFFF' },
+  { name: 'Hotels.com', bg: '#D32F2F', text: '#FFFFFF' },
+  { name: 'Expedia', bg: '#FBCC33', text: '#1A1A1A' },
+  { name: 'Facebook', bg: '#1877F2', text: '#FFFFFF' },
+  { name: 'VRBO', bg: '#3D5AFE', text: '#FFFFFF' },
 ];
 
 export const MasterProcess = () => {
@@ -43,10 +43,12 @@ export const MasterProcess = () => {
           <span className="text-[11px] framer:text-[13px] text-white/40 font-medium me-0.5 framer:me-1 w-full framer:w-auto text-center mb-1 framer:mb-0">
             {t('platformsLabel')}
           </span>
-          {PLATFORMS.map((name) => (
+          {PLATFORMS.map(({ name, bg, text }) => (
             <span
               key={name}
-              className="inline-flex items-center px-3 py-1.5 framer:px-4 framer:py-2 rounded-full bg-white/10 text-[11px] framer:text-[14px] font-medium text-white/80 border border-white/10"
+              dir="ltr"
+              className="inline-flex items-center px-3 py-1.5 framer:px-4 framer:py-2 rounded-full text-[11px] framer:text-[14px] font-semibold border-0 shadow-md"
+              style={{ backgroundColor: bg, color: text }}
             >
               {name}
             </span>

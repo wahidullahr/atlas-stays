@@ -106,6 +106,8 @@
     }
   },
   "HowItWorks": {
+    "video_unmute": "Unmute video",
+    "video_mute": "Mute video",
     "eyebrow": "SELL YOUR PROPERTY",
     "title": "We handle everything. You just sign at the notary.",
     "description": "From valuation to closing — we manage the entire sale so you don't have to fly in, take calls, or chase paperwork.",

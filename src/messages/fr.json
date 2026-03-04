@@ -107,6 +107,8 @@
     }
   },
   "HowItWorks": {
+    "video_unmute": "Activer le son",
+    "video_mute": "Couper le son",
     "eyebrow": "VENDEZ VOTRE BIEN",
     "title": "On gère tout. Vous signez chez le notaire.",
     "description": "De l'estimation à la signature — nous gérons la vente complète pour que vous n'ayez pas à vous déplacer, prendre d'appels ou courir après les papiers.",

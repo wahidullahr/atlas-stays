@@ -63,6 +63,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Premium 3D card - world-class depth, square corners */
+.card-3d-premium {
+  box-shadow:
+    0 50px 100px -20px rgba(0, 0, 0, 0.2),
+    0 30px 60px -30px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transform: translateZ(24px);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-3d-premium:hover {
+  transform: translateZ(40px) translateY(-12px);
+  box-shadow:
+    0 60px 120px -24px rgba(0, 0, 0, 0.25),
+    0 40px 80px -40px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
 .eyebrow {
   font-size: 0.8125rem;
   font-weight: 600;

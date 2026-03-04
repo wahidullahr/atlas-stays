@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Volume2, VolumeX } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 
 const STEP_KEYS = ['onboarding', 'stay', 'reporting'] as const;
@@ -17,18 +17,32 @@ const SHOWCASE_IMAGES = [
   'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200&auto=format&fit=crop',
 ];
 
+/** Video path per locale. Arabic uses French video until AR version is available. */
+const LOCALE_VIDEO: Partial<Record<string, string>> = {
+  en: '/videos/Property_Sale_Management_Video_Ready.mp4',
+  fr: '/videos/Property_Sale_Management_FR.mp4',
+  ar: '/videos/Property_Sale_Management_FR.mp4',
+};
+
 export const HowItWorks = () => {
   const t = useTranslations('HowItWorks');
+  const locale = useLocale();
   const [active, setActive] = useState(0);
+  const [muted, setMuted] = useState(true);
+
+  const videoSrc = LOCALE_VIDEO[locale];
+  const useVideo = Boolean(videoSrc);
 
   const next = useCallback(() => {
     setActive((prev) => (prev + 1) % SHOWCASE_IMAGES.length);
   }, []);
 
   useEffect(() => {
-    const timer = setInterval(next, 4000);
-    return () => clearInterval(timer);
-  }, [next]);
+    if (!useVideo) {
+      const timer = setInterval(next, 4000);
+      return () => clearInterval(timer);
+    }
+  }, [next, useVideo]);
 
   return (
     <section id="sell" className="relative bg-surface overflow-hidden py-14 framer:py-20">
@@ -48,48 +62,81 @@ export const HowItWorks = () => {
             </p>
           </div>
 
-          {/* Image carousel */}
+          {/* Video (EN) or image carousel (FR/AR) */}
           <div className="relative rounded-xl framer:rounded-2xl overflow-hidden min-h-[200px] framer:min-h-[420px] bg-foreground/5">
-            {SHOWCASE_IMAGES.map((src, i) => (
-              <Image
-                key={i}
-                src={src}
-                alt=""
-                fill
-                className={`object-cover transition-opacity duration-700 ease-in-out ${
-                  i === active ? 'opacity-100' : 'opacity-0'
-                }`}
-                sizes="(max-width: 810px) 100vw, 50vw"
-                priority={i === 0}
-              />
-            ))}
-
-            {/* Dot indicators */}
-            <div className="absolute bottom-3 framer:bottom-4 inset-x-0 flex items-center justify-center gap-1.5 framer:gap-2 z-10">
-              {SHOWCASE_IMAGES.map((_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => setActive(i)}
-                  aria-label={`Image ${i + 1}`}
-                  className={`rounded-full transition-all duration-300 ${
-                    i === active
-                      ? 'w-6 h-2 framer:w-8 framer:h-2.5 bg-white'
-                      : 'w-2 h-2 framer:w-2.5 framer:h-2.5 bg-white/50 hover:bg-white/80'
-                  }`}
+            {useVideo && videoSrc ? (
+              <>
+                <video
+                  src={videoSrc}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  playsInline
+                  muted={muted}
+                  loop
+                  autoPlay
+                  aria-label="Property sale management"
                 />
-              ))}
-            </div>
+                <button
+                  type="button"
+                  onClick={() => setMuted((m) => !m)}
+                  className="absolute bottom-3 framer:bottom-4 end-3 framer:end-4 z-10 w-10 h-10 framer:w-12 framer:h-12 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent"
+                  aria-label={muted ? t('video_unmute') : t('video_mute')}
+                >
+                  {muted ? (
+                    <Volume2 className="w-5 h-5 framer:w-6 framer:h-6" />
+                  ) : (
+                    <VolumeX className="w-5 h-5 framer:w-6 framer:h-6" />
+                  )}
+                </button>
+              </>
+            ) : (
+              <>
+                {SHOWCASE_IMAGES.map((src, i) => (
+                  <Image
+                    key={i}
+                    src={src}
+                    alt=""
+                    fill
+                    className={`object-cover transition-opacity duration-700 ease-in-out ${
+                      i === active ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    sizes="(max-width: 810px) 100vw, 50vw"
+                    priority={i === 0}
+                  />
+                ))}
+                {/* Dot indicators */}
+                <div className="absolute bottom-3 framer:bottom-4 inset-x-0 flex items-center justify-center gap-1.5 framer:gap-2 z-10">
+                  {SHOWCASE_IMAGES.map((_, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      onClick={() => setActive(i)}
+                      aria-label={`Image ${i + 1}`}
+                      className={`rounded-full transition-all duration-300 ${
+                        i === active
+                          ? 'w-6 h-2 framer:w-8 framer:h-2.5 bg-white'
+                          : 'w-2 h-2 framer:w-2.5 framer:h-2.5 bg-white/50 hover:bg-white/80'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
 
-        {/* 3 Step cards */}
-        <div className="grid grid-cols-1 framer:grid-cols-3 gap-4 framer:gap-7 mb-8 framer:mb-18">
+        {/* 3 Step cards with 3D effect */}
+        <div className="grid grid-cols-1 framer:grid-cols-3 gap-4 framer:gap-7 mb-8 framer:mb-18 [perspective:1200px]">
           {STEP_KEYS.map((key, i) => (
             <div
               key={key}
-              className="group relative bg-background rounded-xl framer:rounded-2xl p-5 framer:p-10 shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300"
+              className="group relative transition-transform duration-300"
+              style={{
+                transform: 'translateZ(12px) rotateY(-1deg)',
+                transformStyle: 'preserve-3d',
+              }}
             >
+              <div className="relative bg-background rounded-xl framer:rounded-2xl p-5 framer:p-10 transition-all duration-300 hover:-translate-y-2 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.08),0_2px_8px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15),0_12px_24px_-8px_rgba(0,0,0,0.08)] border border-border/10"
+              >
               <span className="inline-flex items-center justify-center w-11 h-11 framer:w-14 framer:h-14 rounded-xl framer:rounded-2xl bg-accent/10 text-accent text-[15px] framer:text-[18px] font-bold mb-4 framer:mb-6 transition-colors duration-200 group-hover:bg-accent group-hover:text-white">
                 0{i + 1}
               </span>
@@ -115,6 +162,7 @@ export const HowItWorks = () => {
                   )
                 )}
               </ul>
+              </div>
             </div>
           ))}
         </div>
