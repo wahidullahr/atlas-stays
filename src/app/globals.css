@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css" layer(leaflet);
 
 :root {
   --font-sans-fallback: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -136,4 +137,13 @@ body {
 
 [dir="rtl"] .rtl-flip {
   transform: scaleX(-1);
+}
+
+.leaflet-container {
+  z-index: 0 !important;
+}
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: auto !important;
 }

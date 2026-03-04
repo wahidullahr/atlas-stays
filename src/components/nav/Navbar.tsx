@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import clsx from "clsx";
-import { Menu as MenuIcon } from "lucide-react";
+import { Menu as MenuIcon, MessageCircle, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { LOCALES, NAV_ITEMS, type Locale } from "./navConfig";
 
@@ -170,46 +170,69 @@ export function Navbar() {
           <div
             ref={drawerRef}
             className={clsx(
-              "absolute top-0 h-full w-[86%] max-w-[360px] bg-bg border-border shadow-card",
-              locale === "ar" ? "left-0 border-e" : "right-0 border-s"
+              "absolute top-0 h-full w-[86%] max-w-[400px] bg-foreground shadow-[0_0_60px_rgba(0,0,0,0.5)]",
+              locale === "ar" ? "left-0" : "right-0"
             )}
           >
-            <div className="h-[72px] px-4 flex items-center justify-between border-b border-border">
-              <span className="text-[16px] font-semibold text-fg">
+            {/* Header */}
+            <div className="h-[80px] px-6 flex items-center justify-between border-b border-white/10">
+              <span className="text-[18px] font-bold text-white tracking-tight">
                 AtlasStays
               </span>
               <button
                 ref={closeBtnRef}
                 type="button"
-                className="rounded-md border border-border px-3 py-2 text-[14px] text-fg"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/80 hover:bg-white/20 transition-colors"
+                aria-label={t("close")}
                 onClick={() => setOpen(false)}
               >
-                {t("close")}
+                <X className="w-5 h-5" />
               </button>
             </div>
 
-            <div className="px-4 py-4 flex flex-col gap-2">
-              {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.key}
-                  href={`/${locale}${item.href}`}
-                  className="rounded-md px-3 py-3 text-[15px] text-fg hover:bg-surface transition"
-                  onClick={() => setOpen(false)}
-                >
-                  {t(item.key)}
-                </Link>
-              ))}
+            {/* Nav links */}
+            <div className="px-5 py-6 flex flex-col gap-1">
+              {NAV_ITEMS.map((item) =>
+                item.anchor ? (
+                  <a
+                    key={item.key}
+                    href={item.href}
+                    className="rounded-xl px-4 py-3.5 text-[16px] font-medium text-white/70 hover:text-white hover:bg-white/8 transition-all duration-200"
+                    onClick={() => setOpen(false)}
+                  >
+                    {t(item.key)}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.key}
+                    href={`/${locale}${item.href}`}
+                    className="rounded-xl px-4 py-3.5 text-[16px] font-medium text-white/70 hover:text-white hover:bg-white/8 transition-all duration-200"
+                    onClick={() => setOpen(false)}
+                  >
+                    {t(item.key)}
+                  </Link>
+                )
+              )}
+            </div>
 
-              <div className="mt-4 flex items-center gap-2 rounded-md border border-border bg-surface-soft p-2">
+            {/* Divider */}
+            <div className="mx-5 border-t border-white/10" />
+
+            {/* Language switcher */}
+            <div className="px-5 py-5">
+              <p className="text-[11px] font-semibold tracking-[0.15em] uppercase text-white/30 mb-3 px-1">
+                Language
+              </p>
+              <div className="flex items-center gap-2 rounded-xl bg-white/5 p-1.5">
                 {localeLinks.map((l) => (
                   <Link
                     key={l.locale}
                     href={l.href}
                     className={clsx(
-                      "flex-1 text-center px-3 py-2 text-[13px] rounded-md transition",
+                      "flex-1 text-center px-3 py-2.5 text-[13px] font-medium rounded-lg transition-all duration-200",
                       l.active
-                        ? "bg-bg text-fg shadow-card"
-                        : "text-muted hover:text-fg"
+                        ? "bg-accent text-white shadow-lg"
+                        : "text-white/50 hover:text-white hover:bg-white/10"
                     )}
                     onClick={() => setOpen(false)}
                   >
@@ -217,17 +240,19 @@ export function Navbar() {
                   </Link>
                 ))}
               </div>
+            </div>
 
-              <div className="mt-4">
-                <a
-                  href={waHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-full inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-medium bg-accent/10 text-accent border border-accent/25 hover:bg-accent/20 transition"
-                >
-                  {t("whatsapp")}
-                </a>
-              </div>
+            {/* WhatsApp CTA */}
+            <div className="px-5 mt-2">
+              <a
+                href={waHref}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2.5 rounded-xl px-5 py-3.5 text-[14px] font-semibold bg-accent text-white hover:bg-accent/90 transition-all duration-200 shadow-lg"
+              >
+                <MessageCircle className="w-4 h-4" />
+                {t("whatsapp")}
+              </a>
             </div>
           </div>
         </div>

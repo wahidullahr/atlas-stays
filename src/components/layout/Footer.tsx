@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { Container } from './Container';
-import { Facebook, Twitter, Linkedin, Instagram, Send } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const SOCIAL = [
   { href: '#', icon: Facebook, label: 'Facebook' },
@@ -21,7 +21,7 @@ export const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
       <Container>
-        <div className="grid grid-cols-1 framer:grid-cols-2 lg:grid-cols-5 gap-12 framer:gap-8 py-16 framer:py-20">
+        <div className="grid grid-cols-1 framer:grid-cols-2 lg:grid-cols-4 gap-12 framer:gap-8 py-16 framer:py-20">
           <div className="lg:col-span-2">
             <Link
               href="/"
@@ -64,25 +64,6 @@ export const Footer = () => {
             <Link href="/legal/privacy" className={footerLinkClass}>Privacy</Link>
           </div>
 
-          <div className="flex flex-col gap-3">
-            <h4 className="font-semibold text-background text-sm mb-1">{tFooter('newsletter')}</h4>
-            <p className="text-background/60 text-sm leading-relaxed">{tFooter('newsletterPrompt')}</p>
-            <form action="#" method="post" className="flex gap-2 mt-1">
-              <input
-                type="email"
-                placeholder="Email"
-                className="flex-1 min-w-0 px-3.5 py-2.5 rounded-xl bg-background/8 border border-on-dark text-background placeholder:text-background/40 text-sm focus:outline-none focus:ring-2 focus:ring-background focus:border-transparent transition-all"
-                aria-label="Email for newsletter"
-              />
-              <button
-                type="submit"
-                className="px-3.5 py-2.5 bg-background text-foreground rounded-xl font-semibold hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-background focus:ring-offset-2 focus:ring-offset-foreground"
-                aria-label={tFooter('subscribe')}
-              >
-                <Send size={16} />
-              </button>
-            </form>
-          </div>
         </div>
 
         <div className="flex flex-col framer:flex-row justify-between items-center py-6 border-t border-on-dark gap-4">

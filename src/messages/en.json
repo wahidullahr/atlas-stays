@@ -7,6 +7,11 @@
     "faq": "FAQ",
     "about": "About",
     "contact": "Contact",
+    "nav_sell": "Sell Your Property",
+    "nav_rent": "Short-Term Rental",
+    "nav_offices": "Our Offices",
+    "nav_proof": "Our Proof",
+    "nav_contact": "Get in Touch",
     "whatsapp": "WhatsApp",
     "menu": "Menu",
     "mobileMenu": "Mobile menu",
@@ -16,23 +21,24 @@
     "eyebrow": "Owner representation in Morocco",
     "title": "Sell or rent your property in Morocco without being disturbed.",
     "description": "We handle everything from marketing and buyer/tenant screening to operations and notary coordination. One point of contact. Full reporting.",
-    "cta_primary": "Get a valuation",
+    "cta_primary": "Get a free valuation",
     "cta_secondary": "Chat on WhatsApp",
-    "trust_line": "Trusted by owners in 4 cities across Morocco",
-    "stat_turnovers": "500+",
-    "stat_turnovers_label": "Turnovers",
-    "stat_cities": "4",
-    "stat_cities_label": "Cities",
-    "stat_response": "< 2h",
-    "stat_response_label": "Response",
-    "panel_aria": "Key highlights",
-    "panel_valuation_label": "For a free quote"
+    "trust_line": "Trusted by property owners in 4 cities across Morocco",
+    "stat_owners": "150+",
+    "stat_owners_label": "Happy owners",
+    "stat_countries": "6",
+    "stat_countries_label": "Cities worldwide",
+    "stat_occupancy": "92%",
+    "stat_occupancy_label": "Avg. occupancy",
+    "stat_guarantee": "100%",
+    "stat_guarantee_label": "Transparent reporting",
+    "panel_aria": "Key highlights"
   },
   "PromiseStrip": {
-    "ariaLabel": "Our promises",
-    "calls": "We handle all calls and visits",
-    "qualify": "We qualify buyers and tenants",
-    "notary": "We coordinate documents to notary"
+    "ariaLabel": "Our commitments",
+    "calls": "We handle all calls and visits for you",
+    "qualify": "We qualify every buyer and tenant",
+    "notary": "We coordinate all documents to the notary"
   },
   "ExploreProperties": {
     "eyebrow": "Categories",
@@ -152,37 +158,62 @@
     "ctaSecondary": "See pricing"
   },
   "Areas": {
-    "eyebrow": "EXPLORE OUR AREAS",
-    "title": "Discover your next market",
+    "eyebrow": "WHERE WE OPERATE",
+    "title": "Headquartered in Europe. Operating across Morocco.",
+    "description": "With offices in Oslo, London, and four cities across Morocco, we combine international standards with deep local knowledge to manage your property wherever you are.",
+    "region_europe": "Europe",
+    "region_europe_cities": "Oslo · London",
+    "region_morocco": "Morocco",
+    "region_morocco_cities": "Tangier · Casablanca · Marrakech · Agadir",
     "cities": {
+      "oslo": {
+        "name": "Oslo",
+        "metric": "Headquarters Scandinavia"
+      },
+      "london": {
+        "name": "London",
+        "metric": "International Sales"
+      },
       "marrakech": {
         "name": "Marrakech",
-        "metric": "Fast response in city center"
+        "metric": "Central operations hub"
       },
       "casablanca": {
         "name": "Casablanca",
-        "metric": "Key business districts"
+        "metric": "Business & finance district"
       },
       "tangier": {
         "name": "Tangier",
-        "metric": "Coastal coverage"
+        "metric": "Northern coastal coverage"
       },
       "agadir": {
         "name": "Agadir",
-        "metric": "Tourist zones"
+        "metric": "Southern tourism zone"
       }
     }
   },
   "Trust": {
-    "eyebrow": "LIVE YOUR DREAM",
-    "title": "Find your perfect partner",
-    "subtitle": "Built for owners who live abroad",
+    "eyebrow": "REAL PROOF",
+    "title": "Proof beats promises.",
+    "subtitle": "We don't show you testimonials. We show you what we actually deliver after every stay, every inspection, and every listing.",
     "proofs": {
-      "report": "Photo report after every stay",
-      "checklist": "Inspection checklist every turnover",
-      "response": "Clear response times and escalation"
+      "report": {
+        "badge": "Sample",
+        "title": "Photo report after every stay",
+        "description": "Every turnover includes a full photo report so you see exactly how your property was left and how it was prepared for the next guest."
+      },
+      "checklist": {
+        "badge": "Sample",
+        "title": "Inspection checklist",
+        "description": "A structured checklist is completed after every cleaning and inspection — covering every room, appliance, and detail."
+      },
+      "render": {
+        "badge": "Sample",
+        "title": "3D visualization of your property",
+        "description": "Before listing, we create professional 3D renders and virtual tours so your property stands out on every platform."
+      }
     },
-    "cta": "Request a quote"
+    "cta": "See how we work"
   },
   "Pricing": {
     "eyebrow": "FIND THE BEST PLAN",
@@ -233,18 +264,106 @@
     "subscribe": "Subscribe"
   },
   "Contact": {
-    "title": "Contact Us",
-    "subtitle": "Get in touch for a quote.",
+    "eyebrow": "LET'S TALK",
+    "title": "Ready to stop worrying about your property?",
+    "subtitle": "Whether you want to sell, rent long-term, or list on Airbnb — we'll handle everything. You just fill in the form, and we take it from here.",
+    "form_title": "Get your free consultation",
+    "form_sub": "No commitment. We'll respond within 24 hours.",
+    "trust": {
+      "free": "100% free consultation — no hidden fees",
+      "fast": "Response within 24 hours, guaranteed",
+      "secure": "Your data stays private and secure"
+    },
+    "whatsapp_label": "Prefer WhatsApp?",
+    "whatsapp_sub": "Message us directly for an instant reply.",
     "form": {
-      "name": "Name",
-      "email": "Email",
+      "name": "Full Name",
+      "email": "Email Address",
       "phone": "Phone / WhatsApp",
       "city": "City",
-      "units": "Number of units",
-      "message": "Message",
-      "submit": "Send Request",
-      "success": "Message sent successfully!",
+      "city_placeholder": "Select your city",
+      "city_oslo": "Oslo",
+      "city_london": "London",
+      "city_marrakech": "Marrakech",
+      "city_casablanca": "Casablanca",
+      "city_tangier": "Tangier",
+      "city_agadir": "Agadir",
+      "city_other": "Other",
+      "units": "Number of properties",
+      "message": "Tell us about your property",
+      "submit": "Get My Free Consultation",
+      "success": "We received your request!",
       "error": "Something went wrong. Please try again."
+    }
+  },
+  "Partners": {
+    "eyebrow": "TRUSTED BY LEADING PLATFORMS",
+    "description": "We partner with the world's largest booking and travel platforms to maximize your property's visibility and occupancy."
+  },
+  "SellPage": {
+    "hero": {
+      "eyebrow": "SELL YOUR PROPERTY",
+      "title": "Sell your property in Morocco. We handle everything.",
+      "subtitle": "From market valuation to notary signing — you don't need to fly in, take calls, or chase paperwork. We represent you on the ground.",
+      "highlight_1": "No travel required — we manage everything on-site",
+      "highlight_2": "Professional 3D tours and media for every listing",
+      "highlight_3": "Full notary coordination until closing day",
+      "cta_primary": "Get a free valuation",
+      "cta_secondary": "Chat on WhatsApp"
+    },
+    "whyUs": {
+      "eyebrow": "WHY CHOOSE US",
+      "title": "Built for owners abroad — and anyone who wants less stress.",
+      "subtitle": "Selling property can be stressful. We remove every friction point so you can sell with confidence, whether you're local or abroad.",
+      "cards": {
+        "no_travel": {
+          "title": "No travel required",
+          "description": "We handle all viewings, negotiations, and paperwork on-site. You never need to fly in — we're your boots on the ground."
+        },
+        "legal": {
+          "title": "Full legal protection",
+          "description": "Every document is reviewed and verified. We coordinate directly with the notary to ensure a smooth, legally sound transaction."
+        },
+        "media": {
+          "title": "3D marketing & media",
+          "description": "Professional photography, 3D virtual tours, and optimized listings across all major platforms to attract qualified buyers fast."
+        },
+        "transparency": {
+          "title": "Total transparency",
+          "description": "Regular progress updates, buyer feedback reports, and full visibility into every step — from listing to closing."
+        }
+      }
+    },
+    "faq": {
+      "eyebrow": "COMMON QUESTIONS",
+      "title": "Everything you need to know.",
+      "subtitle": "Clear answers about selling your property in Morocco with AtlasStays.",
+      "items": {
+        "travel": {
+          "q": "Do I need to be in Morocco to sell my property?",
+          "a": "No. We handle everything on-site — viewings, negotiations, document preparation, and notary coordination. You only need to sign at the notary, and we can arrange a power of attorney if needed."
+        },
+        "timeline": {
+          "q": "How long does the selling process take?",
+          "a": "Timelines vary by property and market conditions. On average, well-priced properties sell within 2–4 months. We provide a realistic timeline during the initial valuation."
+        },
+        "fees": {
+          "q": "What are your fees?",
+          "a": "We work on a transparent commission basis, agreed upfront before we start. No hidden costs, no surprise charges. You'll know exactly what to expect."
+        },
+        "pricing": {
+          "q": "How do you determine the sale price?",
+          "a": "We conduct a thorough market analysis comparing recent sales, current listings, and property condition. We recommend a competitive price that maximizes value while ensuring a timely sale."
+        },
+        "documents": {
+          "q": "What documents do I need?",
+          "a": "We'll provide a complete checklist. Typically you need the title deed, tax certificates, and ID documents. We handle the verification and notary preparation for you."
+        },
+        "updates": {
+          "q": "How will I know what's happening with my property?",
+          "a": "You'll receive regular updates via email or WhatsApp — including viewing feedback, offers received, and milestone notifications. Full transparency at every step."
+        }
+      }
     }
   }
 }

@@ -7,32 +7,39 @@
     "faq": "FAQ",
     "about": "À propos",
     "contact": "Contact",
+    "nav_sell": "Vendre votre bien",
+    "nav_rent": "Location courte durée",
+    "nav_offices": "Nos bureaux",
+    "nav_proof": "Nos preuves",
+    "nav_contact": "Nous contacter",
     "whatsapp": "WhatsApp",
     "menu": "Menu",
     "mobileMenu": "Menu mobile",
     "close": "Fermer"
   },
   "Hero": {
-    "eyebrow": "Représentation du propriétaire au Maroc",
+    "eyebrow": "Représentation de propriétaires au Maroc",
     "title": "Vendez ou louez votre bien au Maroc sans être dérangé.",
-    "description": "Nous gérons tout : marketing, sélection acheteurs/locataires, opérations et coordination notariale. Un seul interlocuteur. Rapports complets.",
-    "cta_primary": "Obtenir une estimation",
-    "cta_secondary": "Chat sur WhatsApp",
-    "trust_line": "Reconnus par des propriétaires dans 4 villes au Maroc",
-    "stat_turnovers": "500+",
-    "stat_turnovers_label": "Turnovers",
-    "stat_cities": "4",
-    "stat_cities_label": "Villes",
-    "stat_response": "< 2h",
-    "stat_response_label": "Réponse",
-    "panel_aria": "Points clés",
+    "description": "Nous gérons tout : marketing, sélection des acheteurs et locataires, opérations et coordination notariale. Un seul interlocuteur. Reporting complet.",
+    "cta_primary": "Estimation gratuite",
+    "cta_secondary": "Discuter sur WhatsApp",
+    "trust_line": "Des propriétaires nous font confiance dans 4 villes au Maroc",
+    "stat_owners": "150+",
+    "stat_owners_label": "Propriétaires satisfaits",
+    "stat_countries": "6",
+    "stat_countries_label": "Villes dans le monde",
+    "stat_occupancy": "92%",
+    "stat_occupancy_label": "Taux d'occupation moy.",
+    "stat_guarantee": "100%",
+    "stat_guarantee_label": "Reporting transparent",
+    "panel_aria": "Chiffres clés",
     "panel_valuation_label": "Devis gratuit"
   },
   "PromiseStrip": {
     "ariaLabel": "Nos engagements",
-    "calls": "Nous gérons tous les appels et visites",
-    "qualify": "Nous qualifions acheteurs et locataires",
-    "notary": "Nous coordonnons les documents chez le notaire"
+    "calls": "Nous gérons tous les appels et les visites pour vous",
+    "qualify": "Nous qualifions chaque acheteur et locataire",
+    "notary": "Nous coordonnons tous les documents chez le notaire"
   },
   "ExploreProperties": {
     "eyebrow": "Catégories",
@@ -152,37 +159,62 @@
     "ctaSecondary": "Voir les tarifs"
   },
   "Areas": {
-    "eyebrow": "NOS ZONES",
-    "title": "Découvrez vos marchés",
+    "eyebrow": "NOS IMPLANTATIONS",
+    "title": "Siège en Europe. Opérations au Maroc.",
+    "description": "Avec des bureaux à Oslo, Londres et quatre villes au Maroc, nous allions standards internationaux et connaissance approfondie du terrain pour gérer votre bien, où que vous soyez.",
+    "region_europe": "Europe",
+    "region_europe_cities": "Oslo · Londres",
+    "region_morocco": "Maroc",
+    "region_morocco_cities": "Tanger · Casablanca · Marrakech · Agadir",
     "cities": {
+      "oslo": {
+        "name": "Oslo",
+        "metric": "Siège Scandinavie"
+      },
+      "london": {
+        "name": "Londres",
+        "metric": "Ventes Internationales"
+      },
       "marrakech": {
         "name": "Marrakech",
-        "metric": "Fast response in city center"
+        "metric": "Centre opérationnel principal"
       },
       "casablanca": {
         "name": "Casablanca",
-        "metric": "Key business districts"
+        "metric": "Quartier affaires et finance"
       },
       "tangier": {
-        "name": "Tangier",
-        "metric": "Coastal coverage"
+        "name": "Tanger",
+        "metric": "Couverture côte nord"
       },
       "agadir": {
         "name": "Agadir",
-        "metric": "Tourist zones"
+        "metric": "Zone touristique sud"
       }
     }
   },
   "Trust": {
-    "eyebrow": "VIVEZ VOTRE RÊVE",
-    "title": "Trouvez le partenaire idéal",
-    "subtitle": "Conçu pour les propriétaires à l'étranger",
+    "eyebrow": "PREUVES CONCRÈTES",
+    "title": "Les preuves valent mieux que les promesses.",
+    "subtitle": "Nous ne vous montrons pas de témoignages. Nous vous montrons ce que nous livrons réellement après chaque séjour, chaque inspection et chaque mise en ligne.",
     "proofs": {
-      "report": "Photo report after every stay",
-      "checklist": "Inspection checklist every turnover",
-      "response": "Clear response times and escalation"
+      "report": {
+        "badge": "Exemple",
+        "title": "Rapport photo après chaque séjour",
+        "description": "Chaque rotation inclut un rapport photo complet pour que vous voyiez exactement l'état de votre bien après le départ et sa préparation pour le prochain invité."
+      },
+      "checklist": {
+        "badge": "Exemple",
+        "title": "Checklist d'inspection",
+        "description": "Une checklist structurée est remplie après chaque nettoyage et inspection — couvrant chaque pièce, appareil et détail."
+      },
+      "render": {
+        "badge": "Exemple",
+        "title": "Visualisation 3D de votre bien",
+        "description": "Avant la mise en ligne, nous créons des rendus 3D professionnels et des visites virtuelles pour que votre bien se démarque sur toutes les plateformes."
+      }
     },
-    "cta": "Request a quote"
+    "cta": "Découvrez notre méthode"
   },
   "Pricing": {
     "eyebrow": "TROUVEZ LA MEILLEURE OFFRE",
@@ -233,18 +265,106 @@
     "subscribe": "S'inscrire"
   },
   "Contact": {
-    "title": "Contactez-nous",
-    "subtitle": "Contactez-nous pour un devis.",
+    "eyebrow": "PARLONS-EN",
+    "title": "Prêt à ne plus vous soucier de votre bien ?",
+    "subtitle": "Que vous souhaitiez vendre, louer à long terme ou publier sur Airbnb — nous gérons tout. Remplissez le formulaire, on s'occupe du reste.",
+    "form_title": "Obtenez votre consultation gratuite",
+    "form_sub": "Sans engagement. Nous répondons sous 24 heures.",
+    "trust": {
+      "free": "Consultation 100 % gratuite — aucun frais caché",
+      "fast": "Réponse sous 24 heures, garantie",
+      "secure": "Vos données restent privées et sécurisées"
+    },
+    "whatsapp_label": "Vous préférez WhatsApp ?",
+    "whatsapp_sub": "Écrivez-nous directement pour une réponse immédiate.",
     "form": {
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone / WhatsApp",
-      "city": "City",
-      "units": "Number of units",
-      "message": "Message",
-      "submit": "Send Request",
-      "success": "Message sent successfully!",
-      "error": "Something went wrong. Please try again."
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone / WhatsApp",
+      "city": "Ville",
+      "city_placeholder": "Sélectionnez votre ville",
+      "city_oslo": "Oslo",
+      "city_london": "Londres",
+      "city_marrakech": "Marrakech",
+      "city_casablanca": "Casablanca",
+      "city_tangier": "Tanger",
+      "city_agadir": "Agadir",
+      "city_other": "Autre",
+      "units": "Nombre de biens",
+      "message": "Parlez-nous de votre bien",
+      "submit": "Obtenir ma consultation gratuite",
+      "success": "Nous avons bien reçu votre demande !",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "Partners": {
+    "eyebrow": "PARTENAIRES DE CONFIANCE",
+    "description": "Nous collaborons avec les plus grandes plateformes de réservation et de voyage pour maximiser la visibilité et le taux d'occupation de votre bien."
+  },
+  "SellPage": {
+    "hero": {
+      "eyebrow": "VENDRE VOTRE BIEN",
+      "title": "Vendez votre bien au Maroc. On s'occupe de tout.",
+      "subtitle": "De l'estimation à la signature chez le notaire — pas besoin de vous déplacer, de prendre des appels ou de courir après les documents.",
+      "highlight_1": "Aucun déplacement nécessaire — tout est géré sur place",
+      "highlight_2": "Visite virtuelle 3D et médias professionnels",
+      "highlight_3": "Coordination complète avec le notaire jusqu'à la vente",
+      "cta_primary": "Obtenir une estimation gratuite",
+      "cta_secondary": "Discuter sur WhatsApp"
+    },
+    "whyUs": {
+      "eyebrow": "POURQUOI NOUS CHOISIR",
+      "title": "Conçu pour les propriétaires à l'étranger — et tous ceux qui veulent moins de stress.",
+      "subtitle": "Vendre un bien peut être stressant. Nous éliminons chaque point de friction pour que vous vendiez en toute confiance, que vous soyez sur place ou à l'étranger.",
+      "cards": {
+        "no_travel": {
+          "title": "Pas de déplacement",
+          "description": "Nous gérons toutes les visites, négociations et formalités sur place. Vous n'avez jamais besoin de venir — nous sommes vos représentants sur le terrain."
+        },
+        "legal": {
+          "title": "Protection juridique complète",
+          "description": "Chaque document est vérifié. Nous coordonnons directement avec le notaire pour garantir une transaction fluide et juridiquement sûre."
+        },
+        "media": {
+          "title": "Marketing 3D et médias",
+          "description": "Photographie professionnelle, visites virtuelles 3D et annonces optimisées sur toutes les grandes plateformes pour attirer des acheteurs qualifiés."
+        },
+        "transparency": {
+          "title": "Transparence totale",
+          "description": "Mises à jour régulières, rapports de retour des acheteurs et visibilité complète à chaque étape — de l'annonce à la signature."
+        }
+      }
+    },
+    "faq": {
+      "eyebrow": "QUESTIONS FRÉQUENTES",
+      "title": "Tout ce que vous devez savoir.",
+      "subtitle": "Des réponses claires sur la vente de votre bien au Maroc avec AtlasStays.",
+      "items": {
+        "travel": {
+          "q": "Dois-je être au Maroc pour vendre mon bien ?",
+          "a": "Non. Nous gérons tout sur place — visites, négociations, préparation des documents et coordination notariale. Vous n'avez qu'à signer chez le notaire, et nous pouvons organiser une procuration si nécessaire."
+        },
+        "timeline": {
+          "q": "Combien de temps prend le processus de vente ?",
+          "a": "Les délais varient selon le bien et le marché. En moyenne, les biens bien positionnés se vendent en 2 à 4 mois. Nous fournissons un calendrier réaliste lors de l'estimation initiale."
+        },
+        "fees": {
+          "q": "Quels sont vos frais ?",
+          "a": "Nous travaillons sur une base de commission transparente, convenue à l'avance. Pas de coûts cachés, pas de surprises. Vous saurez exactement à quoi vous attendre."
+        },
+        "pricing": {
+          "q": "Comment déterminez-vous le prix de vente ?",
+          "a": "Nous réalisons une analyse de marché approfondie en comparant les ventes récentes, les annonces en cours et l'état du bien. Nous recommandons un prix compétitif qui maximise la valeur tout en assurant une vente rapide."
+        },
+        "documents": {
+          "q": "Quels documents dois-je fournir ?",
+          "a": "Nous vous fournirons une liste complète. En général, vous avez besoin du titre de propriété, des certificats fiscaux et des documents d'identité. Nous nous occupons de la vérification et de la préparation notariale."
+        },
+        "updates": {
+          "q": "Comment saurai-je ce qu'il se passe avec mon bien ?",
+          "a": "Vous recevrez des mises à jour régulières par e-mail ou WhatsApp — incluant les retours des visites, les offres reçues et les notifications d'étapes clés. Transparence totale à chaque étape."
+        }
+      }
     }
   }
 }
