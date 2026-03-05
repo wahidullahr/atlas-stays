@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { ArrowRight, MessageCircle, Star, Globe, ShieldCheck, TrendingUp } from 'lucide-react';
 import { Container } from '../layout/Container';
+import { useWhatsAppHref } from '@/hooks/useWhatsAppHref';
 
 const HERO_IMAGE_SRC =
   'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop';
@@ -14,6 +15,7 @@ const PROMISE_KEYS = ['calls', 'qualify', 'notary'] as const;
 export const Hero = () => {
   const t = useTranslations('Hero');
   const tPromise = useTranslations('PromiseStrip');
+  const whatsappHref = useWhatsAppHref();
 
   const floatingCardItems = [
     { key: 'owners', icon: Star, value: t('stat_owners'), label: t('stat_owners_label') },
@@ -76,7 +78,7 @@ export const Hero = () => {
                 <ArrowRight className="w-4 h-4 framer:w-5 framer:h-5 rtl:rotate-180" />
               </a>
               <a
-                href="https://wa.me/4741351547"
+                href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 framer:px-10 framer:py-4.5 bg-transparent border-2 border-white text-white rounded-xl font-semibold text-[15px] framer:text-[17px] hover:bg-white/10 transition-all duration-200 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent"

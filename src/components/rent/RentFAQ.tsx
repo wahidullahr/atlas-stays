@@ -6,16 +6,20 @@ import { ChevronDown } from 'lucide-react';
 import { Container } from '../layout/Container';
 
 const FAQ_KEYS = [
-  'buyers_contact',
-  'viewings',
-  'commission',
-  'timeline',
-  'notaries',
-  'documents',
+  'platforms',
+  'cleaning',
+  'support',
+  'reporting',
   'abroad',
+  'pricing',
 ] as const;
 
-function FAQItem({ question, answer, isOpen, onToggle }: {
+function FAQItem({
+  question,
+  answer,
+  isOpen,
+  onToggle,
+}: {
   question: string;
   answer: string;
   isOpen: boolean;
@@ -49,15 +53,14 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
   );
 }
 
-export const SellFAQ = () => {
-  const t = useTranslations('SellPage.faq');
+export const RentFAQ = () => {
+  const t = useTranslations('RentPage.faq');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-surface py-16 framer:py-24 overflow-hidden">
+    <section className="bg-background py-16 framer:py-24 overflow-hidden">
       <Container className="max-w-[1360px]">
         <div className="grid grid-cols-1 framer:grid-cols-[1fr_1.5fr] gap-10 framer:gap-20">
-          {/* Left: header */}
           <div className="framer:sticky framer:top-32 framer:self-start">
             <p className="text-[11px] framer:text-[14px] font-semibold tracking-[0.18em] uppercase text-accent mb-2.5 framer:mb-4">
               {t('eyebrow')}
@@ -70,7 +73,6 @@ export const SellFAQ = () => {
             </p>
           </div>
 
-          {/* Right: accordion */}
           <div className="bg-white rounded-2xl p-5 framer:p-8 border border-border/20 shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
             {FAQ_KEYS.map((key, i) => (
               <FAQItem

@@ -1,0 +1,65 @@
+---
+description: Internationalization and RTL rules for AtlasStays
+globs: src/**/*.{tsx,ts,json}
+alwaysApply: false
+---
+
+# i18n & RTL
+
+## Locales
+
+Three locales: `/en`, `/fr`, `/ar`. Arabic is RTL.
+
+## Translation Files
+
+- `src/messages/en.json`, `src/messages/fr.json`, `src/messages/ar.json`
+- Every new UI string must be added to ALL THREE files simultaneously
+- Use `useTranslations('Namespace')` hook
+- For arrays, use `t.raw('key')` and cast as `string[]`
+
+## Language Quality Standards
+
+When adding or updating translations, follow these rules strictly:
+
+### English (en)
+- Professional, concise, direct tone
+- Stat labels must be descriptive (e.g. "Properties managed", not "Turnovers")
+- CTAs should be action-oriented and clear
+
+### French (fr)
+- Proper French — never leave English words untranslated
+- Use natural phrasing, not word-for-word translation from English
+- CTAs should be short and punchy (e.g. "Estimation gratuite", not "Obtenir une estimation gratuite")
+- "WhatsApp" stays as-is, but verbs must be French (e.g. "Discuter sur WhatsApp", not "Chat sur WhatsApp")
+
+### Arabic (ar) — Darija (Moroccan Arabic)
+- Use Darija consistently, NOT Modern Standard Arabic (MSA)
+- Darija prepositions: "فـ" / "فال" (not "في"), "ديال" (not possessive construct), "بلا ما" (not "دون أن")
+- Darija verbs: "كنتكلفو" / "كنديرو" / "كننسقو" / "هضر" (not MSA equivalents)
+- Darija vocab: "مكتري" (not "مستأجر"), "الثمن" (not "السعر"), "كري" (not "إيجار")
+- Keep technical terms that have no Darija equivalent (e.g. "check-in", "WhatsApp", "Airbnb")
+- Numbers: use Arabic-Indic convention where natural ("+500" not "500+")
+
+## Checklist for Every New Section
+
+1. Write English copy first
+2. Translate to proper French (no English leftovers)
+3. Translate to Darija Arabic (no MSA)
+4. Verify every key used in the component exists in all 3 files
+5. Verify stat labels, CTA text, and aria labels are all translated
+
+## RTL Rules
+
+- `<html dir="rtl">` is set automatically for Arabic
+- Never use `left`/`right` in CSS — use logical properties:
+  - `ps-` / `pe-` (padding), `ms-` / `me-` (margin)
+  - `inset-s-` / `inset-e-` (positioning)
+  - `text-start` / `text-end`
+  - `rounded-ss-` / `rounded-se-` / `rounded-es-` / `rounded-ee-`
+- Arrow icons: `rtl:rotate-180`
+- Drawer opens from left in RTL, right in LTR
+
+## Routing
+
+- Use `import { Link } from '@/i18n/routing'` (named import, not default)
+- Locale segment is first path segment: `/{locale}/page`

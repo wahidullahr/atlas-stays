@@ -2,10 +2,11 @@
 
 import React, { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { submitContact } from '@/actions/contact';
 import { Container } from '../layout/Container';
-import { Loader2, Send, Phone, Shield, Clock, CheckCircle } from 'lucide-react';
+import { Loader2, Send, MessageCircle, Shield, Clock, CheckCircle } from 'lucide-react';
+import { useWhatsAppHref } from '@/hooks/useWhatsAppHref';
 
 const initialState = {
   success: false,
@@ -38,11 +39,20 @@ const TRUST_ICONS = [
   { key: 'secure', icon: Shield },
 ] as const;
 
-export const ContactForm = () => {
+type ContactFormProps = {
+  variant?: 'default' | 'sell';
+};
+
+export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
   const t = useTranslations('Contact.form');
   const tContact = useTranslations('Contact');
+  const tSell = useTranslations('SellPage.cta');
+  const locale = useLocale() as 'en' | 'fr' | 'ar';
 
   const [state, formAction] = useActionState(submitContact, initialState);
+  const whatsappHref = useWhatsAppHref();
+
+  const isSell = variant === 'sell';
 
   return (
     <section id="contact" className="relative bg-[#1a1a1a] overflow-hidden py-16 framer:py-28">
@@ -54,46 +64,76 @@ export const ContactForm = () => {
 
           {/* Left: Motivational content */}
           <div>
-            <p className="text-[11px] framer:text-[14px] font-semibold tracking-[0.18em] uppercase text-accent mb-3 framer:mb-4">
-              {tContact('eyebrow')}
-            </p>
+            {!isSell && (
+              <p className="text-[11px] framer:text-[14px] font-semibold tracking-[0.18em] uppercase text-accent mb-3 framer:mb-4">
+                {tContact('eyebrow')}
+              </p>
+            )}
             <h2 className="text-[1.6rem] framer:text-[2.75rem] font-bold text-white leading-[1.1] tracking-tight mb-4 framer:mb-6">
-              {tContact('title')}
+              {isSell ? tSell('title') : tContact('title')}
             </h2>
             <p className="text-[14px] framer:text-[17px] text-white/60 leading-relaxed mb-8 framer:mb-12 max-w-md">
-              {tContact('subtitle')}
+              {isSell ? tSell('subtitle') : tContact('subtitle')}
             </p>
 
-            {/* Trust points */}
-            <div className="flex flex-col gap-4 framer:gap-5 mb-8 framer:mb-12">
-              {TRUST_ICONS.map(({ key, icon: Icon }) => (
-                <div key={key} className="flex items-center gap-3.5">
-                  <div className="w-10 h-10 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
-                    <Icon className="w-5 h-5 text-accent" />
-                  </div>
-                  <span className="text-[13px] framer:text-[15px] text-white/80 font-medium">
-                    {tContact(`trust.${key}`)}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* WhatsApp alternative */}
-            <div className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-              <Phone className="w-5 h-5 text-accent shrink-0" />
-              <div>
-                <p className="text-[13px] framer:text-[14px] text-white/90 font-semibold">
-                  {tContact('whatsapp_label')}
-                </p>
-                <p className="text-[12px] framer:text-[13px] text-white/50">
-                  {tContact('whatsapp_sub')}
-                </p>
+            {isSell ? (
+              /* Sell: Two CTAs */
+              <div className="flex flex-col sm:flex-row gap-3 framer:gap-4">
+                <a
+                  href="#contact-form"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 framer:px-8 framer:py-4 bg-accent text-white rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-accent/90 transition-colors w-full sm:w-auto"
+                >
+                  {tSell('cta_primary')}
+                </a>
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 framer:px-8 framer:py-4 bg-white/10 border border-white/30 text-white rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-white/20 transition-colors w-full sm:w-auto"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  {tSell('cta_secondary')}
+                </a>
               </div>
-            </div>
+            ) : (
+              <>
+                {/* Trust points */}
+                <div className="flex flex-col gap-4 framer:gap-5 mb-8 framer:mb-12">
+                  {TRUST_ICONS.map(({ key, icon: Icon }) => (
+                    <div key={key} className="flex items-center gap-3.5">
+                      <div className="w-10 h-10 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
+                        <Icon className="w-5 h-5 text-accent" />
+                      </div>
+                      <span className="text-[13px] framer:text-[15px] text-white/80 font-medium">
+                        {tContact(`trust.${key}`)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* WhatsApp alternative */}
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-colors cursor-pointer"
+                >
+                  <MessageCircle className="w-5 h-5 text-accent shrink-0" />
+                  <div>
+                    <p className="text-[13px] framer:text-[14px] text-white/90 font-semibold">
+                      {tContact('whatsapp_label')}
+                    </p>
+                    <p className="text-[12px] framer:text-[13px] text-white/50">
+                      {tContact('whatsapp_sub')}
+                    </p>
+                  </div>
+                </a>
+              </>
+            )}
           </div>
 
           {/* Right: Form */}
-          <div className="bg-white p-6 framer:p-10 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
+          <div id="contact-form" className="bg-white p-6 framer:p-10 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
             {state.success ? (
               <div className="text-center py-10">
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-5">
@@ -104,6 +144,7 @@ export const ContactForm = () => {
               </div>
             ) : (
               <form action={formAction} className="space-y-4 framer:space-y-5">
+                <input type="hidden" name="locale" value={locale} />
                 <div className="text-center mb-2 framer:mb-4">
                   <h3 className="text-[17px] framer:text-[20px] font-bold text-foreground mb-1">
                     {tContact('form_title')}

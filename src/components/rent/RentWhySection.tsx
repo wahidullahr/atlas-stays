@@ -2,21 +2,23 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { Presentation, UserCheck, Handshake, FileCheck } from 'lucide-react';
+import { Globe, MessageSquare, Shield, BarChart3, Sparkles, TrendingUp } from 'lucide-react';
 import { Container } from '../layout/Container';
 
 const CARDS = [
-  { key: 'presentation', icon: Presentation },
-  { key: 'qualification', icon: UserCheck },
-  { key: 'negotiation', icon: Handshake },
-  { key: 'notary', icon: FileCheck },
+  { key: 'listing', icon: Globe },
+  { key: 'guest_management', icon: MessageSquare },
+  { key: 'support', icon: Shield },
+  { key: 'transparency', icon: BarChart3 },
+  { key: 'cleaning_maintenance', icon: Sparkles },
+  { key: 'pricing_revenue', icon: TrendingUp },
 ] as const;
 
-export const WhyChooseUs = () => {
-  const t = useTranslations('SellPage.whyUs');
+export const RentWhySection = () => {
+  const t = useTranslations('RentPage.whyUs');
 
   return (
-    <section id="why-us" className="bg-surface py-16 framer:py-24 overflow-hidden">
+    <section id="why-rent" className="bg-surface py-16 framer:py-24 overflow-hidden">
       <Container className="max-w-[1360px]">
         <div className="text-center mb-8 framer:mb-12">
           <p className="text-[11px] framer:text-[14px] font-semibold tracking-[0.18em] uppercase text-accent mb-2.5 framer:mb-4">
@@ -27,7 +29,7 @@ export const WhyChooseUs = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 framer:grid-cols-4 gap-4 framer:gap-6 max-w-[1100px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 framer:grid-cols-3 gap-4 framer:gap-6 max-w-[1200px] mx-auto">
           {CARDS.map(({ key, icon: Icon }) => (
             <div
               key={key}

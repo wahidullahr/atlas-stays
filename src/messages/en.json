@@ -1,4 +1,7 @@
 {
+  "common": {
+    "whatsapp_prefill": "Hello AtlasStays, I'm interested in your property services. I'd like a free consultation for selling, renting, or listing my property in Morocco."
+  },
   "nav": {
     "services": "Services",
     "howItWorks": "How it works",
@@ -7,9 +10,10 @@
     "faq": "FAQ",
     "about": "About",
     "contact": "Contact",
+    "nav_home": "Home",
     "nav_sell": "Sell Your Property",
     "nav_rent": "Short-Term Rental",
-    "nav_offices": "Our Offices",
+    "nav_about": "About Us",
     "nav_proof": "Our Proof",
     "nav_contact": "Get in Touch",
     "whatsapp": "WhatsApp",
@@ -194,6 +198,55 @@
       }
     }
   },
+  "About": {
+    "eyebrow": "WHO WE ARE",
+    "title": "About Us",
+    "subtitle": "Built for remote owners who need a reliable partner on the ground.",
+    "hero": {
+      "eyebrow": "WHO WE ARE",
+      "title": "About Us",
+      "subtitle": "Built for remote owners who need a reliable partner on the ground. We combine European standards with deep local expertise in Morocco.",
+      "key_line": "One point of contact. Full reporting. No surprises.",
+      "cta_primary": "Get in touch",
+      "cta_secondary": "Speak with us"
+    },
+    "trustStrip": {
+      "ariaLabel": "Key highlights",
+      "owners": { "value": "150+", "label": "Happy owners" },
+      "cities": { "value": "6", "label": "Cities worldwide" },
+      "occupancy": { "value": "92%", "label": "Avg. occupancy" },
+      "guarantee": { "value": "100%", "label": "Transparent reporting" }
+    },
+    "mission": {
+      "title": "Our Mission",
+      "lead": "To provide stress-free short-term rental management for owners who are not physically present.",
+      "body": "We focus on transparency, reliability, and quality. No hidden fees, no surprises. Whether you're selling, renting long-term, or running a short-term rental — we handle everything so you don't have to."
+    },
+    "story": {
+      "title": "Our Story",
+      "body": "AtlasStays was founded to bridge the gap between international property owners and local operations in Morocco. We combine European standards with deep local expertise, so your property is managed the way you expect — wherever you are."
+    },
+    "values": {
+      "eyebrow": "WHAT WE STAND FOR",
+      "title": "Our Values",
+      "transparency": {
+        "title": "Transparency",
+        "description": "Full reporting after every stay. No hidden fees. You always know what's happening."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "Consistent quality. We show up, we deliver, and we follow through."
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "Professional standards in every touchpoint — from listings to turnovers."
+      },
+      "local": {
+        "title": "Local Expertise",
+        "description": "Deep knowledge of Moroccan markets, regulations, and operations."
+      }
+    }
+  },
   "Trust": {
     "eyebrow": "REAL PROOF",
     "title": "Proof beats promises.",
@@ -303,69 +356,440 @@
     "description": "We partner with the world's largest booking and travel platforms to maximize your property's visibility and occupancy."
   },
   "SellPage": {
+    "cta": {
+      "title": "Sell your property with full representation.",
+      "subtitle": "We manage everything from listing to notary.",
+      "cta_primary": "Request a valuation",
+      "cta_secondary": "Talk on WhatsApp"
+    },
+    "valuationForm": {
+      "title": "Request a valuation",
+      "subtitle": "No commitment. We'll respond within 24 hours.",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "city": "Property city",
+      "city_placeholder": "Select city",
+      "units": "Number of properties",
+      "message": "Brief description",
+      "message_placeholder": "Property type, approximate size, any specific questions…",
+      "submit": "Request valuation",
+      "success": "Thank you. We'll be in touch within 24 hours."
+    },
+    "trustStrip": {
+      "ariaLabel": "Key highlights",
+      "owners": {
+        "value": "150+",
+        "label": "Happy owners"
+      },
+      "cities": {
+        "value": "6",
+        "label": "Cities worldwide"
+      },
+      "occupancy": {
+        "value": "92%",
+        "label": "Avg. occupancy"
+      },
+      "guarantee": {
+        "value": "100%",
+        "label": "Transparent reporting"
+      }
+    },
     "hero": {
-      "eyebrow": "SELL YOUR PROPERTY",
-      "title": "Sell your property in Morocco. We handle everything.",
-      "subtitle": "From market valuation to notary signing — you don't need to fly in, take calls, or chase paperwork. We represent you on the ground.",
-      "highlight_1": "No travel required — we manage everything on-site",
-      "highlight_2": "Professional 3D tours and media for every listing",
-      "highlight_3": "Full notary coordination until closing day",
-      "cta_primary": "Get a free valuation",
-      "cta_secondary": "Chat on WhatsApp"
+      "eyebrow": "Sell with structure",
+      "title": "Sell your property in Morocco with full representation.",
+      "subtitle": "We handle everything — from valuation and professional media to buyer qualification, negotiation, and notary coordination.",
+      "key_line": "Agency fee is paid by the buyer.",
+      "cta_primary": "Request a valuation",
+      "cta_secondary": "Speak with us"
     },
     "whyUs": {
-      "eyebrow": "WHY CHOOSE US",
-      "title": "Built for owners abroad — and anyone who wants less stress.",
-      "subtitle": "Selling property can be stressful. We remove every friction point so you can sell with confidence, whether you're local or abroad.",
+      "eyebrow": "Why Sell With Us",
+      "title": "Serious buyers. Structured process. Clear accountability.",
       "cards": {
-        "no_travel": {
-          "title": "No travel required",
-          "description": "We handle all viewings, negotiations, and paperwork on-site. You never need to fly in — we're your boots on the ground."
+        "presentation": {
+          "title": "Professional presentation",
+          "description": "3D tours, photography, and listings that attract qualified buyers."
         },
-        "legal": {
-          "title": "Full legal protection",
-          "description": "Every document is reviewed and verified. We coordinate directly with the notary to ensure a smooth, legally sound transaction."
+        "qualification": {
+          "title": "Buyer pre-qualification",
+          "description": "We screen buyers so you only meet serious prospects."
         },
-        "media": {
-          "title": "3D marketing & media",
-          "description": "Professional photography, 3D virtual tours, and optimized listings across all major platforms to attract qualified buyers fast."
+        "negotiation": {
+          "title": "Negotiation management",
+          "description": "We negotiate on your behalf to secure the best outcome."
+        },
+        "notary": {
+          "title": "Full coordination to notary",
+          "description": "We handle all paperwork and notary coordination until closing."
+        }
+      }
+    },
+    "whatWeDeliver": {
+      "eyebrow": "What We Deliver",
+      "title": "What we handle for you",
+      "groups": {
+        "property_preparation": {
+          "title": "Property Preparation",
+          "items": {
+            "market_valuation": "Market valuation",
+            "strategy_consultation": "Strategy consultation",
+            "legal_review": "Legal document review",
+            "pricing_plan": "Pricing plan"
+          }
+        },
+        "presentation_marketing": {
+          "title": "Presentation & Marketing",
+          "items": {
+            "professional_photography": "Professional photography",
+            "visualization_3d": "3D visualization",
+            "listing_creation": "Listing creation",
+            "international_exposure": "International exposure",
+            "buyer_screening": "Buyer screening before visits"
+          }
+        },
+        "representation_negotiation": {
+          "title": "Representation & Negotiation",
+          "items": {
+            "calls_handled": "All calls handled by us",
+            "viewings_coordinated": "Viewings coordinated",
+            "buyer_qualification": "Buyer qualification",
+            "offer_negotiation": "Offer negotiation",
+            "deposit_coordination": "Deposit coordination"
+          }
+        },
+        "notary_closing": {
+          "title": "Notary & Closing",
+          "items": {
+            "contract_preparation": "Contract preparation support",
+            "notary_coordination": "Coordination with notary",
+            "document_followup": "Document review follow-up",
+            "completion_assistance": "Completion assistance"
+          }
+        }
+      }
+    },
+    "salesProcess": {
+      "eyebrow": "The Sales Process",
+      "title": "How it works",
+      "steps": {
+        "valuation": {
+          "title": "Valuation & Strategy",
+          "description": "We evaluate and prepare your property for the market."
+        },
+        "marketing": {
+          "title": "Marketing & Viewings",
+          "description": "We create visuals, publish listings, and manage qualified visits."
+        },
+        "negotiation": {
+          "title": "Negotiation & Agreement",
+          "description": "We manage offers and secure a serious buyer."
+        },
+        "notary": {
+          "title": "Notary Completion",
+          "description": "We coordinate documentation until final signature."
+        }
+      }
+    },
+    "feeTransparency": {
+      "eyebrow": "Transparency About Fees",
+      "title": "Clear commission structure",
+      "points": {
+        "commission": "Commission is paid by the buyer.",
+        "no_listing_fee": "No upfront listing fee.",
+        "no_hidden_costs": "No hidden marketing costs.",
+        "written_mandate": "Agreement defined in written mandate."
+      }
+    },
+    "properties": {
+      "eyebrow": "Properties We Represent",
+      "title": "Discover inspiring designed homes.",
+      "subtitle": "Curated homes where elegance, style, and comfort unite.",
+      "available_title": "Currently Available",
+      "sold_title": "Recently Sold",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "names": {
+        "riad_palm": "Riad Palm",
+        "villa_atlas": "Villa Atlas",
+        "medina_view": "Medina View",
+        "kasbah_house": "Kasbah House",
+        "ocean_retreat": "Ocean Retreat",
+        "city_residence": "City Residence"
+      },
+      "cities": {
+        "marrakech": "Marrakech",
+        "casablanca": "Casablanca",
+        "tangier": "Tangier",
+        "agadir": "Agadir"
+      },
+      "types": {
+        "apartment": "Apartment",
+        "villa": "Villa",
+        "house": "House"
+      },
+      "status_available": "Available",
+      "status_sold": "Sold",
+      "status_under_negotiation": "Under negotiation",
+      "status_recently_closed": "Recently closed",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Common questions",
+      "subtitle": "Clear answers to reduce your concerns.",
+      "items": {
+        "buyers_contact": {
+          "q": "Do buyers contact me directly?",
+          "a": "No. All buyer inquiries, calls, and messages go through us. We screen and qualify buyers before you're involved. You stay informed without being interrupted."
+        },
+        "viewings": {
+          "q": "Who handles viewings?",
+          "a": "We do. We coordinate and attend all viewings on-site. You don't need to be present — we represent you and report back after each visit."
+        },
+        "commission": {
+          "q": "Who pays commission?",
+          "a": "Commission is paid by the buyer, not by you. There is no upfront listing fee and no hidden marketing costs. Everything is defined in a written mandate before we start."
+        },
+        "timeline": {
+          "q": "How long does the process take?",
+          "a": "Typically 2–4 months for well-priced properties. We give you a realistic timeline during the initial valuation. Market conditions and pricing affect the speed."
+        },
+        "notaries": {
+          "q": "Do you work with notaries?",
+          "a": "Yes. We coordinate directly with the notary — document preparation, verification, and closing logistics. We ensure everything is ready for your signature."
+        },
+        "documents": {
+          "q": "What documents are required?",
+          "a": "We'll provide a complete checklist. Typically: title deed, tax certificates, and ID. We handle verification and notary preparation. You won't chase paperwork alone."
+        },
+        "abroad": {
+          "q": "Can I sell while living abroad?",
+          "a": "Yes. We're built for owners abroad. We handle everything on-site. You only need to sign at the notary — we can arrange a power of attorney if you can't travel."
+        }
+      }
+    }
+  },
+  "RentPage": {
+    "hero": {
+      "eyebrow": "Short-term rental management",
+      "title": "Your apartment. Listed everywhere. Fully managed.",
+      "subtitle": "We publish your property on Airbnb, Booking.com, and more — then handle every guest from first message to final cleaning. You earn. We manage.",
+      "key_line": "Stress-free operations. Transparent reporting after every stay.",
+      "cta_primary": "List my property",
+      "cta_secondary": "Speak with us"
+    },
+    "whyUs": {
+      "eyebrow": "Why Rent With Us",
+      "title": "Maximum visibility. Zero hassle. Full transparency.",
+      "cards": {
+        "listing": {
+          "title": "Listed on every platform",
+          "description": "Airbnb, Booking.com, VRBO, Expedia — we optimize your listing to maximize bookings."
+        },
+        "guest_management": {
+          "title": "Guest management",
+          "description": "We handle all communication, check-in, check-out, and coordination. You stay informed."
+        },
+        "support": {
+          "title": "24/7 guest support",
+          "description": "Optional round-the-clock support in English, French, and Arabic for guest emergencies."
         },
         "transparency": {
-          "title": "Total transparency",
-          "description": "Regular progress updates, buyer feedback reports, and full visibility into every step — from listing to closing."
+          "title": "Photo report every stay",
+          "description": "After every turnover, you receive a detailed photo report. No surprises. Full visibility."
+        },
+        "cleaning_maintenance": {
+          "title": "Efficient Cleaning & Maintenance",
+          "description": "Our in-house cleaning team ensures your property is always spotless and ready for the next guest. We handle inspections and maintenance between stays."
+        },
+        "pricing_revenue": {
+          "title": "Pricing & Revenue Optimization",
+          "description": "We use dynamic pricing to ensure your property is always competitively priced for maximum revenue, without undercutting."
         }
+      }
+    },
+    "process": {
+      "eyebrow": "How it works",
+      "title": "From listing to earnings",
+      "steps": {
+        "list": {
+          "title": "We List & Publish",
+          "description": "Professional photography, optimized copy, and dynamic pricing. Your property goes live on every major platform."
+        },
+        "manage": {
+          "title": "We Manage Every Guest",
+          "description": "All inquiries, check-ins, check-outs, and support — handled by us. You receive updates without lifting a finger."
+        },
+        "report": {
+          "title": "You Earn & Track",
+          "description": "Monthly revenue reports, expense breakdown, and real-time dashboard access. Full transparency."
+        }
+      }
+    },
+    "trustStrip": {
+      "ariaLabel": "Key highlights",
+      "properties": {
+        "value": "150+",
+        "label": "Properties managed"
+      },
+      "cities": {
+        "value": "4 cities",
+        "label": "Across Morocco"
+      },
+      "occupancy": {
+        "value": "92%",
+        "label": "Avg. occupancy"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Guest support"
+      }
+    },
+    "platforms": {
+      "label": "We list your property on"
+    },
+    "properties": {
+      "eyebrow": "Our Properties",
+      "title": "Properties We Manage",
+      "subtitle": "Active listings and recently managed properties across Morocco.",
+      "available_title": "Available Now",
+      "recently_managed_title": "Recently Managed",
+      "status_available": "Available Now!",
+      "status_rented": "Rented",
+      "names": {
+        "riad_palm": "Riad Palm",
+        "villa_atlas": "Villa Atlas",
+        "medina_view": "Medina View",
+        "ocean_retreat": "Ocean Retreat",
+        "kasbah_house": "Kasbah House",
+        "city_residence": "City Residence"
+      },
+      "cities": {
+        "marrakech": "Marrakech",
+        "casablanca": "Casablanca",
+        "tangier": "Tangier",
+        "agadir": "Agadir"
+      },
+      "types": {
+        "apartment": "Apartment",
+        "villa": "Villa",
+        "house": "House"
+      },
+      "price_95": "€95 / night",
+      "price_110": "€110 / night",
+      "price_120": "€120 / night",
+      "price_130": "€130 / night",
+      "price_180": "€180 / night",
+      "price_220": "€220 / night",
+      "date_oct_2024": "Rented Oct 2024",
+      "date_nov_2024": "Rented Nov 2024",
+      "date_dec_2024": "Rented Dec 2024",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "listForm": {
+      "title": "List your property",
+      "subtitle": "No commitment. We'll respond within 24 hours with a tailored proposal.",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "city": "Property city",
+      "city_placeholder": "Select city",
+      "units": "Number of properties",
+      "message": "Tell us about your property",
+      "message_placeholder": "Property type, approximate size, current status (empty/furnished), any questions…",
+      "submit": "Request a proposal",
+      "success": "Thank you. We'll be in touch within 24 hours with a tailored proposal."
+    },
+    "services": {
+      "eyebrow": "What we deliver",
+      "title": "Core services included",
+      "subtitle": "Cleaning, inspections, keys, linen, and restocking — all handled by our local team.",
+      "items": {
+        "cleaning": {
+          "title": "Turnover cleaning",
+          "description": "Professional cleaning after every stay. No-show cleaners? Never. We verify every turnover."
+        },
+        "inspection": {
+          "title": "Inspection & photo report",
+          "description": "Detailed checklist and photo report sent after every stay. You see exactly how your property was left."
+        },
+        "keys": {
+          "title": "Keys & check-in",
+          "description": "Secure key handling and check-in coordination. Optional smart lock setup."
+        },
+        "linen": {
+          "title": "Linen & towels",
+          "description": "Fresh linen and towels for every guest. Coordinated and replaced as needed."
+        },
+        "restocking": {
+          "title": "Restocking",
+          "description": "Toiletries, kitchen essentials, and supplies restocked between stays."
+        }
+      }
+    },
+    "testimonials": {
+      "eyebrow": "Testimonials",
+      "title": "Real Owner Experiences",
+      "items": {
+        "quote_1": "AtlasStays took care of everything — from listing to guest communication and cleaning. I live abroad and never had to worry. Highly recommend.",
+        "name_1": "Sarah M.",
+        "location_1": "Apartment in Marrakech",
+        "quote_2": "Professional, transparent, and reliable. The photo reports after every stay give me peace of mind. My property is in great hands.",
+        "name_2": "Pierre L.",
+        "location_2": "Villa in Agadir",
+        "quote_3": "Finally, a management company that actually delivers. No hidden fees, clear communication, and my occupancy has never been better.",
+        "name_3": "Amira K.",
+        "location_3": "Riad in Marrakech"
+      }
+    },
+    "feeTransparency": {
+      "eyebrow": "Pricing & Fee Structure",
+      "title": "Fair & Transparent Fees.",
+      "points": {
+        "flat_percentage": "We charge a flat percentage of your property's monthly earnings, so we only succeed when you do.",
+        "no_hidden_costs": "All cleaning, maintenance, and listing fees are included in our service fee. No surprise charges.",
+        "guest_pays_fees": "All booking-related fees are covered by the guests, so you don't pay anything upfront."
       }
     },
     "faq": {
-      "eyebrow": "COMMON QUESTIONS",
-      "title": "Everything you need to know.",
-      "subtitle": "Clear answers about selling your property in Morocco with AtlasStays.",
+      "eyebrow": "FAQ",
+      "title": "Common questions",
+      "subtitle": "Clear answers about our short-term rental management.",
       "items": {
-        "travel": {
-          "q": "Do I need to be in Morocco to sell my property?",
-          "a": "No. We handle everything on-site — viewings, negotiations, document preparation, and notary coordination. You only need to sign at the notary, and we can arrange a power of attorney if needed."
+        "platforms": {
+          "q": "Which platforms do you list on?",
+          "a": "We list on Airbnb, Booking.com, VRBO, Expedia, Hotels.com, and local platforms. Your property gets maximum visibility across all major channels."
         },
-        "timeline": {
-          "q": "How long does the selling process take?",
-          "a": "Timelines vary by property and market conditions. On average, well-priced properties sell within 2–4 months. We provide a realistic timeline during the initial valuation."
+        "cleaning": {
+          "q": "How do I know the cleaner actually showed up?",
+          "a": "Every turnover includes a photo report sent directly to you. We verify each cleaning and inspection. No-show cleaners are not an option — we track and confirm every visit."
         },
-        "fees": {
-          "q": "What are your fees?",
-          "a": "We work on a transparent commission basis, agreed upfront before we start. No hidden costs, no surprise charges. You'll know exactly what to expect."
+        "support": {
+          "q": "What if a guest has an issue at 3AM?",
+          "a": "We offer optional 24/7 guest support in English, French, and Arabic. Emergencies are handled by our team so you never get midnight calls."
+        },
+        "reporting": {
+          "q": "How do I track revenue and expenses?",
+          "a": "You receive monthly revenue and occupancy reports, plus an expense breakdown with receipts. Full transparency. Optional real-time dashboard access."
+        },
+        "abroad": {
+          "q": "Can I manage my property from abroad?",
+          "a": "Yes. We're built for owners abroad. We handle everything on-site — listing, guests, cleaning, keys, and maintenance. You stay informed through reports and updates."
         },
         "pricing": {
-          "q": "How do you determine the sale price?",
-          "a": "We conduct a thorough market analysis comparing recent sales, current listings, and property condition. We recommend a competitive price that maximizes value while ensuring a timely sale."
-        },
-        "documents": {
-          "q": "What documents do I need?",
-          "a": "We'll provide a complete checklist. Typically you need the title deed, tax certificates, and ID documents. We handle the verification and notary preparation for you."
-        },
-        "updates": {
-          "q": "How will I know what's happening with my property?",
-          "a": "You'll receive regular updates via email or WhatsApp — including viewing feedback, offers received, and milestone notifications. Full transparency at every step."
+          "q": "How does pricing work?",
+          "a": "We offer flexible packages: Starter (cleaning + inspection + photo report), Care (adds linen and restocking), and Full Management (revenue-based). See our pricing page for details."
         }
       }
+    },
+    "cta": {
+      "title": "List your property with full management.",
+      "subtitle": "We handle everything from listing to guest support. You earn. We manage.",
+      "cta_primary": "List my property",
+      "cta_secondary": "Talk on WhatsApp"
     }
   }
 }

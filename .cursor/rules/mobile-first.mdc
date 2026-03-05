@@ -1,0 +1,63 @@
+---
+description: Mobile-first responsive design rules for all components
+globs: src/components/**/*.tsx
+alwaysApply: false
+---
+
+# Mobile-First Responsive Design
+
+Every component MUST be built mobile-first. Base styles target mobile, `framer:` (810px) scales up for desktop.
+
+## Typography (mobile → framer:)
+
+- Eyebrow: `text-[11px]-[13px]` → `framer:text-[14px]-[17px]`
+- H1: `text-[1.75rem]` → `framer:text-[clamp(2.5rem,5vw,4rem)]`
+- H2: `text-[1.5rem]-[1.75rem]` → `framer:text-[2.75rem]-[3.75rem]`
+- H3: `text-[16px]-[17px]` → `framer:text-[20px]-[22px]`
+- Body: `text-[13px]-[15px]` → `framer:text-[15px]-[19px]`
+- Small/label: `text-[10px]-[11px]` → `framer:text-[12px]-[14px]`
+
+## Spacing (mobile → framer:)
+
+- Section padding: `py-10`–`py-14` → `framer:py-20`–`framer:py-28`
+- Element margins: `mb-3`–`mb-6` → `framer:mb-5`–`framer:mb-14`
+- Gaps: `gap-2`–`gap-4` → `framer:gap-4`–`framer:gap-8`
+- Card padding: `p-5`–`p-6` → `framer:p-10`–`framer:p-14`
+
+## Buttons
+
+- Mobile: `px-6`–`px-7 py-3`–`py-3.5 text-[14px]-[15px]`
+- Desktop: `framer:px-9`–`framer:px-10 framer:py-4`–`framer:py-4.5 framer:text-[16px]-[17px]`
+- Full-width on mobile: `w-full sm:w-auto`
+- Icons: `w-4 h-4` → `framer:w-5 framer:h-5`
+
+## Layout
+
+- Single column on mobile, multi-column at `framer:`
+- Use `grid-cols-1 framer:grid-cols-2` or `framer:grid-cols-3`
+- Border radius: `rounded-xl` → `framer:rounded-2xl`
+- Never use `min-h-screen` alone on mobile; use `min-h-[100svh]` for iOS safe area
+- Absolute-positioned elements on desktop should be `relative` in flow on mobile
+
+## Images
+
+- Use `aspect-video` or `aspect-4/3` on mobile, scale up on desktop
+- Always set responsive `sizes` attribute
+- Min-height for image containers: `min-h-[200px]` mobile → `framer:min-h-[420px]`
+
+## RTL
+
+- Use logical properties: `ps-`, `pe-`, `ms-`, `me-`, `inset-s-`, `inset-e-`, `text-start`, `text-end`
+- Use `rounded-ss-`, `rounded-se-` for directional radius
+- Arrow icons: add `rtl:rotate-180`
+
+## Touch Targets
+
+- Minimum 44px tap area for all interactive elements
+- Sufficient gap between tappable items (`gap-2`+)
+
+## Overlays / Backgrounds
+
+- Mobile: use solid overlays (`bg-black/50`) for consistent readability
+- Desktop: can use gradients (`bg-linear-to-r from-black/60 ...`)
+- Show/hide with `hidden framer:block` or `framer:hidden`

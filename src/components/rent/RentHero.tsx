@@ -2,20 +2,20 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import { Container } from '../layout/Container';
+import { useTranslations } from 'next-intl';
 import { useWhatsAppHref } from '@/hooks/useWhatsAppHref';
 
 const BG_IMAGE =
-  'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1920&auto=format&fit=crop';
+  'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1920&auto=format&fit=crop';
 
-const STAT_KEYS = ['owners', 'cities', 'occupancy', 'guarantee'] as const;
+const STAT_KEYS = ['properties', 'cities', 'occupancy', 'support'] as const;
 
-export const SellHero = () => {
-  const t = useTranslations('SellPage.hero');
-  const tStats = useTranslations('SellPage.trustStrip');
+export const RentHero = () => {
+  const t = useTranslations('RentPage.hero');
+  const tStats = useTranslations('RentPage.trustStrip');
   const whatsappHref = useWhatsAppHref();
 
   return (

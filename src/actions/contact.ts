@@ -1,6 +1,7 @@
 'use server';
 
 import { z } from 'zod';
+import { sendWelcomeEmail } from '@/lib/email';
 
 const schema = z.object({
   name: z.string().min(2),
@@ -9,6 +10,7 @@ const schema = z.object({
   city: z.string().min(2),
   units: z.string(),
   message: z.string().min(10),
+  locale: z.enum(['en', 'fr', 'ar']).optional(),
 });
 
 export type ContactState = {
@@ -28,6 +30,7 @@ export async function submitContact(
     city: formData.get('city'),
     units: formData.get('units'),
     message: formData.get('message'),
+    locale: formData.get('locale'),
   };
 
   const result = schema.safeParse(data);
@@ -54,9 +57,21 @@ export async function submitContact(
     };
   }
 
-  // Optional: use Resend (RESEND_API_KEY) or SMTP (SMTP_*) to send email.
-  // For now we only validate and acknowledge.
-  await new Promise((resolve) => setTimeout(resolve, 500));
+  const locale = (result.data.locale as 'en' | 'fr' | 'ar') || 'en';
+  const customerEmail = result.data.email;
+  const customerName = result.data.name;
+
+  // Send professional welcome email to the customer
+  const welcomeResult = await sendWelcomeEmail({
+    name: customerName,
+    email: customerEmail,
+    locale,
+  });
+
+  if (!welcomeResult.ok) {
+    // Log but don't fail the form — the inquiry was received
+    console.error('[Contact] Welcome email failed:', welcomeResult.error);
+  }
 
   return {
     success: true,

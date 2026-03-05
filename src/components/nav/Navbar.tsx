@@ -7,6 +7,7 @@ import clsx from "clsx";
 import { Menu as MenuIcon, MessageCircle, Phone, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { LOCALES, NAV_ITEMS, type Locale } from "./navConfig";
+import { useWhatsAppHref } from "@/hooks/useWhatsAppHref";
 
 const SCROLL_THRESHOLD = 20;
 const NAV_MENU_DIALOG_ID = "nav-menu-dialog";
@@ -16,19 +17,6 @@ function buildLocalizedHref(locale: Locale, pathname: string) {
   if (parts.length === 0) return `/${locale}`;
   parts[0] = locale;
   return "/" + parts.join("/");
-}
-
-function buildWhatsAppHref(locale: Locale) {
-  const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "212600000000";
-
-  const msg =
-    locale === "fr"
-      ? "Bonjour AtlasStays, je souhaite un devis pour gérer le ménage et les turnovers de mon appartement."
-      : locale === "ar"
-      ? "سلام AtlasStays، بغيت عرض ثمن باش تعاونوني فتنظيم النظافة والتبديل فالشقة ديالي."
-      : "Hi AtlasStays, I’d like a quote for cleaning and turnover operations for my apartment.";
-
-  return `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
 }
 
 export function Navbar() {
@@ -52,7 +40,7 @@ export function Navbar() {
     }));
   }, [locale, pathname]);
 
-  const waHref = useMemo(() => buildWhatsAppHref(locale), [locale]);
+  const waHref = useWhatsAppHref();
 
   useEffect(() => {
     if (!open) return;

@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { ArrowRight, Volume2, VolumeX } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
+import { useWhatsAppHref } from '@/hooks/useWhatsAppHref';
 
 const STEP_KEYS = ['onboarding', 'stay', 'reporting'] as const;
 
@@ -27,6 +28,7 @@ const LOCALE_VIDEO: Partial<Record<string, string>> = {
 export const HowItWorks = () => {
   const t = useTranslations('HowItWorks');
   const locale = useLocale();
+  const whatsappHref = useWhatsAppHref();
   const [active, setActive] = useState(0);
   const [muted, setMuted] = useState(true);
 
@@ -176,12 +178,14 @@ export const HowItWorks = () => {
             {t('cta')}
             <ArrowRight className="w-4 h-4 framer:w-5 framer:h-5 rtl:rotate-180" />
           </Link>
-          <Link
-            href="/contact"
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 framer:px-10 framer:py-4.5 bg-transparent border-2 border-foreground text-foreground rounded-xl font-semibold text-[14px] framer:text-[17px] hover:bg-foreground hover:text-white transition-colors duration-200 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
           >
             {t('ctaSecondary')}
-          </Link>
+          </a>
         </div>
       </Container>
     </section>

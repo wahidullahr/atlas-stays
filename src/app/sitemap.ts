@@ -3,6 +3,8 @@ import { getBaseUrl } from '@/lib/metadata';
 const LOCALES = ['en', 'fr', 'ar'] as const;
 const PATHS = [
   '',
+  '/sell',
+  '/rent',
   '/services',
   '/how-it-works',
   '/pricing',

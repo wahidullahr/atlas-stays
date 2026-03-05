@@ -1,4 +1,7 @@
 {
+  "common": {
+    "whatsapp_prefill": "Bonjour AtlasStays, je suis intéressé(e) par vos services immobiliers. Je souhaite une consultation gratuite pour vendre, louer ou mettre en location mon bien au Maroc."
+  },
   "nav": {
     "services": "Services",
     "howItWorks": "Comment ça marche",
@@ -7,9 +10,10 @@
     "faq": "FAQ",
     "about": "À propos",
     "contact": "Contact",
+    "nav_home": "Accueil",
     "nav_sell": "Vendre votre bien",
     "nav_rent": "Location courte durée",
-    "nav_offices": "Nos bureaux",
+    "nav_about": "À propos",
     "nav_proof": "Nos preuves",
     "nav_contact": "Nous contacter",
     "whatsapp": "WhatsApp",
@@ -195,6 +199,55 @@
       }
     }
   },
+  "About": {
+    "eyebrow": "QUI SOMMES-NOUS",
+    "title": "À propos",
+    "subtitle": "Conçu pour les propriétaires à distance qui ont besoin d'un partenaire fiable sur le terrain.",
+    "hero": {
+      "eyebrow": "QUI SOMMES-NOUS",
+      "title": "À propos",
+      "subtitle": "Conçu pour les propriétaires à distance qui ont besoin d'un partenaire fiable sur le terrain. Nous combinons les normes européennes avec une expertise locale approfondie au Maroc.",
+      "key_line": "Un seul interlocuteur. Reporting complet. Pas de surprises.",
+      "cta_primary": "Nous contacter",
+      "cta_secondary": "Discuter avec nous"
+    },
+    "trustStrip": {
+      "ariaLabel": "Points clés",
+      "owners": { "value": "150+", "label": "Propriétaires satisfaits" },
+      "cities": { "value": "6", "label": "Villes dans le monde" },
+      "occupancy": { "value": "92%", "label": "Taux d'occupation moy." },
+      "guarantee": { "value": "100%", "label": "Reporting transparent" }
+    },
+    "mission": {
+      "title": "Notre mission",
+      "lead": "Offrir une gestion locative courte durée sans stress pour les propriétaires qui ne sont pas sur place.",
+      "body": "Nous privilégions la transparence, la fiabilité et la qualité. Pas de frais cachés, pas de mauvaises surprises. Que vous vendiez, louiez à long terme ou gériez une location courte durée — nous gérons tout pour vous."
+    },
+    "story": {
+      "title": "Notre histoire",
+      "body": "AtlasStays a été créé pour combler le fossé entre les propriétaires internationaux et les opérations locales au Maroc. Nous combinons les normes européennes avec une expertise locale approfondie, pour que votre bien soit géré comme vous l'attendez — où que vous soyez."
+    },
+    "values": {
+      "eyebrow": "NOS VALEURS",
+      "title": "Ce qui nous anime",
+      "transparency": {
+        "title": "Transparence",
+        "description": "Rapports complets après chaque séjour. Pas de frais cachés. Vous savez toujours ce qui se passe."
+      },
+      "reliability": {
+        "title": "Fiabilité",
+        "description": "Qualité constante. Nous sommes présents, nous livrons et nous assurons le suivi."
+      },
+      "quality": {
+        "title": "Qualité",
+        "description": "Des standards professionnels à chaque étape — des annonces aux remises en état."
+      },
+      "local": {
+        "title": "Expertise locale",
+        "description": "Connaissance approfondie des marchés, réglementations et opérations au Maroc."
+      }
+    }
+  },
   "Trust": {
     "eyebrow": "PREUVES CONCRÈTES",
     "title": "Les preuves valent mieux que les promesses.",
@@ -304,69 +357,440 @@
     "description": "Nous collaborons avec les plus grandes plateformes de réservation et de voyage pour maximiser la visibilité et le taux d'occupation de votre bien."
   },
   "SellPage": {
-    "hero": {
-      "eyebrow": "VENDRE VOTRE BIEN",
-      "title": "Vendez votre bien au Maroc. On s'occupe de tout.",
-      "subtitle": "De l'estimation à la signature chez le notaire — pas besoin de vous déplacer, de prendre des appels ou de courir après les documents.",
-      "highlight_1": "Aucun déplacement nécessaire — tout est géré sur place",
-      "highlight_2": "Visite virtuelle 3D et médias professionnels",
-      "highlight_3": "Coordination complète avec le notaire jusqu'à la vente",
-      "cta_primary": "Obtenir une estimation gratuite",
+    "cta": {
+      "title": "Vendez votre bien avec une représentation complète.",
+      "subtitle": "Nous gérons tout, de l'annonce au notaire.",
+      "cta_primary": "Demander une estimation",
       "cta_secondary": "Discuter sur WhatsApp"
     },
+    "valuationForm": {
+      "title": "Demander une estimation",
+      "subtitle": "Sans engagement. Réponse sous 24 heures.",
+      "name": "Nom complet",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "city": "Ville du bien",
+      "city_placeholder": "Sélectionner",
+      "units": "Nombre de biens",
+      "message": "Description courte",
+      "message_placeholder": "Type de bien, surface approximative, questions…",
+      "submit": "Demander une estimation",
+      "success": "Merci. Nous vous contacterons sous 24 heures."
+    },
+    "trustStrip": {
+      "ariaLabel": "Points clés",
+      "owners": {
+        "value": "150+",
+        "label": "Propriétaires satisfaits"
+      },
+      "cities": {
+        "value": "6",
+        "label": "Villes dans le monde"
+      },
+      "occupancy": {
+        "value": "92%",
+        "label": "Taux d'occupation moy."
+      },
+      "guarantee": {
+        "value": "100%",
+        "label": "Rapports transparents"
+      }
+    },
+    "hero": {
+      "eyebrow": "Vendre avec structure",
+      "title": "Vendez votre bien au Maroc avec une représentation complète.",
+      "subtitle": "Nous gérons tout — de l'estimation et des médias professionnels à la qualification des acheteurs, la négociation et la coordination notariale.",
+      "key_line": "Les honoraires d'agence sont à la charge de l'acheteur.",
+      "cta_primary": "Demander une estimation",
+      "cta_secondary": "Nous contacter"
+    },
     "whyUs": {
-      "eyebrow": "POURQUOI NOUS CHOISIR",
-      "title": "Conçu pour les propriétaires à l'étranger — et tous ceux qui veulent moins de stress.",
-      "subtitle": "Vendre un bien peut être stressant. Nous éliminons chaque point de friction pour que vous vendiez en toute confiance, que vous soyez sur place ou à l'étranger.",
+      "eyebrow": "Pourquoi vendre avec nous",
+      "title": "Acheteurs sérieux. Processus structuré. Responsabilité claire.",
       "cards": {
-        "no_travel": {
-          "title": "Pas de déplacement",
-          "description": "Nous gérons toutes les visites, négociations et formalités sur place. Vous n'avez jamais besoin de venir — nous sommes vos représentants sur le terrain."
+        "presentation": {
+          "title": "Présentation professionnelle",
+          "description": "Visites 3D, photographie et annonces qui attirent des acheteurs qualifiés."
         },
-        "legal": {
-          "title": "Protection juridique complète",
-          "description": "Chaque document est vérifié. Nous coordonnons directement avec le notaire pour garantir une transaction fluide et juridiquement sûre."
+        "qualification": {
+          "title": "Pré-qualification des acheteurs",
+          "description": "Nous filtrons les acheteurs pour ne retenir que les prospects sérieux."
         },
-        "media": {
-          "title": "Marketing 3D et médias",
-          "description": "Photographie professionnelle, visites virtuelles 3D et annonces optimisées sur toutes les grandes plateformes pour attirer des acheteurs qualifiés."
+        "negotiation": {
+          "title": "Gestion des négociations",
+          "description": "Nous négocions en votre nom pour obtenir le meilleur résultat."
+        },
+        "notary": {
+          "title": "Coordination complète jusqu'au notaire",
+          "description": "Nous gérons tous les documents et la coordination notariale jusqu'à la signature."
+        }
+      }
+    },
+    "whatWeDeliver": {
+      "eyebrow": "Ce que nous offrons",
+      "title": "Ce que nous gérons pour vous",
+      "groups": {
+        "property_preparation": {
+          "title": "Préparation du bien",
+          "items": {
+            "market_valuation": "Évaluation du marché",
+            "strategy_consultation": "Consultation stratégique",
+            "legal_review": "Vérification des documents juridiques",
+            "pricing_plan": "Plan de tarification"
+          }
+        },
+        "presentation_marketing": {
+          "title": "Présentation & Marketing",
+          "items": {
+            "professional_photography": "Photographie professionnelle",
+            "visualization_3d": "Visualisation 3D",
+            "listing_creation": "Création d'annonces",
+            "international_exposure": "Exposition internationale",
+            "buyer_screening": "Pré-sélection des acheteurs avant visites"
+          }
+        },
+        "representation_negotiation": {
+          "title": "Représentation & Négociation",
+          "items": {
+            "calls_handled": "Tous les appels gérés par nous",
+            "viewings_coordinated": "Visites coordonnées",
+            "buyer_qualification": "Qualification des acheteurs",
+            "offer_negotiation": "Négociation des offres",
+            "deposit_coordination": "Coordination des acomptes"
+          }
+        },
+        "notary_closing": {
+          "title": "Notaire & Clôture",
+          "items": {
+            "contract_preparation": "Aide à la préparation du contrat",
+            "notary_coordination": "Coordination avec le notaire",
+            "document_followup": "Suivi de la vérification des documents",
+            "completion_assistance": "Assistance à la signature"
+          }
+        }
+      }
+    },
+    "salesProcess": {
+      "eyebrow": "Le processus de vente",
+      "title": "Comment ça marche",
+      "steps": {
+        "valuation": {
+          "title": "Évaluation & Stratégie",
+          "description": "Nous évaluons et préparons votre bien pour le marché."
+        },
+        "marketing": {
+          "title": "Marketing & Visites",
+          "description": "Nous créons les visuels, publions les annonces et gérons les visites qualifiées."
+        },
+        "negotiation": {
+          "title": "Négociation & Accord",
+          "description": "Nous gérons les offres et sécurisons un acheteur sérieux."
+        },
+        "notary": {
+          "title": "Signature chez le notaire",
+          "description": "Nous coordonnons la documentation jusqu'à la signature finale."
+        }
+      }
+    },
+    "feeTransparency": {
+      "eyebrow": "Transparence sur les frais",
+      "title": "Structure de commission claire",
+      "points": {
+        "commission": "La commission est à la charge de l'acheteur.",
+        "no_listing_fee": "Aucun frais d'inscription initial.",
+        "no_hidden_costs": "Aucun frais de marketing cachés.",
+        "written_mandate": "Accord défini dans un mandat écrit."
+      }
+    },
+    "properties": {
+      "eyebrow": "Biens que nous représentons",
+      "title": "Découvrez des maisons au design inspirant.",
+      "subtitle": "Des biens sélectionnés où élégance, style et confort se réunissent.",
+      "available_title": "Actuellement disponibles",
+      "sold_title": "Vendus récemment",
+      "bedrooms": "Chambres",
+      "bathrooms": "Salles de bain",
+      "names": {
+        "riad_palm": "Riad Palm",
+        "villa_atlas": "Villa Atlas",
+        "medina_view": "Vue Medina",
+        "kasbah_house": "Maison Kasbah",
+        "ocean_retreat": "Retraite Océan",
+        "city_residence": "Résidence City"
+      },
+      "cities": {
+        "marrakech": "Marrakech",
+        "casablanca": "Casablanca",
+        "tangier": "Tanger",
+        "agadir": "Agadir"
+      },
+      "types": {
+        "apartment": "Appartement",
+        "villa": "Villa",
+        "house": "Maison"
+      },
+      "status_available": "Disponible",
+      "status_sold": "Vendu",
+      "status_under_negotiation": "En négociation",
+      "status_recently_closed": "Vendu récemment",
+      "prev": "Précédent",
+      "next": "Suivant"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Des réponses claires pour réduire vos inquiétudes.",
+      "items": {
+        "buyers_contact": {
+          "q": "Les acheteurs me contactent-ils directement ?",
+          "a": "Non. Toutes les demandes, appels et messages passent par nous. Nous pré-qualifions les acheteurs avant que vous soyez impliqué. Vous restez informé sans être dérangé."
+        },
+        "viewings": {
+          "q": "Qui gère les visites ?",
+          "a": "Nous. Nous coordonnons et assurons toutes les visites sur place. Vous n'avez pas besoin d'être présent — nous vous représentons et faisons un rapport après chaque visite."
+        },
+        "commission": {
+          "q": "Qui paie la commission ?",
+          "a": "La commission est à la charge de l'acheteur, pas de vous. Pas de frais d'inscription initial, pas de frais de marketing cachés. Tout est défini dans un mandat écrit avant de commencer."
+        },
+        "timeline": {
+          "q": "Combien de temps prend le processus ?",
+          "a": "En général 2 à 4 mois pour les biens bien positionnés. Nous vous donnons un calendrier réaliste lors de l'estimation initiale. Les conditions du marché et le prix influencent la rapidité."
+        },
+        "notaries": {
+          "q": "Travaillez-vous avec des notaires ?",
+          "a": "Oui. Nous coordonnons directement avec le notaire — préparation des documents, vérification et logistique de clôture. Nous nous assurons que tout est prêt pour votre signature."
+        },
+        "documents": {
+          "q": "Quels documents sont requis ?",
+          "a": "Nous vous fournirons une liste complète. En général : titre de propriété, certificats fiscaux et pièce d'identité. Nous gérons la vérification et la préparation notariale. Vous ne courez pas après les papiers seul."
+        },
+        "abroad": {
+          "q": "Puis-je vendre en vivant à l'étranger ?",
+          "a": "Oui. Nous sommes conçus pour les propriétaires à l'étranger. Nous gérons tout sur place. Vous n'avez qu'à signer chez le notaire — nous pouvons organiser une procuration si vous ne pouvez pas vous déplacer."
+        }
+      }
+    }
+  },
+  "RentPage": {
+    "hero": {
+      "eyebrow": "Gestion location courte durée",
+      "title": "Votre appartement. Listé partout. Entièrement géré.",
+      "subtitle": "Nous publions votre bien sur Airbnb, Booking.com et plus — puis gérons chaque voyageur du premier message au nettoyage final. Vous gagnez. Nous gérons.",
+      "key_line": "Opérations sans stress. Rapports transparents après chaque séjour.",
+      "cta_primary": "Lister mon bien",
+      "cta_secondary": "Nous contacter"
+    },
+    "whyUs": {
+      "eyebrow": "Pourquoi nous choisir",
+      "title": "Visibilité maximale. Zéro tracas. Transparence totale.",
+      "cards": {
+        "listing": {
+          "title": "Listé sur toutes les plateformes",
+          "description": "Airbnb, Booking.com, VRBO, Expedia — nous optimisons votre annonce pour maximiser les réservations."
+        },
+        "guest_management": {
+          "title": "Gestion des voyageurs",
+          "description": "Nous gérons toute la communication, check-in, check-out et coordination. Vous restez informé."
+        },
+        "support": {
+          "title": "Support voyageur 24/7",
+          "description": "Support optionnel en anglais, français et arabe pour les urgences voyageurs."
         },
         "transparency": {
-          "title": "Transparence totale",
-          "description": "Mises à jour régulières, rapports de retour des acheteurs et visibilité complète à chaque étape — de l'annonce à la signature."
+          "title": "Rapport photo à chaque séjour",
+          "description": "Après chaque turnover, vous recevez un rapport photo détaillé. Pas de surprises. Visibilité totale."
+        },
+        "cleaning_maintenance": {
+          "title": "Nettoyage & maintenance efficaces",
+          "description": "Notre équipe de nettoyage interne garantit que votre bien est toujours impeccable et prêt pour le prochain voyageur. Nous gérons les inspections et la maintenance entre les séjours."
+        },
+        "pricing_revenue": {
+          "title": "Tarification & optimisation des revenus",
+          "description": "Nous utilisons la tarification dynamique pour que votre bien soit toujours compétitif et maximise vos revenus, sans brader."
         }
+      }
+    },
+    "process": {
+      "eyebrow": "Comment ça marche",
+      "title": "De la mise en ligne aux revenus",
+      "steps": {
+        "list": {
+          "title": "Nous listons et publions",
+          "description": "Photographie professionnelle, texte optimisé et tarification dynamique. Votre bien est en ligne sur toutes les grandes plateformes."
+        },
+        "manage": {
+          "title": "Nous gérons chaque voyageur",
+          "description": "Toutes les demandes, check-ins, check-outs et support — gérés par nous. Vous recevez des mises à jour sans lever le petit doigt."
+        },
+        "report": {
+          "title": "Vous gagnez et suivez",
+          "description": "Rapports de revenus mensuels, détail des dépenses et accès tableau de bord en temps réel. Transparence totale."
+        }
+      }
+    },
+    "trustStrip": {
+      "ariaLabel": "Points clés",
+      "properties": {
+        "value": "150+",
+        "label": "Biens gérés"
+      },
+      "cities": {
+        "value": "4 villes",
+        "label": "Au Maroc"
+      },
+      "occupancy": {
+        "value": "92%",
+        "label": "Taux d'occupation moy."
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Support voyageur"
+      }
+    },
+    "platforms": {
+      "label": "Nous listons votre bien sur"
+    },
+    "properties": {
+      "eyebrow": "Nos biens",
+      "title": "Propriétés que nous gérons",
+      "subtitle": "Annonces actives et biens récemment gérés au Maroc.",
+      "available_title": "Disponibles maintenant",
+      "recently_managed_title": "Récemment gérés",
+      "status_available": "Disponible maintenant !",
+      "status_rented": "Loué",
+      "names": {
+        "riad_palm": "Riad Palm",
+        "villa_atlas": "Villa Atlas",
+        "medina_view": "Medina View",
+        "ocean_retreat": "Ocean Retreat",
+        "kasbah_house": "Kasbah House",
+        "city_residence": "City Residence"
+      },
+      "cities": {
+        "marrakech": "Marrakech",
+        "casablanca": "Casablanca",
+        "tangier": "Tanger",
+        "agadir": "Agadir"
+      },
+      "types": {
+        "apartment": "Appartement",
+        "villa": "Villa",
+        "house": "Maison"
+      },
+      "price_95": "95 € / nuit",
+      "price_110": "110 € / nuit",
+      "price_120": "120 € / nuit",
+      "price_130": "130 € / nuit",
+      "price_180": "180 € / nuit",
+      "price_220": "220 € / nuit",
+      "date_oct_2024": "Loué oct. 2024",
+      "date_nov_2024": "Loué nov. 2024",
+      "date_dec_2024": "Loué déc. 2024",
+      "prev": "Précédent",
+      "next": "Suivant"
+    },
+    "listForm": {
+      "title": "Lister votre bien",
+      "subtitle": "Sans engagement. Nous répondons sous 24 heures avec une proposition sur mesure.",
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "city": "Ville du bien",
+      "city_placeholder": "Sélectionner une ville",
+      "units": "Nombre de biens",
+      "message": "Parlez-nous de votre bien",
+      "message_placeholder": "Type de bien, superficie approximative, statut actuel (vide/meublé), questions…",
+      "submit": "Demander une proposition",
+      "success": "Merci. Nous vous recontacterons sous 24 heures avec une proposition sur mesure."
+    },
+    "services": {
+      "eyebrow": "Ce que nous livrons",
+      "title": "Services de base inclus",
+      "subtitle": "Nettoyage, inspections, clés, linge et réapprovisionnement — tout géré par notre équipe locale.",
+      "items": {
+        "cleaning": {
+          "title": "Nettoyage turnover",
+          "description": "Nettoyage professionnel après chaque séjour. Nettoyeurs absents ? Jamais. Nous vérifions chaque turnover."
+        },
+        "inspection": {
+          "title": "Inspection et rapport photo",
+          "description": "Checklist détaillée et rapport photo envoyés après chaque séjour. Vous voyez exactement l'état de votre bien."
+        },
+        "keys": {
+          "title": "Clés et check-in",
+          "description": "Gestion sécurisée des clés et coordination du check-in. Installation de serrure connectée optionnelle."
+        },
+        "linen": {
+          "title": "Linge et serviettes",
+          "description": "Linge frais et serviettes pour chaque voyageur. Coordonné et remplacé selon les besoins."
+        },
+        "restocking": {
+          "title": "Réapprovisionnement",
+          "description": "Produits de toilette, essentiels cuisine et fournitures réapprovisionnés entre les séjours."
+        }
+      }
+    },
+    "testimonials": {
+      "eyebrow": "Témoignages",
+      "title": "Expériences réelles de propriétaires",
+      "items": {
+        "quote_1": "AtlasStays a tout géré — de la mise en ligne à la communication avec les voyageurs et le nettoyage. Je vis à l'étranger et n'ai jamais eu à m'inquiéter. Je recommande vivement.",
+        "name_1": "Sarah M.",
+        "location_1": "Appartement à Marrakech",
+        "quote_2": "Professionnel, transparent et fiable. Les rapports photo après chaque séjour me rassurent. Mon bien est entre de bonnes mains.",
+        "name_2": "Pierre L.",
+        "location_2": "Villa à Agadir",
+        "quote_3": "Enfin une société de gestion qui tient ses promesses. Pas de frais cachés, communication claire, et mon taux d'occupation n'a jamais été aussi bon.",
+        "name_3": "Amira K.",
+        "location_3": "Riad à Marrakech"
+      }
+    },
+    "feeTransparency": {
+      "eyebrow": "Tarification & structure des frais",
+      "title": "Des frais justes et transparents.",
+      "points": {
+        "flat_percentage": "Nous facturons un pourcentage fixe sur les revenus mensuels de votre bien — nous ne réussissons que lorsque vous réussissez.",
+        "no_hidden_costs": "Tous les frais de nettoyage, maintenance et annonce sont inclus dans notre tarif. Aucune surprise.",
+        "guest_pays_fees": "Tous les frais liés aux réservations sont à la charge des voyageurs — vous ne payez rien d'avance."
       }
     },
     "faq": {
-      "eyebrow": "QUESTIONS FRÉQUENTES",
-      "title": "Tout ce que vous devez savoir.",
-      "subtitle": "Des réponses claires sur la vente de votre bien au Maroc avec AtlasStays.",
+      "eyebrow": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Réponses claires sur notre gestion location courte durée.",
       "items": {
-        "travel": {
-          "q": "Dois-je être au Maroc pour vendre mon bien ?",
-          "a": "Non. Nous gérons tout sur place — visites, négociations, préparation des documents et coordination notariale. Vous n'avez qu'à signer chez le notaire, et nous pouvons organiser une procuration si nécessaire."
+        "platforms": {
+          "q": "Sur quelles plateformes listez-vous ?",
+          "a": "Nous listons sur Airbnb, Booking.com, VRBO, Expedia, Hotels.com et plateformes locales. Votre bien bénéficie d'une visibilité maximale sur tous les canaux majeurs."
         },
-        "timeline": {
-          "q": "Combien de temps prend le processus de vente ?",
-          "a": "Les délais varient selon le bien et le marché. En moyenne, les biens bien positionnés se vendent en 2 à 4 mois. Nous fournissons un calendrier réaliste lors de l'estimation initiale."
+        "cleaning": {
+          "q": "Comment savoir si le nettoyeur est vraiment passé ?",
+          "a": "Chaque turnover inclut un rapport photo envoyé directement à vous. Nous vérifions chaque nettoyage et inspection. Les nettoyeurs absents ne sont pas une option — nous suivons et confirmons chaque visite."
         },
-        "fees": {
-          "q": "Quels sont vos frais ?",
-          "a": "Nous travaillons sur une base de commission transparente, convenue à l'avance. Pas de coûts cachés, pas de surprises. Vous saurez exactement à quoi vous attendre."
+        "support": {
+          "q": "Et si un voyageur a un problème à 3h du matin ?",
+          "a": "Nous proposons un support voyageur 24/7 optionnel en anglais, français et arabe. Les urgences sont gérées par notre équipe pour que vous n'ayez jamais d'appels à minuit."
+        },
+        "reporting": {
+          "q": "Comment suivre revenus et dépenses ?",
+          "a": "Vous recevez des rapports mensuels de revenus et d'occupation, plus un détail des dépenses avec reçus. Transparence totale. Accès tableau de bord en temps réel optionnel."
+        },
+        "abroad": {
+          "q": "Puis-je gérer mon bien depuis l'étranger ?",
+          "a": "Oui. Nous sommes conçus pour les propriétaires à l'étranger. Nous gérons tout sur place — listing, voyageurs, nettoyage, clés et maintenance. Vous restez informé via rapports et mises à jour."
         },
         "pricing": {
-          "q": "Comment déterminez-vous le prix de vente ?",
-          "a": "Nous réalisons une analyse de marché approfondie en comparant les ventes récentes, les annonces en cours et l'état du bien. Nous recommandons un prix compétitif qui maximise la valeur tout en assurant une vente rapide."
-        },
-        "documents": {
-          "q": "Quels documents dois-je fournir ?",
-          "a": "Nous vous fournirons une liste complète. En général, vous avez besoin du titre de propriété, des certificats fiscaux et des documents d'identité. Nous nous occupons de la vérification et de la préparation notariale."
-        },
-        "updates": {
-          "q": "Comment saurai-je ce qu'il se passe avec mon bien ?",
-          "a": "Vous recevrez des mises à jour régulières par e-mail ou WhatsApp — incluant les retours des visites, les offres reçues et les notifications d'étapes clés. Transparence totale à chaque étape."
+          "q": "Comment fonctionne la tarification ?",
+          "a": "Nous proposons des forfaits flexibles : Starter (nettoyage + inspection + rapport photo), Care (ajoute linge et réapprovisionnement), et Full Management (pourcentage sur revenus). Voir notre page tarifs."
         }
       }
+    },
+    "cta": {
+      "title": "Listez votre bien avec gestion complète.",
+      "subtitle": "Nous gérons tout, du listing au support voyageur. Vous gagnez. Nous gérons.",
+      "cta_primary": "Lister mon bien",
+      "cta_secondary": "Parler sur WhatsApp"
     }
   }
 }
