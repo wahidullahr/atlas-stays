@@ -1,23 +1,32 @@
-import React from 'react';
-import { useTranslations } from 'next-intl';
-import { Container } from '@/components/layout/Container';
-import { Section } from '@/components/layout/Section';
+import type { Metadata } from 'next';
+import { Navbar } from '@/components/nav/Navbar';
+import { ContactHero } from '@/components/contact/ContactHero';
 import { ContactForm } from '@/components/forms/ContactForm';
+import { buildMetadata } from '@/lib/metadata';
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return buildMetadata({
+    locale,
+    path: '/contact',
+    title: 'Contact',
+    description:
+      'Get in touch with AtlasStays. Sell, rent, or list your property in Morocco. We respond within 24 hours.',
+  });
+}
 
 export default function ContactPage() {
-  const t = useTranslations('Nav');
-
   return (
     <>
-      <Section className="pt-16 framer:pt-24 pb-12 framer:pb-16 bg-surface/30">
-        <Container className="text-center max-w-[800px] mx-auto">
-          <h1 className="h1 mb-6">{t('contact')}</h1>
-          <p className="body-muted mb-8 max-w-[600px] mx-auto">
-            Ready to get started? Send us a message or chat on WhatsApp.
-          </p>
-        </Container>
-      </Section>
-      <ContactForm />
+      <Navbar />
+      <main className="-mt-[88px]">
+        <ContactHero />
+        <ContactForm />
+      </main>
     </>
   );
 }

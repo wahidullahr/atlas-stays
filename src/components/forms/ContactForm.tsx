@@ -5,7 +5,7 @@ import { useFormStatus } from 'react-dom';
 import { useTranslations, useLocale } from 'next-intl';
 import { submitContact } from '@/actions/contact';
 import { Container } from '../layout/Container';
-import { Loader2, Send, MessageCircle, Shield, Clock, CheckCircle } from 'lucide-react';
+import { Loader2, Send, MessageCircle, Shield, Clock, CheckCircle, Mail } from 'lucide-react';
 import { useWhatsAppHref } from '@/hooks/useWhatsAppHref';
 
 const initialState = {
@@ -46,6 +46,7 @@ type ContactFormProps = {
 export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
   const t = useTranslations('Contact.form');
   const tContact = useTranslations('Contact');
+  const tInfo = useTranslations('ContactPage.info');
   const tSell = useTranslations('SellPage.cta');
   const locale = useLocale() as 'en' | 'fr' | 'ar';
 
@@ -55,10 +56,7 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
   const isSell = variant === 'sell';
 
   return (
-    <section id="contact" className="relative bg-[#1a1a1a] overflow-hidden py-16 framer:py-28">
-      {/* Decorative accent line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-accent" />
-
+    <section id="contact" className="relative bg-surface overflow-hidden py-16 framer:py-28">
       <Container className="max-w-[1360px]">
         <div className="grid grid-cols-1 framer:grid-cols-[2fr_3fr] gap-10 framer:gap-16 items-center">
 
@@ -69,10 +67,10 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
                 {tContact('eyebrow')}
               </p>
             )}
-            <h2 className="text-[1.6rem] framer:text-[2.75rem] font-bold text-white leading-[1.1] tracking-tight mb-4 framer:mb-6">
+            <h2 className="text-[1.6rem] framer:text-[2.75rem] font-bold text-foreground leading-[1.1] tracking-tight mb-4 framer:mb-6">
               {isSell ? tSell('title') : tContact('title')}
             </h2>
-            <p className="text-[14px] framer:text-[17px] text-white/60 leading-relaxed mb-8 framer:mb-12 max-w-md">
+            <p className="text-[14px] framer:text-[17px] text-muted leading-relaxed mb-8 framer:mb-12 max-w-md">
               {isSell ? tSell('subtitle') : tContact('subtitle')}
             </p>
 
@@ -89,7 +87,7 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 framer:px-8 framer:py-4 bg-white/10 border border-white/30 text-white rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-white/20 transition-colors w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 framer:px-8 framer:py-4 bg-foreground/5 border border-border text-foreground rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-foreground/10 transition-colors w-full sm:w-auto"
                 >
                   <MessageCircle className="w-4 h-4" />
                   {tSell('cta_secondary')}
@@ -104,7 +102,7 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
                       <div className="w-10 h-10 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
                         <Icon className="w-5 h-5 text-accent" />
                       </div>
-                      <span className="text-[13px] framer:text-[15px] text-white/80 font-medium">
+                      <span className="text-[13px] framer:text-[15px] text-foreground/80 font-medium">
                         {tContact(`trust.${key}`)}
                       </span>
                     </div>
@@ -116,16 +114,28 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-colors cursor-pointer"
+                  className="flex items-center gap-3 p-4 rounded-xl bg-background border border-border hover:bg-surface transition-colors cursor-pointer mb-6"
                 >
                   <MessageCircle className="w-5 h-5 text-accent shrink-0" />
                   <div>
-                    <p className="text-[13px] framer:text-[14px] text-white/90 font-semibold">
+                    <p className="text-[13px] framer:text-[14px] text-foreground font-semibold">
                       {tContact('whatsapp_label')}
                     </p>
-                    <p className="text-[12px] framer:text-[13px] text-white/50">
+                    <p className="text-[12px] framer:text-[13px] text-muted">
                       {tContact('whatsapp_sub')}
                     </p>
+                  </div>
+                </a>
+
+                {/* Email */}
+                <a
+                  href="mailto:hello@atlasstays.com"
+                  className="flex items-center gap-3 p-4 rounded-xl bg-background border border-border text-foreground hover:text-accent transition-colors"
+                >
+                  <Mail className="w-5 h-5 text-accent shrink-0" />
+                  <div>
+                    <p className="text-[12px] text-muted">{tInfo('email.label')}</p>
+                    <p className="text-[13px] font-medium tabular-nums">hello@atlasstays.com</p>
                   </div>
                 </a>
               </>
@@ -216,10 +226,13 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
                   <label htmlFor="message" className="block text-[13px] font-medium text-foreground mb-1.5">
                     {t('message')}
                   </label>
-                  <textarea id="message" name="message" rows={3} required className={`${inputClass} resize-none`} />
+                  <textarea id="message" name="message" rows={5} required className={`${inputClass} resize-none`} />
                   {state.errors?.message && (
                     <p className="text-red-500 text-[12px] mt-1">{state.errors.message[0]}</p>
                   )}
+                  <p className="text-[12px] text-muted mt-2">
+                    {tInfo('hours.label')}: {tInfo('hours.value')}
+                  </p>
                 </div>
 
                 <SubmitButton />
