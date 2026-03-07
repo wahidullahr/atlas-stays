@@ -16,17 +16,17 @@ export const RentPlatforms = () => {
   const t = useTranslations('RentPage.platforms');
 
   return (
-    <section className="bg-surface py-14 framer:py-20 overflow-hidden">
+    <section className="bg-[#F8FAFC] py-14 framer:py-20 overflow-hidden">
       <Container className="max-w-[900px]">
-        <p className="text-center text-[13px] framer:text-[14px] font-medium text-foreground mb-6 framer:mb-8">
+        <p className="text-center text-[15px] framer:text-[17px] font-bold text-foreground mb-6 framer:mb-10">
           {t('label')}
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-3 framer:gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-3 framer:gap-5">
           {PLATFORMS.map(({ name, bg, text }) => (
             <span
               key={name}
               dir="ltr"
-              className="inline-flex items-center px-4 py-2 framer:px-5 framer:py-2.5 rounded-full text-[12px] framer:text-[14px] font-semibold shadow-sm"
+              className="inline-flex items-center px-5 py-3 framer:px-6 framer:py-3.5 rounded-xl text-[14px] framer:text-[16px] font-bold shadow-[0_2px_12px_rgba(0,0,0,0.12)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 transition-all duration-200"
               style={{ backgroundColor: bg, color: text }}
             >
               {name}

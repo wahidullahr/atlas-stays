@@ -19,7 +19,7 @@ export const RentHero = () => {
   const whatsappHref = useWhatsAppHref();
 
   return (
-    <section className="relative min-h-[85svh] framer:min-h-[90vh] flex flex-col overflow-hidden pt-[88px]">
+    <section className="relative min-h-[55svh] framer:min-h-[60vh] flex flex-col overflow-hidden pt-[88px]">
       <div className="absolute inset-0">
         <Image
           src={BG_IMAGE}
@@ -36,8 +36,8 @@ export const RentHero = () => {
         />
       </div>
 
-      <div className="relative z-10 flex-1 flex items-center">
-        <Container>
+      <div className="relative z-10 flex-1 flex items-center min-h-0 overflow-y-auto">
+        <Container className="max-w-[1360px]">
           <div className="max-w-[640px] py-10 framer:py-20">
           <p className="text-[11px] framer:text-[14px] font-semibold tracking-[0.18em] uppercase text-white mb-4 framer:mb-6">
             {t('eyebrow')}
