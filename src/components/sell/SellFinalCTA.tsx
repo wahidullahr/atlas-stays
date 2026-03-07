@@ -16,7 +16,7 @@ export const SellFinalCTA = () => {
       <div className="absolute top-0 left-0 right-0 h-1 bg-accent" />
       <Container className="max-w-[1360px]">
         <div className="max-w-[640px] mx-auto text-center">
-          <h2 className="text-[1.5rem] framer:text-[2rem] font-bold text-white leading-[1.15] tracking-tight mb-3 framer:mb-4">
+          <h2 className="text-[2rem] framer:text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-white leading-[1.1] tracking-tight mb-3 framer:mb-4">
             {t('title')}
           </h2>
           <p className="text-[14px] framer:text-[16px] text-white/60 leading-relaxed mb-6 framer:mb-8">

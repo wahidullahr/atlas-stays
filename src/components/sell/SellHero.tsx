@@ -11,7 +11,7 @@ import { useWhatsAppHref } from '@/hooks/useWhatsAppHref';
 const BG_IMAGE =
   'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1920&auto=format&fit=crop';
 
-const STAT_KEYS = ['owners', 'cities', 'occupancy', 'guarantee'] as const;
+const STAT_KEYS = ['owners', 'cities', 'guarantee'] as const;
 
 export const SellHero = () => {
   const t = useTranslations('SellPage.hero');
@@ -19,7 +19,7 @@ export const SellHero = () => {
   const whatsappHref = useWhatsAppHref();
 
   return (
-    <section className="relative min-h-[85svh] framer:min-h-[90vh] flex flex-col overflow-hidden pt-[88px]">
+    <section className="relative min-h-[55svh] framer:min-h-[60vh] flex flex-col overflow-hidden pt-[88px]">
       <div className="absolute inset-0">
         <Image
           src={BG_IMAGE}
@@ -37,7 +37,7 @@ export const SellHero = () => {
       </div>
 
       <div className="relative z-10 flex-1 flex items-center">
-        <Container>
+        <Container className="max-w-[1360px]">
           <div className="max-w-[640px] py-10 framer:py-20">
           <p className="text-[11px] framer:text-[14px] font-semibold tracking-[0.18em] uppercase text-white mb-4 framer:mb-6">
             {t('eyebrow')}
@@ -83,7 +83,7 @@ export const SellHero = () => {
         aria-label={tStats('ariaLabel')}
       >
         <div className="bg-white framer:rounded-ss-2xl px-5 py-5 framer:px-10 framer:py-8 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] framer:shadow-[0_8px_30px_rgba(0,0,0,0.12)] w-full">
-          <div className="grid grid-cols-4 gap-4 framer:gap-8">
+          <div className="grid grid-cols-3 gap-4 framer:gap-8">
             {STAT_KEYS.map((key) => (
               <div key={key} className="flex flex-col items-center text-center">
                 <span className="text-[18px] framer:text-[28px] font-extrabold text-foreground block tracking-tight">
