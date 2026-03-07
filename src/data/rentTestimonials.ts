@@ -29,4 +29,11 @@ export const RENT_TESTIMONIALS: RentTestimonial[] = [
     locationKey: 'location_3',
     image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=400',
   },
+  {
+    id: 't4',
+    quoteKey: 'quote_4',
+    nameKey: 'name_4',
+    locationKey: 'location_4',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=400',
+  },
 ];

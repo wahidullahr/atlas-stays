@@ -3,7 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { ArrowRight, MessageCircle, Star, Globe, ShieldCheck, TrendingUp } from 'lucide-react';
+import { ArrowRight, MessageCircle, Star, Globe, ShieldCheck } from 'lucide-react';
 import { Container } from '../layout/Container';
 import { useWhatsAppHref } from '@/hooks/useWhatsAppHref';
 
@@ -20,7 +20,6 @@ export const Hero = () => {
   const floatingCardItems = [
     { key: 'owners', icon: Star, value: t('stat_owners'), label: t('stat_owners_label') },
     { key: 'countries', icon: Globe, value: t('stat_countries'), label: t('stat_countries_label') },
-    { key: 'occupancy', icon: TrendingUp, value: t('stat_occupancy'), label: t('stat_occupancy_label') },
     { key: 'guarantee', icon: ShieldCheck, value: t('stat_guarantee'), label: t('stat_guarantee_label') },
   ] as const;
 
@@ -50,7 +49,7 @@ export const Hero = () => {
 
       {/* Main content — grows to fill space, pushes panel to bottom */}
       <div className="relative z-10 flex-1 flex items-center">
-        <Container>
+        <Container className="max-w-[1360px]">
           <div className="max-w-[600px] py-8 framer:py-12">
             <p className="text-[12px] framer:text-[14px] font-semibold tracking-[0.14em] uppercase text-white/90 mb-5 framer:mb-10">
               {t('eyebrow')}
@@ -98,7 +97,7 @@ export const Hero = () => {
         aria-label={t('panel_aria')}
       >
         <div className="bg-white framer:rounded-ss-2xl px-5 py-5 framer:px-10 framer:py-8 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] framer:shadow-[0_8px_30px_rgba(0,0,0,0.12)] w-full">
-          <div className="grid grid-cols-4 gap-4 framer:gap-8">
+          <div className="grid grid-cols-3 gap-4 framer:gap-8">
             {floatingCardItems.map(({ key, value, label }) => (
               <div key={key} className="flex flex-col items-center text-center">
                 <span className="text-[18px] framer:text-[28px] font-extrabold text-foreground block tracking-tight">{value}</span>

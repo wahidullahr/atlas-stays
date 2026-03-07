@@ -7,6 +7,7 @@ export type PropertyListing = {
   cityKey: string;
   typeKey: string;
   status: ListingStatus;
+  priceKey: string; // e.g. "price_sale_250" for 250k
   bedrooms: number;
   bathrooms: number;
   area: number; // m²
@@ -21,6 +22,7 @@ export const AVAILABLE_LISTINGS: PropertyListing[] = [
     cityKey: 'marrakech',
     typeKey: 'apartment',
     status: 'available',
+    priceKey: 'price_sale_280',
     bedrooms: 4,
     bathrooms: 3,
     area: 120,
@@ -32,6 +34,7 @@ export const AVAILABLE_LISTINGS: PropertyListing[] = [
     cityKey: 'casablanca',
     typeKey: 'villa',
     status: 'available',
+    priceKey: 'price_sale_450',
     bedrooms: 5,
     bathrooms: 4,
     area: 180,
@@ -43,6 +46,7 @@ export const AVAILABLE_LISTINGS: PropertyListing[] = [
     cityKey: 'tangier',
     typeKey: 'apartment',
     status: 'available',
+    priceKey: 'price_sale_195',
     bedrooms: 3,
     bathrooms: 2,
     area: 95,
@@ -58,6 +62,7 @@ export const SOLD_LISTINGS: PropertyListing[] = [
     cityKey: 'marrakech',
     typeKey: 'apartment',
     status: 'sold',
+    priceKey: 'price_sale_320',
     bedrooms: 4,
     bathrooms: 3,
     area: 130,
@@ -69,6 +74,7 @@ export const SOLD_LISTINGS: PropertyListing[] = [
     cityKey: 'agadir',
     typeKey: 'villa',
     status: 'sold',
+    priceKey: 'price_sale_520',
     bedrooms: 5,
     bathrooms: 4,
     area: 200,
@@ -80,6 +86,7 @@ export const SOLD_LISTINGS: PropertyListing[] = [
     cityKey: 'casablanca',
     typeKey: 'apartment',
     status: 'sold',
+    priceKey: 'price_sale_245',
     bedrooms: 3,
     bathrooms: 2,
     area: 110,
@@ -98,6 +105,7 @@ export const ALL_LISTINGS: PropertyListing[] = [
     cityKey: 'marrakech',
     typeKey: 'villa',
     status: 'available',
+    priceKey: 'price_sale_380',
     bedrooms: 4,
     bathrooms: 3,
     area: 140,
@@ -109,6 +117,7 @@ export const ALL_LISTINGS: PropertyListing[] = [
     cityKey: 'agadir',
     typeKey: 'villa',
     status: 'sold',
+    priceKey: 'price_sale_480',
     bedrooms: 5,
     bathrooms: 4,
     area: 190,
@@ -120,6 +129,7 @@ export const ALL_LISTINGS: PropertyListing[] = [
     cityKey: 'tangier',
     typeKey: 'apartment',
     status: 'available',
+    priceKey: 'price_sale_165',
     bedrooms: 3,
     bathrooms: 2,
     area: 88,
@@ -131,6 +141,7 @@ export const ALL_LISTINGS: PropertyListing[] = [
     cityKey: 'casablanca',
     typeKey: 'apartment',
     status: 'sold',
+    priceKey: 'price_sale_295',
     bedrooms: 4,
     bathrooms: 3,
     area: 125,
@@ -142,6 +153,7 @@ export const ALL_LISTINGS: PropertyListing[] = [
     cityKey: 'marrakech',
     typeKey: 'villa',
     status: 'available',
+    priceKey: 'price_sale_620',
     bedrooms: 6,
     bathrooms: 5,
     area: 220,
@@ -153,6 +165,7 @@ export const ALL_LISTINGS: PropertyListing[] = [
     cityKey: 'tangier',
     typeKey: 'apartment',
     status: 'sold',
+    priceKey: 'price_sale_135',
     bedrooms: 2,
     bathrooms: 2,
     area: 75,

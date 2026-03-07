@@ -14,7 +14,7 @@
     "nav_sell": "Vendre votre bien",
     "nav_rent": "Location courte durée",
     "nav_about": "À propos",
-    "nav_proof": "Nos preuves",
+    "nav_properties": "Propriétés",
     "nav_contact": "Nous contacter",
     "whatsapp": "WhatsApp",
     "menu": "Menu",
@@ -29,13 +29,11 @@
     "cta_secondary": "Discuter sur WhatsApp",
     "trust_line": "Des propriétaires nous font confiance dans 4 villes au Maroc",
     "stat_owners": "150+",
-    "stat_owners_label": "Propriétaires satisfaits",
+    "stat_owners_label": "Propriétaires qui dorment sur leurs deux oreilles",
     "stat_countries": "6",
-    "stat_countries_label": "Villes dans le monde",
-    "stat_occupancy": "92%",
-    "stat_occupancy_label": "Taux d'occupation moy.",
+    "stat_countries_label": "Villes au Maroc",
     "stat_guarantee": "100%",
-    "stat_guarantee_label": "Reporting transparent",
+    "stat_guarantee_label": "Transparence totale. Jamais de surprises.",
     "panel_aria": "Chiffres clés",
     "panel_valuation_label": "Devis gratuit"
   },
@@ -82,6 +80,8 @@
     "eyebrow": "NOTRE MODÈLE",
     "title": "3 piliers",
     "description": "Représentation complète : vente, location longue et courte durée.",
+    "cta_sell": "Vendre votre bien",
+    "cta_rent": "Louer votre bien",
     "cta": "En savoir plus",
     "learnMore": "En savoir plus",
     "pillars": {
@@ -161,8 +161,90 @@
         "items": ["Ménage professionnel après chaque séjour", "Rapports mensuels revenus & occupation", "Détail des dépenses & justificatifs", "Accès tableau de bord en temps réel"]
       }
     },
-    "cta": "Lister mon bien",
+    "cta": "Listez votre appartement avec nous",
     "ctaSecondary": "Voir les tarifs"
+  },
+  "Properties": {
+    "eyebrow": "Propriétés",
+    "title": "Maisons à louer et à vendre au Maroc.",
+    "subtitle": "Nous gérons les visites, les contrats et les transactions jusqu'au notaire.",
+    "key_line": "Parcourez les annonces. Louez ou achetez — nous gérons tout.",
+    "tab_rent": "Location",
+    "tab_sale": "À vendre",
+    "count_rent": "Location",
+    "count_sale": "À vendre",
+    "trustStrip": {
+      "ariaLabel": "Points clés",
+      "rent": { "value": "24", "label": "À louer" },
+      "sale": { "value": "12", "label": "À vendre" },
+      "cities": { "value": "4", "label": "Villes" },
+      "owners": { "value": "150+", "label": "Propriétaires satisfaits" }
+    },
+    "filters": {
+      "filters_button": "Filtres",
+      "filters_panel": "Filtres",
+      "close": "Fermer",
+      "apply": "Appliquer",
+      "reset": "Réinitialiser",
+      "city": "Ville",
+      "city_all": "Toutes les villes",
+      "type": "Type",
+      "type_all": "Tous les types",
+      "bedrooms": "Chambres",
+      "bedrooms_all": "Toutes",
+      "price_min": "Min",
+      "price_max": "Max",
+      "search": "Recherche",
+      "search_placeholder": "Titre ou lieu…",
+      "furnished": "Meublé",
+      "available_from": "Disponible à partir de",
+      "under_offer": "En cours de vente",
+      "cities": {
+        "marrakech": "Marrakech",
+        "casablanca": "Casablanca",
+        "tangier": "Tanger",
+        "agadir": "Agadir"
+      },
+      "types": {
+        "apartment": "Appartement",
+        "villa": "Villa",
+        "studio": "Studio"
+      }
+    },
+    "pagination": {
+      "ariaLabel": "Pagination",
+      "prev": "Page précédente",
+      "next": "Page suivante",
+      "browseAllForSale": "Voir tous les biens à vendre"
+    },
+    "browseIntro": {
+      "headline": "Trouvez votre prochain logement. Parcourez des biens vérifiés au Maroc.",
+      "tab_rent": "Location",
+      "tab_sale": "À vendre",
+      "count_rent": "Location",
+      "count_sale": "À vendre"
+    },
+    "ownerCta": {
+      "headline": "Vous possédez un bien au Maroc et souhaitez le louer ou le vendre ?",
+      "valuation": "Demander une estimation",
+      "whatsapp": "Discuter sur WhatsApp"
+    },
+    "howWeHelp": {
+      "ariaLabel": "Comment nous aidons",
+      "viewings": "Nous organisons les visites",
+      "qualify": "Nous qualifions locataires et acheteurs",
+      "contracts": "Nous gérons contrats et coordination notariale"
+    },
+    "card": {
+      "status_rent": "Location",
+      "status_sale": "Vente",
+      "status_sold": "Vendu",
+      "status_rented": "Loué",
+      "status_under_offer": "En cours",
+      "view_details": "Voir les détails",
+      "whatsapp": "WhatsApp pour ce bien",
+      "whatsapp_prefill": "Bonjour, je suis intéressé(e) par {name}."
+    }
   },
   "Areas": {
     "eyebrow": "NOS IMPLANTATIONS",
@@ -312,6 +394,7 @@
   },
   "Footer": {
     "description": "Gestion sereine de la location courte durée au Maroc.",
+    "developedBy": "Développé par",
     "quickLinks": "Liens rapides",
     "support": "Support",
     "contactUs": "Nous contacter",
@@ -352,6 +435,33 @@
       "error": "Une erreur est survenue. Veuillez réessayer."
     }
   },
+  "ContactPage": {
+    "hero": {
+      "eyebrow": "CONTACTEZ-NOUS",
+      "title": "Nous sommes là pour vous aider.",
+      "subtitle": "Que vous souhaitiez vendre, louer ou publier votre bien au Maroc — contactez-nous à tout moment. Nous répondons sous 24 heures.",
+      "key_line": "Un seul interlocuteur. Transparence totale. Pas de surprises.",
+      "cta_primary": "Envoyer un message",
+      "cta_secondary": "Discuter sur WhatsApp",
+      "cta_phone": "Nous appeler"
+    },
+    "trustStrip": {
+      "ariaLabel": "Points clés",
+      "owners": { "value": "150+", "label": "Propriétaires satisfaits" },
+      "cities": { "value": "6", "label": "Villes dans le monde" },
+      "response": { "value": "24h", "label": "Délai de réponse" },
+      "guarantee": { "value": "100%", "label": "Rapports transparents" }
+    },
+    "info": {
+      "eyebrow": "OPTIONS DE CONTACT",
+      "title": "Rejoignez-nous comme vous voulez",
+      "subtitle": "Choisissez le canal qui vous convient. Nous sommes disponibles dans tous les fuseaux horaires.",
+      "phone": { "label": "Téléphone", "value": "+47 413 51 547" },
+      "whatsapp": { "label": "WhatsApp", "value": "Réponse immédiate" },
+      "email": { "label": "E-mail", "value": "hello@atlasstays.com" },
+      "hours": { "label": "Délai de réponse", "value": "Sous 24 heures, lun.–ven." }
+    }
+  },
   "Partners": {
     "eyebrow": "PARTENAIRES DE CONFIANCE",
     "description": "Nous collaborons avec les plus grandes plateformes de réservation et de voyage pour maximiser la visibilité et le taux d'occupation de votre bien."
@@ -381,19 +491,15 @@
       "ariaLabel": "Points clés",
       "owners": {
         "value": "150+",
-        "label": "Propriétaires satisfaits"
+        "label": "Vendeurs représentés"
       },
       "cities": {
         "value": "6",
-        "label": "Villes dans le monde"
-      },
-      "occupancy": {
-        "value": "92%",
-        "label": "Taux d'occupation moy."
+        "label": "Villes au Maroc"
       },
       "guarantee": {
         "value": "100%",
-        "label": "Rapports transparents"
+        "label": "Honoraires à la charge de l'acheteur"
       }
     },
     "hero": {
@@ -406,7 +512,9 @@
     },
     "whyUs": {
       "eyebrow": "Pourquoi vendre avec nous",
-      "title": "Acheteurs sérieux. Processus structuré. Responsabilité claire.",
+      "title": "Acheteurs sérieux, processus structuré et responsabilité claire—de l'annonce à la signature.",
+      "subtitle": "Nous gérons les visites, les contrats et les transactions jusqu'au notaire.",
+      "step_of": "Étape {n} sur 4",
       "cards": {
         "presentation": {
           "title": "Présentation professionnelle",
@@ -429,9 +537,13 @@
     "whatWeDeliver": {
       "eyebrow": "Ce que nous offrons",
       "title": "Ce que nous gérons pour vous",
+      "clickHint": "Cliquez pour explorer",
+      "cta_primary": "Demander une estimation",
+      "cta_secondary": "Nous contacter",
       "groups": {
         "property_preparation": {
           "title": "Préparation du bien",
+          "description": "Nous préparons votre bien pour le marché—évaluation, stratégie et vérification juridique pour un lancement en douceur.",
           "items": {
             "market_valuation": "Évaluation du marché",
             "strategy_consultation": "Consultation stratégique",
@@ -441,6 +553,7 @@
         },
         "presentation_marketing": {
           "title": "Présentation & Marketing",
+          "description": "Visuels professionnels et annonces qui attirent des acheteurs qualifiés. Visites 3D, photographie et exposition internationale.",
           "items": {
             "professional_photography": "Photographie professionnelle",
             "visualization_3d": "Visualisation 3D",
@@ -451,6 +564,7 @@
         },
         "representation_negotiation": {
           "title": "Représentation & Négociation",
+          "description": "Nous gérons toutes les demandes, coordonnons les visites et négocions en votre nom pour obtenir le meilleur résultat.",
           "items": {
             "calls_handled": "Tous les appels gérés par nous",
             "viewings_coordinated": "Visites coordonnées",
@@ -461,6 +575,7 @@
         },
         "notary_closing": {
           "title": "Notaire & Clôture",
+          "description": "Nous coordonnons avec le notaire et gérons toute la documentation jusqu'à la signature finale.",
           "items": {
             "contract_preparation": "Aide à la préparation du contrat",
             "notary_coordination": "Coordination avec le notaire",
@@ -473,6 +588,9 @@
     "salesProcess": {
       "eyebrow": "Le processus de vente",
       "title": "Comment ça marche",
+      "subtitle": "Un seul interlocuteur. Communication claire. Accompagnement complet de l'annonce à la signature.",
+      "intro": "De l'évaluation à la signature chez le notaire, nous vous accompagnons à chaque étape. Photographie professionnelle, visites qualifiées et soutien à la négociation—pour vendre en toute sérénité.",
+      "cta": "Demander une estimation",
       "steps": {
         "valuation": {
           "title": "Évaluation & Stratégie",
@@ -504,8 +622,8 @@
     },
     "properties": {
       "eyebrow": "Biens que nous représentons",
-      "title": "Découvrez des maisons au design inspirant.",
-      "subtitle": "Des biens sélectionnés où élégance, style et confort se réunissent.",
+      "title": "Nous pouvons vendre votre appartement ou villa.",
+      "subtitle": "Voici des biens que nous avons vendus pour des propriétaires comme vous. Le vôtre pourrait être le prochain — représentation complète de l'annonce au notaire.",
       "available_title": "Actuellement disponibles",
       "sold_title": "Vendus récemment",
       "bedrooms": "Chambres",
@@ -533,8 +651,22 @@
       "status_sold": "Vendu",
       "status_under_negotiation": "En négociation",
       "status_recently_closed": "Vendu récemment",
+      "price_sale_135": "135 000 €",
+      "price_sale_165": "165 000 €",
+      "price_sale_195": "195 000 €",
+      "price_sale_245": "245 000 €",
+      "price_sale_250": "250 000 €",
+      "price_sale_280": "280 000 €",
+      "price_sale_295": "295 000 €",
+      "price_sale_320": "320 000 €",
+      "price_sale_380": "380 000 €",
+      "price_sale_450": "450 000 €",
+      "price_sale_480": "480 000 €",
+      "price_sale_520": "520 000 €",
+      "price_sale_620": "620 000 €",
       "prev": "Précédent",
-      "next": "Suivant"
+      "next": "Suivant",
+      "no_results": "Aucun bien ne correspond à vos critères. Essayez d'ajuster votre recherche."
     },
     "faq": {
       "eyebrow": "FAQ",
@@ -583,7 +715,7 @@
     },
     "whyUs": {
       "eyebrow": "Pourquoi nous choisir",
-      "title": "Visibilité maximale. Zéro tracas. Transparence totale.",
+      "title": "Votre bien génère des revenus pendant que vous gardez le contrôle",
       "cards": {
         "listing": {
           "title": "Listé sur toutes les plateformes",
@@ -614,6 +746,8 @@
     "process": {
       "eyebrow": "Comment ça marche",
       "title": "De la mise en ligne aux revenus",
+      "subtitle": "Un processus simple et entièrement géré qui transforme votre bien en revenus réguliers.",
+      "cta": "Commencer",
       "steps": {
         "list": {
           "title": "Nous listons et publions",
@@ -678,17 +812,18 @@
         "villa": "Villa",
         "house": "Maison"
       },
-      "price_95": "95 € / nuit",
-      "price_110": "110 € / nuit",
-      "price_120": "120 € / nuit",
-      "price_130": "130 € / nuit",
-      "price_180": "180 € / nuit",
-      "price_220": "220 € / nuit",
+      "price_95": "2 850 € / mois",
+      "price_110": "3 300 € / mois",
+      "price_120": "3 600 € / mois",
+      "price_130": "3 900 € / mois",
+      "price_180": "5 400 € / mois",
+      "price_220": "6 600 € / mois",
       "date_oct_2024": "Loué oct. 2024",
       "date_nov_2024": "Loué nov. 2024",
       "date_dec_2024": "Loué déc. 2024",
       "prev": "Précédent",
-      "next": "Suivant"
+      "next": "Suivant",
+      "no_results": "Aucun bien ne correspond à vos critères. Essayez d'ajuster votre recherche."
     },
     "listForm": {
       "title": "Lister votre bien",
@@ -706,24 +841,24 @@
     },
     "services": {
       "eyebrow": "Ce que nous livrons",
-      "title": "Services de base inclus",
-      "subtitle": "Nettoyage, inspections, clés, linge et réapprovisionnement — tout géré par notre équipe locale.",
+      "title": "Opérations complètes",
+      "subtitle": "Notre équipe locale gère le nettoyage, les inspections, les clés, le linge et le réapprovisionnement — sans surprise.",
       "items": {
         "cleaning": {
-          "title": "Nettoyage turnover",
-          "description": "Nettoyage professionnel après chaque séjour. Nettoyeurs absents ? Jamais. Nous vérifions chaque turnover."
+          "title": "Nettoyage entre séjours",
+          "description": "Nettoyage professionnel après chaque séjour. Chaque turnover vérifié."
         },
         "inspection": {
           "title": "Inspection et rapport photo",
-          "description": "Checklist détaillée et rapport photo envoyés après chaque séjour. Vous voyez exactement l'état de votre bien."
+          "description": "Checklist détaillée et rapport photo après chaque séjour. Visibilité complète sur l'état de votre bien."
         },
         "keys": {
           "title": "Clés et check-in",
-          "description": "Gestion sécurisée des clés et coordination du check-in. Installation de serrure connectée optionnelle."
+          "description": "Gestion sécurisée des clés et coordination du check-in. Serrure connectée disponible."
         },
         "linen": {
           "title": "Linge et serviettes",
-          "description": "Linge frais et serviettes pour chaque voyageur. Coordonné et remplacé selon les besoins."
+          "description": "Linge frais et serviettes pour chaque séjour. Géré et remplacé selon planning."
         },
         "restocking": {
           "title": "Réapprovisionnement",
@@ -743,7 +878,10 @@
         "location_2": "Villa à Agadir",
         "quote_3": "Enfin une société de gestion qui tient ses promesses. Pas de frais cachés, communication claire, et mon taux d'occupation n'a jamais été aussi bon.",
         "name_3": "Amira K.",
-        "location_3": "Riad à Marrakech"
+        "location_3": "Riad à Marrakech",
+        "quote_4": "Dès le premier jour, tout a été géré professionnellement. Je reçois des rapports mensuels et n'ai jamais à relancer. Meilleure décision pour mon bien.",
+        "name_4": "Thomas B.",
+        "location_4": "Appartement à Casablanca"
       }
     },
     "feeTransparency": {

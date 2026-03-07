@@ -14,8 +14,8 @@
     "nav_sell": "Sell Your Property",
     "nav_rent": "Short-Term Rental",
     "nav_about": "About Us",
-    "nav_proof": "Our Proof",
-    "nav_contact": "Get in Touch",
+    "nav_properties": "Properties",
+    "nav_contact": "Contact",
     "whatsapp": "WhatsApp",
     "menu": "Menu",
     "mobileMenu": "Mobile menu",
@@ -29,13 +29,11 @@
     "cta_secondary": "Chat on WhatsApp",
     "trust_line": "Trusted by property owners in 4 cities across Morocco",
     "stat_owners": "150+",
-    "stat_owners_label": "Happy owners",
+    "stat_owners_label": "Owners who sleep soundly",
     "stat_countries": "6",
-    "stat_countries_label": "Cities worldwide",
-    "stat_occupancy": "92%",
-    "stat_occupancy_label": "Avg. occupancy",
+    "stat_countries_label": "Cities across Morocco",
     "stat_guarantee": "100%",
-    "stat_guarantee_label": "Transparent reporting",
+    "stat_guarantee_label": "Transparent. No surprises. Ever.",
     "panel_aria": "Key highlights"
   },
   "PromiseStrip": {
@@ -81,6 +79,8 @@
     "eyebrow": "OUR MODEL",
     "title": "3 Core Pillars",
     "description": "Full-service representation for sell, long-term, and short-term.",
+    "cta_sell": "Sell your property",
+    "cta_rent": "Rent your property",
     "cta": "Learn more",
     "learnMore": "Learn more",
     "pillars": {
@@ -160,8 +160,90 @@
         "items": ["Professional cleaning after every stay", "Monthly revenue & occupancy reports", "Expense breakdown & receipts", "Real-time dashboard access"]
       }
     },
-    "cta": "List my property",
+    "cta": "List your apartment with us",
     "ctaSecondary": "See pricing"
+  },
+  "Properties": {
+    "eyebrow": "Properties",
+    "title": "Homes for rent and sale in Morocco.",
+    "subtitle": "We manage viewings, contracts, and complete transactions to notary.",
+    "key_line": "Browse available listings. Rent or buy — we handle everything.",
+    "tab_rent": "Rent",
+    "tab_sale": "For Sale",
+    "count_rent": "Rent",
+    "count_sale": "For Sale",
+    "trustStrip": {
+      "ariaLabel": "Key highlights",
+      "rent": { "value": "24", "label": "For rent" },
+      "sale": { "value": "12", "label": "For sale" },
+      "cities": { "value": "4", "label": "Cities" },
+      "owners": { "value": "150+", "label": "Happy owners" }
+    },
+    "filters": {
+      "filters_button": "Filters",
+      "filters_panel": "Filters",
+      "close": "Close",
+      "apply": "Apply",
+      "reset": "Reset",
+      "city": "City",
+      "city_all": "All cities",
+      "type": "Type",
+      "type_all": "All types",
+      "bedrooms": "Bedrooms",
+      "bedrooms_all": "Any",
+      "price_min": "Min",
+      "price_max": "Max",
+      "search": "Search",
+      "search_placeholder": "Title or location…",
+      "furnished": "Furnished",
+      "available_from": "Available from",
+      "under_offer": "Under offer",
+      "cities": {
+        "marrakech": "Marrakech",
+        "casablanca": "Casablanca",
+        "tangier": "Tangier",
+        "agadir": "Agadir"
+      },
+      "types": {
+        "apartment": "Apartment",
+        "villa": "Villa",
+        "studio": "Studio"
+      }
+    },
+    "pagination": {
+      "ariaLabel": "Pagination",
+      "prev": "Previous page",
+      "next": "Next page",
+      "browseAllForSale": "Browse all properties for sale"
+    },
+    "browseIntro": {
+      "headline": "Find your next home. Browse verified properties across Morocco.",
+      "tab_rent": "Rent",
+      "tab_sale": "For Sale",
+      "count_rent": "Rent",
+      "count_sale": "For Sale"
+    },
+    "ownerCta": {
+      "headline": "Own a property in Morocco and want to rent or sell?",
+      "valuation": "Request valuation",
+      "whatsapp": "Talk on WhatsApp"
+    },
+    "howWeHelp": {
+      "ariaLabel": "How we help",
+      "viewings": "We arrange viewings",
+      "qualify": "We qualify tenants & buyers",
+      "contracts": "We handle contracts & notary coordination"
+    },
+    "card": {
+      "status_rent": "Rent",
+      "status_sale": "Sale",
+      "status_sold": "Sold",
+      "status_rented": "Rented",
+      "status_under_offer": "Under offer",
+      "view_details": "View details",
+      "whatsapp": "WhatsApp about this property",
+      "whatsapp_prefill": "Hi, I'm interested in {name}."
+    }
   },
   "Areas": {
     "eyebrow": "WHERE WE OPERATE",
@@ -311,6 +393,7 @@
   },
   "Footer": {
     "description": "Stress-free short-term rental operations in Morocco.",
+    "developedBy": "Developed by",
     "quickLinks": "Quick Links",
     "support": "Support",
     "contactUs": "Contact Us",
@@ -351,6 +434,33 @@
       "error": "Something went wrong. Please try again."
     }
   },
+  "ContactPage": {
+    "hero": {
+      "eyebrow": "GET IN TOUCH",
+      "title": "We're here to help.",
+      "subtitle": "Whether you want to sell, rent, or list your property in Morocco — reach out anytime. We respond within 24 hours.",
+      "key_line": "One point of contact. Full transparency. No surprises.",
+      "cta_primary": "Send a message",
+      "cta_secondary": "Chat on WhatsApp",
+      "cta_phone": "Call us"
+    },
+    "trustStrip": {
+      "ariaLabel": "Key highlights",
+      "owners": { "value": "150+", "label": "Happy owners" },
+      "cities": { "value": "6", "label": "Cities worldwide" },
+      "response": { "value": "24h", "label": "Response time" },
+      "guarantee": { "value": "100%", "label": "Transparent reporting" }
+    },
+    "info": {
+      "eyebrow": "CONTACT OPTIONS",
+      "title": "Reach us your way",
+      "subtitle": "Choose the channel that works best for you. We're available across time zones.",
+      "phone": { "label": "Phone", "value": "+47 413 51 547" },
+      "whatsapp": { "label": "WhatsApp", "value": "Instant reply" },
+      "email": { "label": "Email", "value": "hello@atlasstays.com" },
+      "hours": { "label": "Response time", "value": "Within 24 hours, Mon–Fri" }
+    }
+  },
   "Partners": {
     "eyebrow": "TRUSTED BY LEADING PLATFORMS",
     "description": "We partner with the world's largest booking and travel platforms to maximize your property's visibility and occupancy."
@@ -380,19 +490,15 @@
       "ariaLabel": "Key highlights",
       "owners": {
         "value": "150+",
-        "label": "Happy owners"
+        "label": "Sellers represented"
       },
       "cities": {
         "value": "6",
-        "label": "Cities worldwide"
-      },
-      "occupancy": {
-        "value": "92%",
-        "label": "Avg. occupancy"
+        "label": "Cities in Morocco"
       },
       "guarantee": {
         "value": "100%",
-        "label": "Transparent reporting"
+        "label": "Fees paid by buyer"
       }
     },
     "hero": {
@@ -405,7 +511,9 @@
     },
     "whyUs": {
       "eyebrow": "Why Sell With Us",
-      "title": "Serious buyers. Structured process. Clear accountability.",
+      "title": "Serious buyers, a structured process, and clear accountability—from listing to closing.",
+      "subtitle": "We manage viewings, contracts, and complete transactions to notary.",
+      "step_of": "Step {n} of 4",
       "cards": {
         "presentation": {
           "title": "Professional presentation",
@@ -428,9 +536,13 @@
     "whatWeDeliver": {
       "eyebrow": "What We Deliver",
       "title": "What we handle for you",
+      "clickHint": "Click to explore",
+      "cta_primary": "Request a valuation",
+      "cta_secondary": "Contact us",
       "groups": {
         "property_preparation": {
           "title": "Property Preparation",
+          "description": "We prepare your property for market—valuation, strategy, and legal review to ensure a smooth launch.",
           "items": {
             "market_valuation": "Market valuation",
             "strategy_consultation": "Strategy consultation",
@@ -440,6 +552,7 @@
         },
         "presentation_marketing": {
           "title": "Presentation & Marketing",
+          "description": "Professional visuals and listings that attract qualified buyers. 3D tours, photography, and international exposure.",
           "items": {
             "professional_photography": "Professional photography",
             "visualization_3d": "3D visualization",
@@ -450,6 +563,7 @@
         },
         "representation_negotiation": {
           "title": "Representation & Negotiation",
+          "description": "We handle all inquiries, coordinate viewings, and negotiate on your behalf to secure the best outcome.",
           "items": {
             "calls_handled": "All calls handled by us",
             "viewings_coordinated": "Viewings coordinated",
@@ -460,6 +574,7 @@
         },
         "notary_closing": {
           "title": "Notary & Closing",
+          "description": "We coordinate with the notary and handle all documentation until the final signature.",
           "items": {
             "contract_preparation": "Contract preparation support",
             "notary_coordination": "Coordination with notary",
@@ -472,6 +587,9 @@
     "salesProcess": {
       "eyebrow": "The Sales Process",
       "title": "How it works",
+      "subtitle": "One point of contact. Clear communication. Full support from listing to closing.",
+      "intro": "From valuation to notary signature, we guide you through every step. Professional photography, qualified viewings, and full negotiation support—so you can sell with confidence.",
+      "cta": "Request a valuation",
       "steps": {
         "valuation": {
           "title": "Valuation & Strategy",
@@ -503,8 +621,8 @@
     },
     "properties": {
       "eyebrow": "Properties We Represent",
-      "title": "Discover inspiring designed homes.",
-      "subtitle": "Curated homes where elegance, style, and comfort unite.",
+      "title": "We can sell your apartment or villa.",
+      "subtitle": "These are homes we've sold for owners like you. Yours could be next — full representation from listing to notary.",
       "available_title": "Currently Available",
       "sold_title": "Recently Sold",
       "bedrooms": "Bedrooms",
@@ -532,8 +650,22 @@
       "status_sold": "Sold",
       "status_under_negotiation": "Under negotiation",
       "status_recently_closed": "Recently closed",
+      "price_sale_135": "€135,000",
+      "price_sale_165": "€165,000",
+      "price_sale_195": "€195,000",
+      "price_sale_245": "€245,000",
+      "price_sale_250": "€250,000",
+      "price_sale_280": "€280,000",
+      "price_sale_295": "€295,000",
+      "price_sale_320": "€320,000",
+      "price_sale_380": "€380,000",
+      "price_sale_450": "€450,000",
+      "price_sale_480": "€480,000",
+      "price_sale_520": "€520,000",
+      "price_sale_620": "€620,000",
       "prev": "Previous",
-      "next": "Next"
+      "next": "Next",
+      "no_results": "No properties match your filters. Try adjusting your search."
     },
     "faq": {
       "eyebrow": "FAQ",
@@ -582,7 +714,7 @@
     },
     "whyUs": {
       "eyebrow": "Why Rent With Us",
-      "title": "Maximum visibility. Zero hassle. Full transparency.",
+      "title": "Your property earns while you stay in control",
       "cards": {
         "listing": {
           "title": "Listed on every platform",
@@ -613,6 +745,8 @@
     "process": {
       "eyebrow": "How it works",
       "title": "From listing to earnings",
+      "subtitle": "A simple, fully managed process that turns your property into consistent revenue.",
+      "cta": "Get started",
       "steps": {
         "list": {
           "title": "We List & Publish",
@@ -677,17 +811,18 @@
         "villa": "Villa",
         "house": "House"
       },
-      "price_95": "€95 / night",
-      "price_110": "€110 / night",
-      "price_120": "€120 / night",
-      "price_130": "€130 / night",
-      "price_180": "€180 / night",
-      "price_220": "€220 / night",
+      "price_95": "€2,850 / month",
+      "price_110": "€3,300 / month",
+      "price_120": "€3,600 / month",
+      "price_130": "€3,900 / month",
+      "price_180": "€5,400 / month",
+      "price_220": "€6,600 / month",
       "date_oct_2024": "Rented Oct 2024",
       "date_nov_2024": "Rented Nov 2024",
       "date_dec_2024": "Rented Dec 2024",
       "prev": "Previous",
-      "next": "Next"
+      "next": "Next",
+      "no_results": "No properties match your filters. Try adjusting your search."
     },
     "listForm": {
       "title": "List your property",
@@ -705,24 +840,24 @@
     },
     "services": {
       "eyebrow": "What we deliver",
-      "title": "Core services included",
-      "subtitle": "Cleaning, inspections, keys, linen, and restocking — all handled by our local team.",
+      "title": "Full-service operations",
+      "subtitle": "Our local team handles cleaning, inspections, keys, linen, and restocking — no surprises.",
       "items": {
         "cleaning": {
           "title": "Turnover cleaning",
-          "description": "Professional cleaning after every stay. No-show cleaners? Never. We verify every turnover."
+          "description": "Professional cleaning after every stay. Every turnover verified."
         },
         "inspection": {
-          "title": "Inspection & photo report",
-          "description": "Detailed checklist and photo report sent after every stay. You see exactly how your property was left."
+          "title": "Inspection and photo report",
+          "description": "Detailed checklist and photo report after every stay. Full visibility into your property's condition."
         },
         "keys": {
-          "title": "Keys & check-in",
-          "description": "Secure key handling and check-in coordination. Optional smart lock setup."
+          "title": "Keys and check-in",
+          "description": "Secure key management and check-in coordination. Smart lock support available."
         },
         "linen": {
-          "title": "Linen & towels",
-          "description": "Fresh linen and towels for every guest. Coordinated and replaced as needed."
+          "title": "Linen and towels",
+          "description": "Fresh linen and towels for every stay. Managed and replaced on schedule."
         },
         "restocking": {
           "title": "Restocking",
@@ -742,7 +877,10 @@
         "location_2": "Villa in Agadir",
         "quote_3": "Finally, a management company that actually delivers. No hidden fees, clear communication, and my occupancy has never been better.",
         "name_3": "Amira K.",
-        "location_3": "Riad in Marrakech"
+        "location_3": "Riad in Marrakech",
+        "quote_4": "From day one, everything was handled professionally. I get monthly reports and never have to chase anyone. Best decision for my property.",
+        "name_4": "Thomas B.",
+        "location_4": "Apartment in Casablanca"
       }
     },
     "feeTransparency": {

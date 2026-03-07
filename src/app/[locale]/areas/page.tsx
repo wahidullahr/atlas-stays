@@ -1,25 +1,57 @@
-import React from 'react';
-import { useTranslations } from 'next-intl';
-import { Container } from '@/components/layout/Container';
-import { Section } from '@/components/layout/Section';
-import { CityGrid } from '@/components/cities/CityGrid';
-import { CTA } from '@/components/layout/CTA';
+import type { Metadata } from 'next';
+import { Suspense } from 'react';
+import { Navbar } from '@/components/nav/Navbar';
+import { PropertiesHero } from '@/components/properties/PropertiesHero';
+import { OwnerCTA } from '@/components/properties/OwnerCTA';
+import { PropertiesContent } from '@/components/properties/PropertiesContent';
+import { buildMetadata, getBaseUrl } from '@/lib/metadata';
 
-export default function AreasPage() {
-  const t = useTranslations('Areas');
+type Props = {
+  searchParams: Promise<{ page?: string; tab?: string }>;
+  params: Promise<{ locale: string }>;
+};
 
+export async function generateMetadata({ searchParams, params }: Props): Promise<Metadata> {
+  const { page, tab } = await searchParams;
+  const { locale } = await params;
+  const baseUrl = getBaseUrl();
+  const path = `/areas`;
+  const pageNum = Math.max(1, parseInt(page || '1', 10) || 1);
+  const tabParam = tab || 'rent';
+
+  const meta = buildMetadata({
+    locale,
+    path,
+    title: pageNum > 1 ? `Properties - Page ${pageNum}` : 'Properties',
+  });
+
+  const baseCanonical = `${baseUrl}/${locale}${path}`;
+  const canonical = pageNum > 1 ? `${baseCanonical}?tab=${tabParam}&page=${pageNum}` : baseCanonical;
+  const prev = pageNum > 1 ? `${baseCanonical}?tab=${tabParam}&page=${pageNum - 1}` : undefined;
+  const next = `${baseCanonical}?tab=${tabParam}&page=${pageNum + 1}`;
+
+  return {
+    ...meta,
+    alternates: {
+      ...meta.alternates,
+      canonical,
+      ...(prev ? { prev } : {}),
+      ...(next ? { next } : {}),
+    },
+  };
+}
+
+export default async function AreasPage() {
   return (
     <>
-      <Section className="pt-16 framer:pt-24 pb-12 framer:pb-16 bg-surface/30">
-        <Container className="text-center max-w-[800px] mx-auto">
-          <h1 className="h1 mb-6">{t('title')}</h1>
-          <p className="body-muted mb-8 max-w-[600px] mx-auto">
-            We operate in major Moroccan cities.
-          </p>
-        </Container>
-      </Section>
-      <CityGrid />
-      <CTA />
+      <Navbar />
+      <main className="-mt-[88px]">
+        <Suspense fallback={null}>
+          <PropertiesHero />
+          <PropertiesContent />
+        </Suspense>
+        <OwnerCTA />
+      </main>
     </>
   );
 }

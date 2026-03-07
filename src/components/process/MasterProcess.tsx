@@ -99,20 +99,14 @@ export const MasterProcess = () => {
           })}
         </div>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 framer:gap-4">
+        {/* CTA */}
+        <div className="flex justify-center">
           <Link
-            href="/contact"
+            href="/rent"
             className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 framer:px-10 framer:py-4.5 bg-accent text-white rounded-xl font-semibold text-[14px] framer:text-[17px] hover:bg-accent/90 transition-colors duration-200 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-foreground"
           >
             {t('cta')}
             <ArrowRight className="w-4 h-4 framer:w-5 framer:h-5 rtl:rotate-180" />
-          </Link>
-          <Link
-            href="/pricing"
-            className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 framer:px-10 framer:py-4.5 bg-transparent border-2 border-white/30 text-white rounded-xl font-semibold text-[14px] framer:text-[17px] hover:bg-white/10 transition-colors duration-200 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-foreground"
-          >
-            {t('ctaSecondary')}
           </Link>
         </div>
       </Container>

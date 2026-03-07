@@ -28,7 +28,7 @@ export const ExplorePropertiesSection = () => {
 
       <Container className="relative z-10 max-w-[1360px]">
         {/* Mobile: stacked. Desktop: 2-col grid */}
-        <div className="grid grid-cols-1 framer:grid-cols-[0.85fr_1.15fr] gap-8 framer:gap-x-14 framer:gap-y-6 framer:items-start">
+        <div className="grid grid-cols-1 framer:grid-cols-[0.85fr_1.15fr] gap-8 framer:gap-x-8 framer:gap-y-6 framer:items-start">
           {/* Text + CTA */}
           <div className="order-2 framer:order-0 framer:col-start-1 framer:row-start-1 max-w-[560px]">
             <div className="flex items-center gap-2.5 framer:gap-3 mb-5 framer:mb-8">
@@ -46,7 +46,7 @@ export const ExplorePropertiesSection = () => {
               {t('description')}
             </p>
             <Link
-              href="/services"
+              href="/areas"
               className="inline-flex items-center justify-center px-7 py-3.5 framer:px-10 framer:py-5 bg-accent text-white rounded-xl font-semibold text-[15px] framer:text-[18px] hover:bg-accent/90 transition-colors duration-200 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
             >
               {t('cta')}
@@ -80,7 +80,7 @@ export const ExplorePropertiesSection = () => {
           </div>
 
           {/* Bottom-right images */}
-          <div className="order-4 framer:order-0 framer:col-start-2 framer:row-start-2 w-full grid grid-cols-2 gap-3 framer:gap-5">
+          <div className="order-4 framer:order-0 framer:col-start-2 framer:row-start-2 w-full grid grid-cols-2 gap-2 framer:gap-3">
             <div className="relative w-full aspect-4/3 framer:aspect-auto framer:h-[325px] rounded-xl framer:rounded-2xl overflow-hidden bg-surface">
               <Image
                 src={IMAGES.bottomCenter}

@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { FileText, ClipboardCheck, Box, ArrowRight } from 'lucide-react';
 import { Container } from '../layout/Container';
 
@@ -111,13 +112,13 @@ export const FullWidthTrust = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <a
-            href="#contact"
+          <Link
+            href="/about"
             className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-white rounded-xl font-semibold text-[14px] framer:text-[15px] hover:bg-accent/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
           >
             {t('cta')}
             <ArrowRight className="w-4 h-4 rtl:rotate-180" />
-          </a>
+          </Link>
         </div>
       </Container>
     </section>

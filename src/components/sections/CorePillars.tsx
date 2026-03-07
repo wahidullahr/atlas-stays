@@ -69,13 +69,21 @@ export const CorePillars = () => {
             ))}
           </div>
 
-          {/* CTA */}
-          <Link
-            href="/services"
-            className="inline-flex items-center justify-center px-7 py-3.5 framer:px-9 framer:py-4.5 bg-foreground text-white rounded-xl font-semibold text-[14px] framer:text-[17px] hover:bg-foreground/90 transition-colors duration-200 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
-          >
-            {t('cta')}
-          </Link>
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-3 framer:gap-4">
+            <Link
+              href="/sell"
+              className="inline-flex items-center justify-center px-7 py-3.5 framer:px-9 framer:py-4.5 bg-accent text-white rounded-xl font-semibold text-[14px] framer:text-[17px] hover:bg-accent/90 transition-colors duration-200 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+            >
+              {t('cta_sell')}
+            </Link>
+            <Link
+              href="/rent"
+              className="inline-flex items-center justify-center px-7 py-3.5 framer:px-9 framer:py-4.5 bg-foreground text-white rounded-xl font-semibold text-[14px] framer:text-[17px] hover:bg-foreground/90 transition-colors duration-200 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
+            >
+              {t('cta_rent')}
+            </Link>
+          </div>
         </div>
       </div>
     </section>
