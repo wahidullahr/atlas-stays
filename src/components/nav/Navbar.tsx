@@ -8,6 +8,7 @@ import { Menu as MenuIcon, MessageCircle, Phone, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { LOCALES, NAV_ITEMS, type Locale } from "./navConfig";
 import { useWhatsAppHref } from "@/hooks/useWhatsAppHref";
+import { Logo } from "@/components/brand/Logo";
 
 const SCROLL_THRESHOLD = 20;
 const NAV_MENU_DIALOG_ID = "nav-menu-dialog";
@@ -104,20 +105,13 @@ export function Navbar() {
     >
       <div
         className={clsx(
-          "mx-auto max-w-[1200px] h-[72px] flex items-center justify-between relative px-6 framer:px-10 transition-all duration-300",
+          "mx-auto h-[72px] flex items-center justify-between relative px-6 framer:px-10 transition-all duration-300",
+          isLight ? "max-w-[1360px]" : "max-w-[1200px]",
           scrolled && "rounded-full bg-white/95 backdrop-blur shadow-md"
         )}
       >
         <div className="flex items-center shrink-0">
-          <Link
-            href={`/${locale}`}
-            className={clsx(
-              "text-[18px] font-semibold tracking-[-0.02em] transition-colors",
-              isLight ? "text-white" : "text-fg"
-            )}
-          >
-            AtlasStays
-          </Link>
+          <Logo variant={isLight ? "light" : "dark"} />
         </div>
 
         <div className="flex items-center gap-3 shrink-0">
@@ -183,9 +177,9 @@ export function Navbar() {
           >
             {/* Header */}
             <div className="h-[80px] px-6 flex items-center justify-between border-b border-white/10">
-              <span className="text-[18px] font-bold text-white tracking-tight">
-                AtlasStays
-              </span>
+              <Link href={`/${locale}`} onClick={() => setOpen(false)}>
+                <Logo variant="light" href={null} />
+              </Link>
               <button
                 ref={closeBtnRef}
                 type="button"
