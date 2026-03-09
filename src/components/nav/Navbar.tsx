@@ -118,7 +118,7 @@ export function Navbar() {
           <a
             href="tel:+4741351547"
             className={clsx(
-              "inline-flex items-center gap-2 text-[14px] framer:text-[15px] font-semibold tabular-nums focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 rounded-md",
+              "hidden framer:inline-flex items-center gap-2 text-[14px] framer:text-[15px] font-semibold tabular-nums focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 rounded-md",
               isLight ? "text-white focus-visible:ring-white" : "text-fg focus-visible:ring-foreground"
             )}
           >
@@ -127,7 +127,7 @@ export function Navbar() {
           </a>
           <span
             className={clsx(
-              "text-[14px] font-normal select-none",
+              "hidden framer:block text-[14px] font-normal select-none",
               isLight ? "text-white/60" : "text-fg/50"
             )}
             aria-hidden
@@ -144,7 +144,7 @@ export function Navbar() {
             )}
             aria-haspopup="dialog"
             aria-controls={NAV_MENU_DIALOG_ID}
-            aria-expanded={open ? "true" : "false"}
+            aria-expanded={open}
             onClick={() => setOpen(true)}
           >
             <MenuIcon className="w-4 h-4" aria-hidden />
@@ -259,8 +259,15 @@ export function Navbar() {
               </div>
             </div>
 
-            {/* WhatsApp CTA */}
-            <div className="px-5 mt-2">
+            {/* Contact CTAs */}
+            <div className="px-5 mt-2 flex flex-col gap-3">
+              <a
+                href="tel:+4741351547"
+                className="w-full inline-flex items-center justify-center gap-2.5 rounded-xl px-5 py-3.5 text-[14px] font-semibold bg-white/10 border border-white/15 text-white hover:bg-white/15 transition-all duration-200 tabular-nums"
+              >
+                <Phone className="w-4 h-4" />
+                +47 413 51 547
+              </a>
               <a
                 href={waHref}
                 target="_blank"
