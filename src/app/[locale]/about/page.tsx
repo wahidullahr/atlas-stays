@@ -1,7 +1,12 @@
 import { Navbar } from '@/components/nav/Navbar';
-import { CityGrid } from '@/components/cities/CityGrid';
 import { AboutHero } from '@/components/about/AboutHero';
-import { AboutContent } from '@/components/about/AboutContent';
+import { AboutPhilosophy } from '@/components/about/AboutPhilosophy';
+import { AboutDifference } from '@/components/about/AboutDifference';
+import { AboutTeam } from '@/components/about/AboutTeam';
+import { AboutStandards } from '@/components/about/AboutStandards';
+import { AboutInternational } from '@/components/about/AboutInternational';
+import { AboutCommitment } from '@/components/about/AboutCommitment';
+import { AboutCTA } from '@/components/about/AboutCTA';
 
 export default function AboutPage() {
   return (
@@ -9,8 +14,13 @@ export default function AboutPage() {
       <Navbar />
       <main className="-mt-[88px]">
         <AboutHero />
-        <AboutContent />
-        <CityGrid />
+        <AboutPhilosophy />
+        <AboutDifference />
+        <AboutTeam />
+        <AboutStandards />
+        <AboutInternational />
+        <AboutCommitment />
+        <AboutCTA />
       </main>
     </>
   );

@@ -46,7 +46,11 @@
     "eyebrow": "Categories",
     "title": "Explore best properties with expert services.",
     "description": "Discover a diverse range of premium properties, from luxurious apartments to spacious villas, tailored to your needs.",
-    "cta": "View Properties"
+    "cta": "View Properties",
+    "label_villas": "Villas",
+    "label_apartments": "Apartments",
+    "label_riads": "Riads",
+    "label_commercial": "Commercial"
   },
   "Problems": {
     "eyebrow": "PROBLEMS WE SOLVE",
@@ -168,6 +172,11 @@
     "title": "Homes for rent and sale in Morocco.",
     "subtitle": "We manage viewings, contracts, and complete transactions to notary.",
     "key_line": "Browse available listings. Rent or buy — we handle everything.",
+    "cta_primary": "Schedule a viewing",
+    "cta_secondary": "Speak with us",
+    "highlight_rent": "For rent",
+    "highlight_sale": "For sale",
+    "highlight_cities": "Cities in Morocco",
     "tab_rent": "Rent",
     "tab_sale": "For Sale",
     "count_rent": "Rent",
@@ -281,52 +290,104 @@
     }
   },
   "About": {
-    "eyebrow": "WHO WE ARE",
-    "title": "About Us",
-    "subtitle": "Built for remote owners who need a reliable partner on the ground.",
     "hero": {
-      "eyebrow": "WHO WE ARE",
-      "title": "About Us",
-      "subtitle": "Built for remote owners who need a reliable partner on the ground. We combine European standards with deep local expertise in Morocco.",
-      "key_line": "One point of contact. Full reporting. No surprises.",
-      "cta_primary": "Get in touch",
-      "cta_secondary": "Speak with us"
+      "eyebrow": "ABOUT US",
+      "title": "A Professional Approach to Real Estate",
+      "subtitle": "We combine real estate expertise with design, marketing, and technology to deliver a modern and professional property experience.",
+      "cta": "Explore Properties"
     },
-    "trustStrip": {
-      "ariaLabel": "Key highlights",
-      "owners": { "value": "150+", "label": "Happy owners" },
-      "cities": { "value": "6", "label": "Cities worldwide" },
-      "occupancy": { "value": "92%", "label": "Avg. occupancy" },
-      "guarantee": { "value": "100%", "label": "Transparent reporting" }
+    "philosophy": {
+      "eyebrow": "OUR PHILOSOPHY",
+      "title": "Our Approach",
+      "body1": "Real estate is not just about listing properties. It is about presenting homes in a way that reflects their true value.",
+      "body2": "Many agencies publish listings quickly with limited information, poor images, and little attention to presentation.",
+      "body3": "Our process focuses on quality and professionalism. Each property goes through a structured preparation process including photography, design, and carefully written descriptions.",
+      "body4": "This ensures that buyers understand the property clearly and sellers achieve the best possible exposure."
     },
-    "mission": {
-      "title": "Our Mission",
-      "lead": "To provide stress-free short-term rental management for owners who are not physically present.",
-      "body": "We focus on transparency, reliability, and quality. No hidden fees, no surprises. Whether you're selling, renting long-term, or running a short-term rental — we handle everything so you don't have to."
-    },
-    "story": {
-      "title": "Our Story",
-      "body": "AtlasStays was founded to bridge the gap between international property owners and local operations in Morocco. We combine European standards with deep local expertise, so your property is managed the way you expect — wherever you are."
-    },
-    "values": {
-      "eyebrow": "WHAT WE STAND FOR",
-      "title": "Our Values",
-      "transparency": {
-        "title": "Transparency",
-        "description": "Full reporting after every stay. No hidden fees. You always know what's happening."
-      },
-      "reliability": {
-        "title": "Reliability",
-        "description": "Consistent quality. We show up, we deliver, and we follow through."
-      },
-      "quality": {
-        "title": "Quality",
-        "description": "Professional standards in every touchpoint — from listings to turnovers."
-      },
-      "local": {
-        "title": "Local Expertise",
-        "description": "Deep knowledge of Moroccan markets, regulations, and operations."
+    "difference": {
+      "eyebrow": "WHY US",
+      "title": "What Makes Us Different",
+      "subtitle": "Five key principles that define how we work and why clients trust us with their most valuable assets.",
+      "cards": {
+        "photography": {
+          "title": "Professional Property Photography",
+          "description": "Every property is presented with high-quality photography that highlights space, lighting, and architectural details."
+        },
+        "descriptions": {
+          "title": "Structured Property Descriptions",
+          "description": "Our listings include clear and detailed descriptions so buyers can understand the property before visiting."
+        },
+        "international": {
+          "title": "International Experience",
+          "description": "Our team brings experience from international markets and applies global standards to property presentation and service."
+        },
+        "client": {
+          "title": "Client-First Approach",
+          "description": "We prioritize transparency, communication, and long-term relationships with our clients."
+        },
+        "fullService": {
+          "title": "Full-Service Support",
+          "description": "From listing preparation to final transaction, our team supports clients throughout the entire process."
+        }
       }
+    },
+    "team": {
+      "eyebrow": "OUR TEAM",
+      "title": "A Multidisciplinary Team",
+      "description": "Delivering high-quality property listings requires more than real estate agents. Our team includes professionals from several disciplines who work together to present each property in the best possible way.",
+      "roles": {
+        "agents": {
+          "title": "Real Estate Agents",
+          "description": "Experts in the local market who guide clients through buying and selling decisions."
+        },
+        "photographers": {
+          "title": "Photographers",
+          "description": "Professionals who capture each property with the correct lighting and composition."
+        },
+        "designers": {
+          "title": "Design Specialists",
+          "description": "Designers who structure listings so that the presentation is clean, modern, and visually appealing."
+        },
+        "technical": {
+          "title": "Technical Team",
+          "description": "Engineers who maintain the digital platform and ensure property information is presented accurately."
+        },
+        "marketing": {
+          "title": "Marketing Specialists",
+          "description": "Professionals who ensure properties reach the right audience through digital marketing and promotion."
+        }
+      }
+    },
+    "standards": {
+      "eyebrow": "OUR STANDARDS",
+      "title": "Professional Standards for Every Listing",
+      "description": "We follow a consistent professional standard for every property we represent.",
+      "items": {
+        "photography": "High-quality photography",
+        "descriptions": "Clear and structured property descriptions",
+        "details": "Accurate property details and specifications",
+        "pricing": "Transparent pricing information",
+        "presentation": "Consistent professional presentation across all platforms"
+      }
+    },
+    "international": {
+      "eyebrow": "GLOBAL REACH",
+      "title": "International Perspective",
+      "body1": "Our team brings experience from international markets and diverse professional backgrounds.",
+      "body2": "This global perspective allows us to understand different buyer expectations and cultural preferences. By applying international standards, we create listings that appeal to both local and international buyers.",
+      "body3": "This approach helps sellers reach a wider audience and ensures a more professional real estate experience."
+    },
+    "commitment": {
+      "eyebrow": "OUR PROMISE",
+      "title": "Our Clients Come First",
+      "body1": "Our work is built on trust and long-term relationships.",
+      "body2": "We take the time to understand our clients' goals and guide them through every stage of the process with honesty, transparency, and professional advice.",
+      "body3": "Deliver exceptional service and represent every property with the highest level of professionalism."
+    },
+    "cta": {
+      "title": "Work With a Professional Real Estate Team",
+      "description": "Whether you are selling a property or searching for your next home, our team is ready to assist you.",
+      "button": "View Properties"
     }
   },
   "Trust": {
@@ -442,7 +503,10 @@
       "key_line": "One point of contact. Full transparency. No surprises.",
       "cta_primary": "Send a message",
       "cta_secondary": "Chat on WhatsApp",
-      "cta_phone": "Call us"
+      "cta_phone": "Call us",
+      "highlight_response": "Response time",
+      "highlight_owners": "Happy owners",
+      "highlight_transparency": "Transparent reporting"
     },
     "trustStrip": {
       "ariaLabel": "Key highlights",
@@ -507,12 +571,15 @@
       "subtitle": "We handle everything — from valuation and professional media to buyer qualification, negotiation, and notary coordination.",
       "key_line": "Agency fee is paid by the buyer.",
       "cta_primary": "Request a valuation",
-      "cta_secondary": "Speak with us"
+      "cta_secondary": "Speak with us",
+      "highlight_owners": "Happy owners",
+      "highlight_cities": "Cities in Morocco",
+      "highlight_fee": "Upfront seller fee"
     },
     "whyUs": {
       "eyebrow": "Why Sell With Us",
-      "title": "Serious buyers, a structured process, and clear accountability—from listing to closing.",
-      "subtitle": "We manage viewings, contracts, and complete transactions to notary.",
+      "title": "From listing to notary, fully managed.",
+      "subtitle": "Qualified buyers, structured process, total accountability.",
       "step_of": "Step {n} of 4",
       "cards": {
         "presentation": {
@@ -531,7 +598,9 @@
           "title": "Full coordination to notary",
           "description": "We handle all paperwork and notary coordination until closing."
         }
-      }
+      },
+      "cta_primary": "Request a valuation",
+      "cta_secondary": "Speak with us"
     },
     "whatWeDeliver": {
       "eyebrow": "What We Deliver",
@@ -710,7 +779,10 @@
       "subtitle": "We publish your property on Airbnb, Booking.com, and more — then handle every guest from first message to final cleaning. You earn. We manage.",
       "key_line": "Stress-free operations. Transparent reporting after every stay.",
       "cta_primary": "List my property",
-      "cta_secondary": "Speak with us"
+      "cta_secondary": "Speak with us",
+      "highlight_properties": "Properties managed",
+      "highlight_occupancy": "Avg. occupancy",
+      "highlight_support": "Guest support"
     },
     "whyUs": {
       "eyebrow": "Why Rent With Us",
@@ -822,7 +894,8 @@
       "date_dec_2024": "Rented Dec 2024",
       "prev": "Previous",
       "next": "Next",
-      "no_results": "No properties match your filters. Try adjusting your search."
+      "no_results": "No properties match your filters. Try adjusting your search.",
+      "view_all": "View all properties"
     },
     "listForm": {
       "title": "List your property",

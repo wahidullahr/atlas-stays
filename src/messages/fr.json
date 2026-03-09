@@ -47,7 +47,11 @@
     "eyebrow": "Catégories",
     "title": "Explorez les meilleurs biens avec nos services d’experts.",
     "description": "Découvrez une gamme variée de biens premium, des appartements de standing aux villas spacieuses, adaptés à vos besoins.",
-    "cta": "Voir les biens"
+    "cta": "Voir les biens",
+    "label_villas": "Villas",
+    "label_apartments": "Appartements",
+    "label_riads": "Riads",
+    "label_commercial": "Commercial"
   },
   "Problems": {
     "eyebrow": "PROBLÈMES QUE NOUS RÉSOLVONS",
@@ -169,6 +173,11 @@
     "title": "Maisons à louer et à vendre au Maroc.",
     "subtitle": "Nous gérons les visites, les contrats et les transactions jusqu'au notaire.",
     "key_line": "Parcourez les annonces. Louez ou achetez — nous gérons tout.",
+    "cta_primary": "Planifier une visite",
+    "cta_secondary": "Nous contacter",
+    "highlight_rent": "À louer",
+    "highlight_sale": "À vendre",
+    "highlight_cities": "Villes au Maroc",
     "tab_rent": "Location",
     "tab_sale": "À vendre",
     "count_rent": "Location",
@@ -282,52 +291,104 @@
     }
   },
   "About": {
-    "eyebrow": "QUI SOMMES-NOUS",
-    "title": "À propos",
-    "subtitle": "Conçu pour les propriétaires à distance qui ont besoin d'un partenaire fiable sur le terrain.",
     "hero": {
-      "eyebrow": "QUI SOMMES-NOUS",
-      "title": "À propos",
-      "subtitle": "Conçu pour les propriétaires à distance qui ont besoin d'un partenaire fiable sur le terrain. Nous combinons les normes européennes avec une expertise locale approfondie au Maroc.",
-      "key_line": "Un seul interlocuteur. Reporting complet. Pas de surprises.",
-      "cta_primary": "Nous contacter",
-      "cta_secondary": "Discuter avec nous"
+      "eyebrow": "À PROPOS",
+      "title": "Une Approche Professionnelle de l'Immobilier",
+      "subtitle": "Nous combinons l'expertise immobilière avec le design, le marketing et la technologie pour offrir une expérience immobilière moderne et professionnelle.",
+      "cta": "Explorer les propriétés"
     },
-    "trustStrip": {
-      "ariaLabel": "Points clés",
-      "owners": { "value": "150+", "label": "Propriétaires satisfaits" },
-      "cities": { "value": "6", "label": "Villes dans le monde" },
-      "occupancy": { "value": "92%", "label": "Taux d'occupation moy." },
-      "guarantee": { "value": "100%", "label": "Reporting transparent" }
+    "philosophy": {
+      "eyebrow": "NOTRE PHILOSOPHIE",
+      "title": "Notre Approche",
+      "body1": "L'immobilier ne se résume pas à publier des annonces. Il s'agit de présenter des biens d'une manière qui reflète leur véritable valeur.",
+      "body2": "De nombreuses agences publient des annonces rapidement avec des informations limitées, des images de mauvaise qualité et peu d'attention portée à la présentation.",
+      "body3": "Notre processus se concentre sur la qualité et le professionnalisme. Chaque propriété passe par un processus de préparation structuré comprenant la photographie, le design et des descriptions soigneusement rédigées.",
+      "body4": "Cela garantit que les acheteurs comprennent clairement la propriété et que les vendeurs obtiennent la meilleure exposition possible."
     },
-    "mission": {
-      "title": "Notre mission",
-      "lead": "Offrir une gestion locative courte durée sans stress pour les propriétaires qui ne sont pas sur place.",
-      "body": "Nous privilégions la transparence, la fiabilité et la qualité. Pas de frais cachés, pas de mauvaises surprises. Que vous vendiez, louiez à long terme ou gériez une location courte durée — nous gérons tout pour vous."
-    },
-    "story": {
-      "title": "Notre histoire",
-      "body": "AtlasStays a été créé pour combler le fossé entre les propriétaires internationaux et les opérations locales au Maroc. Nous combinons les normes européennes avec une expertise locale approfondie, pour que votre bien soit géré comme vous l'attendez — où que vous soyez."
-    },
-    "values": {
-      "eyebrow": "NOS VALEURS",
-      "title": "Ce qui nous anime",
-      "transparency": {
-        "title": "Transparence",
-        "description": "Rapports complets après chaque séjour. Pas de frais cachés. Vous savez toujours ce qui se passe."
-      },
-      "reliability": {
-        "title": "Fiabilité",
-        "description": "Qualité constante. Nous sommes présents, nous livrons et nous assurons le suivi."
-      },
-      "quality": {
-        "title": "Qualité",
-        "description": "Des standards professionnels à chaque étape — des annonces aux remises en état."
-      },
-      "local": {
-        "title": "Expertise locale",
-        "description": "Connaissance approfondie des marchés, réglementations et opérations au Maroc."
+    "difference": {
+      "eyebrow": "POURQUOI NOUS",
+      "title": "Ce Qui Nous Distingue",
+      "subtitle": "Cinq principes clés qui définissent notre façon de travailler et la confiance que nos clients nous accordent.",
+      "cards": {
+        "photography": {
+          "title": "Photographie Immobilière Professionnelle",
+          "description": "Chaque propriété est présentée avec une photographie de haute qualité qui met en valeur l'espace, la lumière et les détails architecturaux."
+        },
+        "descriptions": {
+          "title": "Descriptions Structurées",
+          "description": "Nos annonces incluent des descriptions claires et détaillées pour que les acheteurs puissent comprendre la propriété avant la visite."
+        },
+        "international": {
+          "title": "Expérience Internationale",
+          "description": "Notre équipe apporte une expérience des marchés internationaux et applique des standards mondiaux à la présentation et au service immobilier."
+        },
+        "client": {
+          "title": "Approche Client",
+          "description": "Nous privilégions la transparence, la communication et les relations à long terme avec nos clients."
+        },
+        "fullService": {
+          "title": "Accompagnement Complet",
+          "description": "De la préparation de l'annonce à la transaction finale, notre équipe accompagne les clients tout au long du processus."
+        }
       }
+    },
+    "team": {
+      "eyebrow": "NOTRE ÉQUIPE",
+      "title": "Une Équipe Pluridisciplinaire",
+      "description": "Proposer des annonces immobilières de haute qualité nécessite bien plus que des agents immobiliers. Notre équipe comprend des professionnels de plusieurs disciplines qui collaborent pour présenter chaque propriété de la meilleure façon possible.",
+      "roles": {
+        "agents": {
+          "title": "Agents Immobiliers",
+          "description": "Experts du marché local qui accompagnent les clients dans leurs décisions d'achat et de vente."
+        },
+        "photographers": {
+          "title": "Photographes",
+          "description": "Professionnels qui capturent chaque propriété avec le bon éclairage et la bonne composition."
+        },
+        "designers": {
+          "title": "Spécialistes en Design",
+          "description": "Designers qui structurent les annonces pour une présentation claire, moderne et visuellement attrayante."
+        },
+        "technical": {
+          "title": "Équipe Technique",
+          "description": "Ingénieurs qui maintiennent la plateforme numérique et garantissent la précision des informations."
+        },
+        "marketing": {
+          "title": "Spécialistes Marketing",
+          "description": "Professionnels qui s'assurent que les propriétés atteignent la bonne audience via le marketing digital et la promotion."
+        }
+      }
+    },
+    "standards": {
+      "eyebrow": "NOS STANDARDS",
+      "title": "Des Standards Professionnels pour Chaque Annonce",
+      "description": "Nous suivons un standard professionnel constant pour chaque propriété que nous représentons.",
+      "items": {
+        "photography": "Photographie de haute qualité",
+        "descriptions": "Descriptions claires et structurées",
+        "details": "Détails et spécifications précis",
+        "pricing": "Informations tarifaires transparentes",
+        "presentation": "Présentation professionnelle cohérente sur toutes les plateformes"
+      }
+    },
+    "international": {
+      "eyebrow": "PORTÉE MONDIALE",
+      "title": "Perspective Internationale",
+      "body1": "Notre équipe apporte une expérience des marchés internationaux et des parcours professionnels diversifiés.",
+      "body2": "Cette perspective mondiale nous permet de comprendre les attentes et les préférences culturelles des différents acheteurs. En appliquant des standards internationaux, nous créons des annonces qui séduisent les acheteurs locaux et internationaux.",
+      "body3": "Cette approche aide les vendeurs à atteindre un public plus large et garantit une expérience immobilière plus professionnelle."
+    },
+    "commitment": {
+      "eyebrow": "NOTRE ENGAGEMENT",
+      "title": "Nos Clients Passent en Premier",
+      "body1": "Notre travail repose sur la confiance et les relations à long terme.",
+      "body2": "Nous prenons le temps de comprendre les objectifs de nos clients et les accompagnons à chaque étape du processus avec honnêteté, transparence et des conseils professionnels.",
+      "body3": "Offrir un service exceptionnel et représenter chaque propriété avec le plus haut niveau de professionnalisme."
+    },
+    "cta": {
+      "title": "Travaillez avec une Équipe Immobilière Professionnelle",
+      "description": "Que vous vendiez une propriété ou que vous cherchiez votre prochain logement, notre équipe est prête à vous accompagner.",
+      "button": "Voir les propriétés"
     }
   },
   "Trust": {
@@ -443,7 +504,10 @@
       "key_line": "Un seul interlocuteur. Transparence totale. Pas de surprises.",
       "cta_primary": "Envoyer un message",
       "cta_secondary": "Discuter sur WhatsApp",
-      "cta_phone": "Nous appeler"
+      "cta_phone": "Nous appeler",
+      "highlight_response": "Délai de réponse",
+      "highlight_owners": "Propriétaires satisfaits",
+      "highlight_transparency": "Rapports transparents"
     },
     "trustStrip": {
       "ariaLabel": "Points clés",
@@ -508,12 +572,15 @@
       "subtitle": "Nous gérons tout — de l'estimation et des médias professionnels à la qualification des acheteurs, la négociation et la coordination notariale.",
       "key_line": "Les honoraires d'agence sont à la charge de l'acheteur.",
       "cta_primary": "Demander une estimation",
-      "cta_secondary": "Nous contacter"
+      "cta_secondary": "Nous contacter",
+      "highlight_owners": "Propriétaires satisfaits",
+      "highlight_cities": "Villes au Maroc",
+      "highlight_fee": "Frais vendeur"
     },
     "whyUs": {
       "eyebrow": "Pourquoi vendre avec nous",
-      "title": "Acheteurs sérieux, processus structuré et responsabilité claire—de l'annonce à la signature.",
-      "subtitle": "Nous gérons les visites, les contrats et les transactions jusqu'au notaire.",
+      "title": "De l'annonce au notaire, tout est géré.",
+      "subtitle": "Acheteurs qualifiés, processus structuré, responsabilité totale.",
       "step_of": "Étape {n} sur 4",
       "cards": {
         "presentation": {
@@ -532,7 +599,9 @@
           "title": "Coordination complète jusqu'au notaire",
           "description": "Nous gérons tous les documents et la coordination notariale jusqu'à la signature."
         }
-      }
+      },
+      "cta_primary": "Demander une estimation",
+      "cta_secondary": "Parlons-en"
     },
     "whatWeDeliver": {
       "eyebrow": "Ce que nous offrons",
@@ -711,7 +780,10 @@
       "subtitle": "Nous publions votre bien sur Airbnb, Booking.com et plus — puis gérons chaque voyageur du premier message au nettoyage final. Vous gagnez. Nous gérons.",
       "key_line": "Opérations sans stress. Rapports transparents après chaque séjour.",
       "cta_primary": "Lister mon bien",
-      "cta_secondary": "Nous contacter"
+      "cta_secondary": "Nous contacter",
+      "highlight_properties": "Biens gérés",
+      "highlight_occupancy": "Taux d'occupation",
+      "highlight_support": "Support voyageurs"
     },
     "whyUs": {
       "eyebrow": "Pourquoi nous choisir",
@@ -823,7 +895,8 @@
       "date_dec_2024": "Loué déc. 2024",
       "prev": "Précédent",
       "next": "Suivant",
-      "no_results": "Aucun bien ne correspond à vos critères. Essayez d'ajuster votre recherche."
+      "no_results": "Aucun bien ne correspond à vos critères. Essayez d'ajuster votre recherche.",
+      "view_all": "Voir tous les biens"
     },
     "listForm": {
       "title": "Lister votre bien",
