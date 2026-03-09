@@ -62,15 +62,19 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
 
           {/* Left: Motivational content */}
           <div>
+            {/* Eyebrow with accent bar */}
             {!isSell && (
-              <p className="text-[11px] framer:text-[14px] font-semibold tracking-[0.18em] uppercase text-accent mb-3 framer:mb-4">
-                {tContact('eyebrow')}
-              </p>
+              <div className="flex items-center gap-3 mb-5 framer:mb-7">
+                <span className="w-8 framer:w-10 h-px bg-accent" aria-hidden />
+                <p className="text-[11px] framer:text-[13px] font-semibold tracking-[0.25em] uppercase text-accent">
+                  {tContact('eyebrow')}
+                </p>
+              </div>
             )}
-            <h2 className="text-[1.6rem] framer:text-[2.75rem] font-bold text-foreground leading-[1.1] tracking-tight mb-4 framer:mb-6">
+            <h2 className="text-[2rem] framer:text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-foreground leading-[1.08] tracking-tight mb-4 framer:mb-6">
               {isSell ? tSell('title') : tContact('title')}
             </h2>
-            <p className="text-[14px] framer:text-[17px] text-muted leading-relaxed mb-8 framer:mb-12 max-w-md">
+            <p className="text-[15px] framer:text-[18px] text-muted leading-relaxed mb-8 framer:mb-10 max-w-md">
               {isSell ? tSell('subtitle') : tContact('subtitle')}
             </p>
 
@@ -79,7 +83,7 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
               <div className="flex flex-col sm:flex-row gap-3 framer:gap-4">
                 <a
                   href="#contact-form"
-                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 framer:px-8 framer:py-4 bg-accent text-white rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-accent/90 transition-colors w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2.5 px-8 py-4 framer:px-10 framer:py-4.5 bg-accent text-white rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-accent/90 transition-all duration-200 w-full sm:w-auto shadow-[0_6px_24px_rgba(5,150,105,0.35)]"
                 >
                   {tSell('cta_primary')}
                 </a>
@@ -87,7 +91,7 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 framer:px-8 framer:py-4 bg-foreground/5 border border-border text-foreground rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-foreground/10 transition-colors w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2.5 px-8 py-4 framer:px-10 framer:py-4.5 bg-white border border-border/30 text-foreground rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-surface transition-all duration-200 w-full sm:w-auto"
                 >
                   <MessageCircle className="w-4 h-4" />
                   {tSell('cta_secondary')}
@@ -96,10 +100,10 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
             ) : (
               <>
                 {/* Trust points */}
-                <div className="flex flex-col gap-4 framer:gap-5 mb-8 framer:mb-12">
+                <div className="flex flex-col gap-4 framer:gap-5 mb-8 framer:mb-10">
                   {TRUST_ICONS.map(({ key, icon: Icon }) => (
                     <div key={key} className="flex items-center gap-3.5">
-                      <div className="w-10 h-10 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
+                      <div className="w-10 h-10 framer:w-11 framer:h-11 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
                         <Icon className="w-5 h-5 text-accent" />
                       </div>
                       <span className="text-[13px] framer:text-[15px] text-foreground/80 font-medium">
@@ -114,9 +118,11 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 rounded-xl bg-background border border-border hover:bg-surface transition-colors cursor-pointer mb-6"
+                  className="flex items-center gap-3.5 p-4 framer:p-5 rounded-2xl bg-white border border-border/30 hover:border-accent/30 shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-200 cursor-pointer mb-4"
                 >
-                  <MessageCircle className="w-5 h-5 text-accent shrink-0" />
+                  <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
+                    <MessageCircle className="w-5 h-5 text-green-600" />
+                  </div>
                   <div>
                     <p className="text-[13px] framer:text-[14px] text-foreground font-semibold">
                       {tContact('whatsapp_label')}
@@ -130,12 +136,14 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
                 {/* Email */}
                 <a
                   href="mailto:hello@atlasstays.com"
-                  className="flex items-center gap-3 p-4 rounded-xl bg-background border border-border text-foreground hover:text-accent transition-colors"
+                  className="flex items-center gap-3.5 p-4 framer:p-5 rounded-2xl bg-white border border-border/30 hover:border-accent/30 shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-200"
                 >
-                  <Mail className="w-5 h-5 text-accent shrink-0" />
+                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                    <Mail className="w-5 h-5 text-accent" />
+                  </div>
                   <div>
                     <p className="text-[12px] text-muted">{tInfo('email.label')}</p>
-                    <p className="text-[13px] font-medium tabular-nums">hello@atlasstays.com</p>
+                    <p className="text-[13px] framer:text-[14px] font-semibold text-foreground tabular-nums">hello@atlasstays.com</p>
                   </div>
                 </a>
               </>
@@ -143,10 +151,10 @@ export const ContactForm = ({ variant = 'default' }: ContactFormProps) => {
           </div>
 
           {/* Right: Form */}
-          <div id="contact-form" className="bg-white p-6 framer:p-10 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
+          <div id="contact-form" className="bg-white p-6 framer:p-10 rounded-2xl framer:rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.08)] border border-border/15">
             {state.success ? (
-              <div className="text-center py-10">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-5">
+              <div className="text-center py-12">
+                <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-5">
                   <CheckCircle size={32} className="text-accent" />
                 </div>
                 <h3 className="text-[20px] framer:text-[24px] font-bold text-foreground mb-2">{t('success')}</h3>

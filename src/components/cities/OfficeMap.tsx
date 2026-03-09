@@ -160,7 +160,7 @@ export const OfficeMap: React.FC<OfficeMapProps> = ({ cities, regionLabels }) =>
           <h3 className="text-[15px] framer:text-[17px] font-bold text-foreground tracking-tight">{regionLabels.europe}</h3>
           <span className="text-[12px] framer:text-[13px] text-muted font-medium">{regionLabels.europeCities}</span>
         </div>
-        <div className="relative w-full aspect-square framer:aspect-square rounded-2xl overflow-hidden border border-border/20 shadow-sm">
+        <div className="relative w-full aspect-square framer:aspect-square rounded-2xl framer:rounded-3xl overflow-hidden border border-border/15 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
           <RegionMap
             cities={cities}
             filterKeys={EUROPE_CITIES}
@@ -179,7 +179,7 @@ export const OfficeMap: React.FC<OfficeMapProps> = ({ cities, regionLabels }) =>
           <h3 className="text-[15px] framer:text-[17px] font-bold text-foreground tracking-tight">{regionLabels.morocco}</h3>
           <span className="text-[12px] framer:text-[13px] text-muted font-medium">{regionLabels.moroccoCities}</span>
         </div>
-        <div className="relative w-full aspect-square framer:aspect-square rounded-2xl overflow-hidden border border-border/20 shadow-sm">
+        <div className="relative w-full aspect-square framer:aspect-square rounded-2xl framer:rounded-3xl overflow-hidden border border-border/15 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
           <RegionMap
             cities={cities}
             filterKeys={AFRICA_CITIES}

@@ -3,11 +3,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Presentation, UserCheck, Handshake, FileCheck } from 'lucide-react';
+import { Link } from '@/i18n/routing';
+import { Presentation, UserCheck, Handshake, FileCheck, ArrowRight, MessageCircle } from 'lucide-react';
 import { Container } from '../layout/Container';
+import { useWhatsAppHref } from '@/hooks/useWhatsAppHref';
 
-const BG_IMAGE =
-  'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2000&auto=format&fit=crop';
+const BG_IMAGE = '/images/why-sell-bg.png';
 
 const STEPS = [
   { key: 'presentation', icon: Presentation },
@@ -18,71 +19,96 @@ const STEPS = [
 
 export const WhyChooseUs = () => {
   const t = useTranslations('SellPage.whyUs');
+  const whatsappHref = useWhatsAppHref();
 
   return (
     <section id="why-us" className="relative overflow-hidden">
-      {/* Background image */}
-      <Image
-        src={BG_IMAGE}
-        alt=""
-        fill
-        className="object-cover object-center"
-        sizes="100vw"
-        priority={false}
-      />
-      {/* Light overlay */}
-      <div className="absolute inset-0 bg-white/85" aria-hidden />
+      {/* Full-bleed background */}
+      <div className="absolute inset-0">
+        <Image
+          src={BG_IMAGE}
+          alt=""
+          fill
+          className="object-cover object-center scale-105"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/50 framer:bg-black/40" aria-hidden />
+        <div
+          className="absolute inset-0 hidden framer:block bg-linear-to-b from-black/55 via-black/30 to-black/55"
+          aria-hidden
+        />
+      </div>
 
-      <div className="relative z-10">
-        <Container className="max-w-[1360px] p-0">
-          <div className="grid grid-cols-1 framer:grid-cols-2 gap-0 framer:items-stretch">
-            {/* Left: headline */}
-            <div className="py-16 framer:py-24 px-6 framer:px-10 framer:flex framer:items-center">
-              <div>
-                <p className="text-[12px] framer:text-[14px] font-semibold tracking-[0.2em] uppercase text-accent mb-3 framer:mb-5">
-                  {t('eyebrow')}
-                </p>
-                <h2 className="text-[2rem] framer:text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-foreground leading-[1.1] tracking-tight mb-6 framer:mb-8">
-                  {t('title')}
-                </h2>
-                <p className="text-[18px] framer:text-[24px] text-muted leading-relaxed">
-                  {t('subtitle')}
-                </p>
-              </div>
+      {/* Content */}
+      <div className="relative z-10 py-16 framer:py-28">
+        <Container className="max-w-[1360px]">
+          {/* Header */}
+          <div className="text-center mb-12 framer:mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4 framer:mb-6">
+              <span className="w-8 framer:w-10 h-px bg-accent" aria-hidden />
+              <p className="text-[11px] framer:text-[14px] font-semibold tracking-[0.25em] uppercase text-accent">
+                {t('eyebrow')}
+              </p>
+              <span className="w-8 framer:w-10 h-px bg-accent" aria-hidden />
             </div>
+            <h2 className="text-[1.75rem] framer:text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-white leading-[1.1] tracking-tight max-w-[780px] mx-auto mb-4 framer:mb-6">
+              {t('title')}
+            </h2>
+            <p className="text-[15px] framer:text-[18px] text-white/60 leading-relaxed max-w-[560px] mx-auto">
+              {t('subtitle')}
+            </p>
+          </div>
 
-            {/* Right: timeline */}
-            <div className="py-16 framer:py-24 px-6 framer:px-10">
-              <div className="relative pl-1">
-                <div
-                  className="absolute top-4 bottom-4 inset-s-4 w-px bg-border rtl:inset-s-auto rtl:inset-e-4"
-                  aria-hidden
-                />
-                <div className="relative flex flex-col gap-0">
-                  {STEPS.map(({ key, icon: Icon }, i) => (
-                    <div
-                      key={key}
-                      className="group flex items-start gap-5 framer:gap-6 py-5 framer:py-6 first:pt-0 last:pb-0 border-b border-border/40 last:border-0"
-                    >
-                      <div className="relative z-10 shrink-0 w-8 h-8 framer:w-9 framer:h-9 rounded-full bg-accent flex items-center justify-center text-white text-[12px] framer:text-[13px] font-bold tabular-nums">
-                        {i + 1}
-                      </div>
-                      <div className="flex-1 min-w-0 pt-0.5">
-                        <div className="w-9 h-9 framer:w-10 framer:h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-3 group-hover:bg-accent/20 transition-colors">
-                          <Icon className="w-4 h-4 framer:w-5 framer:h-5 text-accent" strokeWidth={1.5} />
-                        </div>
-                        <h3 className="text-[15px] framer:text-[17px] font-bold text-foreground mb-1.5">
-                          {t(`cards.${key}.title`)}
-                        </h3>
-                        <p className="text-[13px] framer:text-[14px] text-foreground/70 leading-relaxed">
-                          {t(`cards.${key}.description`)}
-                        </p>
-                      </div>
+          {/* Steps */}
+          <div className="grid grid-cols-2 framer:grid-cols-4 gap-6 framer:gap-10 mb-12 framer:mb-16">
+            {STEPS.map(({ key, icon: Icon }, i) => (
+              <div key={key} className="group flex flex-col items-center text-center">
+                {/* Circle */}
+                <div className="relative mb-5 framer:mb-7">
+                  {/* Outer ring */}
+                  <div className="w-[100px] h-[100px] framer:w-[140px] framer:h-[140px] rounded-full border border-white/12 group-hover:border-white/25 bg-white/5 backdrop-blur-md group-hover:bg-white/10 transition-all duration-500 flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.2)] group-hover:shadow-[0_16px_48px_rgba(0,0,0,0.35)] group-hover:scale-105">
+                    {/* Inner icon circle */}
+                    <div className="w-[56px] h-[56px] framer:w-[76px] framer:h-[76px] rounded-full bg-accent/15 border border-accent/25 flex items-center justify-center group-hover:bg-accent/25 group-hover:border-accent/40 transition-all duration-500">
+                      <Icon className="w-6 h-6 framer:w-8 framer:h-8 text-accent" strokeWidth={1.5} />
                     </div>
-                  ))}
+                  </div>
+                  {/* Step number badge */}
+                  <span className="absolute -top-1 -inset-e-1 framer:-top-1.5 framer:-inset-e-1.5 w-8 h-8 framer:w-9 framer:h-9 rounded-full bg-accent text-white text-[12px] framer:text-[13px] font-bold tabular-nums flex items-center justify-center shadow-[0_4px_14px_rgba(5,150,105,0.5)] ring-2 ring-black/20">
+                    {i + 1}
+                  </span>
                 </div>
+
+                {/* Title */}
+                <h3 className="text-[15px] framer:text-[19px] font-bold text-white tracking-tight leading-snug mb-2 framer:mb-3">
+                  {t(`cards.${key}.title`)}
+                </h3>
+
+                {/* Description */}
+                <p className="text-[12px] framer:text-[15px] text-white/45 leading-relaxed group-hover:text-white/65 transition-colors duration-300 max-w-[220px] framer:max-w-[260px]">
+                  {t(`cards.${key}.description`)}
+                </p>
               </div>
-            </div>
+            ))}
+          </div>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 framer:gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 framer:px-10 framer:py-4.5 bg-accent text-white rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-accent/90 transition-all duration-200 w-full sm:w-auto shadow-[0_6px_24px_rgba(5,150,105,0.35)]"
+            >
+              {t('cta_primary')}
+              <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+            </Link>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 framer:px-10 framer:py-4.5 bg-white/10 border border-white/20 text-white rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-white/20 backdrop-blur-sm transition-all duration-200 w-full sm:w-auto"
+            >
+              <MessageCircle className="w-4 h-4" />
+              {t('cta_secondary')}
+            </a>
           </div>
         </Container>
       </div>

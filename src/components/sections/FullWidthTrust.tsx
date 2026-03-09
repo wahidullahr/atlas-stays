@@ -11,19 +11,19 @@ const PROOF_ITEMS = [
   {
     key: 'report' as const,
     icon: FileText,
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop',
+    image: '/images/photo-report.png',
     blurred: false,
   },
   {
     key: 'checklist' as const,
     icon: ClipboardCheck,
-    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800&auto=format&fit=crop',
+    image: '/images/checklist-inspection.png',
     blurred: false,
   },
   {
     key: 'render' as const,
     icon: Box,
-    image: '/images/3d-render.png',
+    image: '/images/3d-render-screen.png',
     blurred: false,
   },
 ];
@@ -36,72 +36,55 @@ export const FullWidthTrust = () => {
       <Container className="max-w-[1360px]">
         {/* Header */}
         <div className="text-center mb-10 framer:mb-16">
-          <p className="text-[11px] framer:text-[15px] font-semibold tracking-[0.18em] uppercase text-accent mb-2.5 framer:mb-4">
-            {t('eyebrow')}
-          </p>
-          <h2 className="text-[1.6rem] framer:text-[3rem] font-bold text-foreground leading-[1.1] tracking-tight mb-3 framer:mb-5">
+          <div className="flex items-center justify-center gap-3 mb-5 framer:mb-7">
+            <span className="w-8 framer:w-10 h-px bg-accent" aria-hidden />
+            <p className="text-[11px] framer:text-[13px] font-semibold tracking-[0.25em] uppercase text-accent">
+              {t('eyebrow')}
+            </p>
+            <span className="w-8 framer:w-10 h-px bg-accent" aria-hidden />
+          </div>
+          <h2 className="text-[2rem] framer:text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-foreground leading-[1.08] tracking-tight mb-4 framer:mb-6">
             {t('title')}
           </h2>
-          <p className="text-[13px] framer:text-[17px] text-muted max-w-xl mx-auto leading-relaxed">
+          <p className="text-[15px] framer:text-[18px] text-muted max-w-xl mx-auto leading-relaxed">
             {t('subtitle')}
           </p>
         </div>
 
         {/* Proof Cards */}
-        <div
-          className="grid grid-cols-1 framer:grid-cols-3 gap-5 framer:gap-8 mb-12 framer:mb-16"
-          style={{ perspective: '1200px' }}
-        >
-          {PROOF_ITEMS.map((item, i) => {
+        <div className="grid grid-cols-1 framer:grid-cols-3 gap-5 framer:gap-6 mb-12 framer:mb-16">
+          {PROOF_ITEMS.map((item) => {
             const Icon = item.icon;
-            const tiltDeg = i === 0 ? 2 : i === 2 ? -2 : 0;
 
             return (
               <div
                 key={item.key}
-                className="group relative rounded-2xl border border-border/20 bg-white overflow-hidden transition-all duration-500 hover:-translate-y-3 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
-                style={{
-                  transform: `rotateY(${tiltDeg}deg)`,
-                  transformStyle: 'preserve-3d',
-                }}
+                className="group relative rounded-2xl framer:rounded-3xl border border-border/15 bg-white overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.1)]"
               >
                 <div className="relative aspect-4/3 overflow-hidden">
                   <Image
                     src={item.image}
                     alt=""
                     fill
-                    className={`object-cover transition-all duration-500 ${
-                      item.blurred
-                        ? 'blur-[6px] scale-105 group-hover:blur-[3px]'
-                        : 'scale-100 group-hover:scale-105'
-                    }`}
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 810px) 100vw, 33vw"
                   />
-                  {item.blurred && <div className="absolute inset-0 bg-white/40" />}
+                  <div className="absolute inset-0 bg-linear-to-t from-black/25 to-transparent" aria-hidden />
 
-                  {/* Icon badge — only on blurred cards */}
-                  {item.blurred && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-14 h-14 framer:w-16 framer:h-16 rounded-2xl bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="w-6 h-6 framer:w-7 framer:h-7 text-accent" />
-                      </div>
+                  {/* Icon badge */}
+                  <div className="absolute top-4 inset-s-4">
+                    <div className="w-10 h-10 framer:w-11 framer:h-11 rounded-xl bg-white/90 backdrop-blur-sm shadow-md flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-accent" />
                     </div>
-                  )}
-
-                  {/* Badge label — only on blurred cards */}
-                  {item.blurred && (
-                    <div className="absolute top-3 inset-e-3 px-2.5 py-1 bg-foreground/80 text-white text-[10px] framer:text-[11px] font-bold uppercase tracking-wider rounded-md">
-                      {t(`proofs.${item.key}.badge`)}
-                    </div>
-                  )}
+                  </div>
                 </div>
 
                 {/* Card content */}
-                <div className="p-5 framer:p-6 border-t border-border/10">
-                  <h3 className="text-[15px] framer:text-[17px] font-bold text-foreground mb-1.5">
+                <div className="p-5 framer:p-7">
+                  <h3 className="text-[15px] framer:text-[18px] font-bold text-foreground mb-1.5 framer:mb-2">
                     {t(`proofs.${item.key}.title`)}
                   </h3>
-                  <p className="text-[12px] framer:text-[14px] text-muted leading-relaxed">
+                  <p className="text-[13px] framer:text-[15px] text-foreground/70 leading-relaxed">
                     {t(`proofs.${item.key}.description`)}
                   </p>
                 </div>
@@ -114,7 +97,7 @@ export const FullWidthTrust = () => {
         <div className="text-center">
           <Link
             href="/about"
-            className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-white rounded-xl font-semibold text-[14px] framer:text-[15px] hover:bg-accent/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+            className="inline-flex items-center gap-2.5 px-8 py-4 framer:px-10 framer:py-4.5 bg-accent text-white rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-accent/90 transition-all duration-200 shadow-[0_6px_24px_rgba(5,150,105,0.35)]"
           >
             {t('cta')}
             <ArrowRight className="w-4 h-4 rtl:rotate-180" />

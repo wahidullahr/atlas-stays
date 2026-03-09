@@ -75,24 +75,28 @@ export const StatsSection = () => {
   const t = useTranslations('Partners');
 
   return (
-    <section className="bg-surface py-14 framer:py-20 overflow-hidden border-y border-border/20">
-      <Container>
-        <p className="text-[12px] framer:text-[14px] font-semibold tracking-[0.18em] uppercase text-foreground/60 text-center mb-8 framer:mb-12">
-          {t('eyebrow')}
-        </p>
+    <section className="bg-surface py-16 framer:py-24 overflow-hidden border-y border-border/10">
+      <Container className="max-w-[1360px]">
+        <div className="flex items-center justify-center gap-3 mb-8 framer:mb-12">
+          <span className="w-8 framer:w-10 h-px bg-accent" aria-hidden />
+          <p className="text-[11px] framer:text-[13px] font-semibold tracking-[0.25em] uppercase text-accent">
+            {t('eyebrow')}
+          </p>
+          <span className="w-8 framer:w-10 h-px bg-accent" aria-hidden />
+        </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-8 framer:gap-14">
+        <div className="flex flex-wrap items-center justify-center gap-10 framer:gap-16">
           {PARTNER_LOGOS.map(({ key, Component }) => (
             <div
               key={key}
-              className="opacity-100 transition-transform duration-300 hover:scale-105"
+              className="opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-105"
             >
               <Component />
             </div>
           ))}
         </div>
 
-        <p className="text-[13px] framer:text-[15px] text-foreground/50 text-center mt-8 framer:mt-12 max-w-lg mx-auto leading-relaxed">
+        <p className="text-[14px] framer:text-[16px] text-muted text-center mt-8 framer:mt-12 max-w-lg mx-auto leading-relaxed">
           {t('description')}
         </p>
       </Container>

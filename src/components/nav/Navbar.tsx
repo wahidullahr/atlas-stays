@@ -193,12 +193,23 @@ export function Navbar() {
 
             {/* Nav links */}
             <div className="px-5 py-6 flex flex-col gap-1">
-              {NAV_ITEMS.map((item) =>
-                item.anchor ? (
+              {NAV_ITEMS.map((item) => {
+                const fullHref = `/${locale}${item.href === '/' ? '' : item.href}`;
+                const isActive =
+                  item.href === '/'
+                    ? pathname === `/${locale}` || pathname === `/${locale}/`
+                    : pathname.startsWith(`/${locale}${item.href}`);
+
+                return item.anchor ? (
                   <a
                     key={item.key}
                     href={item.href}
-                    className="rounded-xl px-4 py-3.5 text-[16px] font-medium text-white/70 hover:text-white hover:bg-white/8 transition-all duration-200"
+                    className={clsx(
+                      "rounded-xl px-4 py-3.5 text-[16px] font-medium transition-all duration-200",
+                      isActive
+                        ? "text-white bg-accent/20"
+                        : "text-white/70 hover:text-white hover:bg-white/8"
+                    )}
                     onClick={() => setOpen(false)}
                   >
                     {t(item.key)}
@@ -206,14 +217,19 @@ export function Navbar() {
                 ) : (
                   <Link
                     key={item.key}
-                    href={`/${locale}${item.href}`}
-                    className="rounded-xl px-4 py-3.5 text-[16px] font-medium text-white/70 hover:text-white hover:bg-white/8 transition-all duration-200"
+                    href={fullHref}
+                    className={clsx(
+                      "rounded-xl px-4 py-3.5 text-[16px] font-medium transition-all duration-200",
+                      isActive
+                        ? "text-white bg-accent/20"
+                        : "text-white/70 hover:text-white hover:bg-white/8"
+                    )}
                     onClick={() => setOpen(false)}
                   >
                     {t(item.key)}
                   </Link>
-                )
-              )}
+                );
+              })}
             </div>
 
             {/* Divider */}

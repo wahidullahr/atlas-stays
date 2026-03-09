@@ -18,16 +18,20 @@ export const CityGrid = () => {
   ];
 
   return (
-    <section id="offices" className="relative bg-surface overflow-hidden py-10 framer:py-24">
+    <section id="offices" className="relative bg-surface overflow-hidden py-16 framer:py-28">
       <Container className="max-w-[1360px]">
-        <div className="text-center mb-8 framer:mb-14">
-          <p className="text-[11px] framer:text-[15px] font-semibold tracking-[0.18em] uppercase text-accent mb-2.5 framer:mb-4">
-            {t('eyebrow')}
-          </p>
-          <h2 className="text-[1.5rem] framer:text-[2.75rem] font-bold text-foreground leading-[1.15] framer:leading-[1.1] tracking-tight mb-3 framer:mb-5">
+        <div className="text-center mb-10 framer:mb-16">
+          <div className="flex items-center justify-center gap-3 mb-5 framer:mb-7">
+            <span className="w-8 framer:w-10 h-px bg-accent" aria-hidden />
+            <p className="text-[11px] framer:text-[13px] font-semibold tracking-[0.25em] uppercase text-accent">
+              {t('eyebrow')}
+            </p>
+            <span className="w-8 framer:w-10 h-px bg-accent" aria-hidden />
+          </div>
+          <h2 className="text-[2rem] framer:text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-foreground leading-[1.08] tracking-tight mb-4 framer:mb-6">
             {t('title')}
           </h2>
-          <p className="text-[13px] framer:text-[17px] text-muted max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[15px] framer:text-[18px] text-muted max-w-2xl mx-auto leading-relaxed">
             {t('description')}
           </p>
         </div>
