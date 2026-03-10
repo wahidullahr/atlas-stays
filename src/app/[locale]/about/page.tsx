@@ -6,6 +6,7 @@ import { AboutTeam } from '@/components/about/AboutTeam';
 import { AboutStandards } from '@/components/about/AboutStandards';
 import { AboutInternational } from '@/components/about/AboutInternational';
 import { AboutCommitment } from '@/components/about/AboutCommitment';
+import { AboutDigitalPartner } from '@/components/about/AboutDigitalPartner';
 import { AboutCTA } from '@/components/about/AboutCTA';
 
 export default function AboutPage() {
@@ -20,6 +21,7 @@ export default function AboutPage() {
         <AboutStandards />
         <AboutInternational />
         <AboutCommitment />
+        <AboutDigitalPartner />
         <AboutCTA />
       </main>
     </>

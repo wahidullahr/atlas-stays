@@ -351,19 +351,40 @@
       "title": "International Perspective",
       "body1": "Our team brings experience from international markets and diverse professional backgrounds.",
       "body2": "This global perspective allows us to understand different buyer expectations and cultural preferences. By applying international standards, we create listings that appeal to both local and international buyers.",
-      "body3": "This approach helps sellers reach a wider audience and ensures a more professional real estate experience."
+      "body3": "This approach helps sellers reach a wider audience and ensures a more professional real estate experience.",
+      "highlight_local": "Local & international buyers",
+      "highlight_standards": "Global standards"
     },
     "commitment": {
       "eyebrow": "OUR PROMISE",
       "title": "Our Clients Come First",
       "body1": "Our work is built on trust and long-term relationships.",
       "body2": "We take the time to understand our clients' goals and guide them through every stage of the process with honesty, transparency, and professional advice.",
-      "body3": "Deliver exceptional service and represent every property with the highest level of professionalism."
+      "body3": "Deliver exceptional service and represent every property with the highest level of professionalism.",
+      "highlight_trust": "Trust & transparency",
+      "highlight_guidance": "Guided every step"
+    },
+    "digitalPartner": {
+      "eyebrow": "DIGITAL PARTNER",
+      "title": "Powered by Xala Technologies",
+      "body1": "AtlasStays partners with Xala Technologies — a Norwegian innovation leader trusted by the UN, UNICEF, USAID, Statistics Norway, and major Nordic enterprises — to power our digital infrastructure.",
+      "body2": "Xala combines AI, cloud technology, and modern web development to deliver secure, scalable solutions. Their expertise in React, Next.js, and TypeScript ensures our platform is fast, reliable, and built to grow with your business.",
+      "body3": "For property owners, this means enterprise-grade security, GDPR compliance, and a platform designed for the long term. Your listings, data, and guest communications are protected by the same standards used by global institutions.",
+      "badge_iso": "ISO 27001 & 27701",
+      "badge_gdpr": "GDPR Compliant",
+      "badge_partners": "Microsoft & AWS Partner",
+      "cta": "Learn more about Xala Technologies",
+      "card_ai": "AI & Machine Learning",
+      "card_ai_desc": "Smart automation and insights that streamline operations and enhance guest experiences.",
+      "card_cloud": "Cloud Infrastructure",
+      "card_cloud_desc": "Secure, scalable hosting on Azure and AWS for 99.9% uptime.",
+      "card_trust": "Trusted by Global Institutions",
+      "card_trust_desc": "The same technology stack that serves UN agencies, Nordic banks, and healthcare networks powers AtlasStays."
     },
     "cta": {
       "title": "Work With a Professional Real Estate Team",
       "description": "Whether you are selling a property or searching for your next home, our team is ready to assist you.",
-      "button": "View Properties"
+      "button": "Get in Touch"
     }
   },
   "Trust": {

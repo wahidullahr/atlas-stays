@@ -5,8 +5,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Container } from '../layout/Container';
 
-const PHILOSOPHY_IMAGE =
-  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop';
+const PHILOSOPHY_IMAGE = '/images/moroccan-villa-philosophy.png';
 
 export const AboutPhilosophy = () => {
   const t = useTranslations('About.philosophy');
@@ -48,7 +47,7 @@ export const AboutPhilosophy = () => {
           <div className="relative rounded-2xl framer:rounded-3xl overflow-hidden min-h-[300px] framer:min-h-[520px]">
             <Image
               src={PHILOSOPHY_IMAGE}
-              alt=""
+              alt="Traditional Moroccan villa — AtlasStays approach to property presentation"
               fill
               className="object-cover"
               sizes="(min-width: 810px) 50vw, 100vw"

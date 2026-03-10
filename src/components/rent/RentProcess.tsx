@@ -1,8 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { motion } from 'framer-motion';
 import { Camera, MessageCircle, BarChart3, ArrowRight } from 'lucide-react';
 import { Container } from '../layout/Container';
 
@@ -12,8 +13,17 @@ const STEPS = [
   { key: 'report', number: '03', icon: BarChart3, color: '#8b5cf6' },
 ] as const;
 
+
 export const RentProcess = () => {
   const t = useTranslations('RentPage.process');
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((i) => (i + 1) % STEPS.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="bg-white py-16 framer:py-24 overflow-hidden">
@@ -38,12 +48,32 @@ export const RentProcess = () => {
 
           <div className="grid grid-cols-1 framer:grid-cols-3 gap-8 framer:gap-6">
             {STEPS.map(({ key, number, icon: Icon, color }, i) => (
-              <div key={key} className="flex flex-col items-center text-center group">
+              <div key={key} className="flex flex-col items-center text-center group relative">
                 {/* Number + icon circle */}
-                <div className="relative mb-6 framer:mb-8">
+                <div className="relative mb-6 framer:mb-8 w-20 h-20 framer:w-24 framer:h-24">
+                  {/* Active glow ring - cycles through steps */}
+                  <motion.div
+                    className="absolute inset-0 rounded-full pointer-events-none"
+                    initial={false}
+                    animate={{
+                      scale: activeIndex === i ? [1, 1.2, 1] : 1,
+                      opacity: activeIndex === i ? [0.5, 0.1, 0.5] : 0,
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                    style={{
+                      boxShadow: `0 0 0 3px ${color}`,
+                    }}
+                  />
                   <div
-                    className="w-20 h-20 framer:w-24 framer:h-24 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105"
-                    style={{ backgroundColor: `${color}12` }}
+                    className="relative w-full h-full rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-105"
+                    style={{
+                      backgroundColor: `${color}12`,
+                      boxShadow: activeIndex === i ? `0 0 20px ${color}35` : undefined,
+                    }}
                   >
                     <Icon className="w-8 h-8 framer:w-10 framer:h-10" style={{ color }} strokeWidth={1.5} />
                   </div>

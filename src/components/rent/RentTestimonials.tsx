@@ -13,7 +13,7 @@ export const RentTestimonials = () => {
   const t = useTranslations('RentPage.testimonials');
 
   return (
-    <section className="bg-white py-16 framer:py-24 overflow-hidden">
+    <section className="bg-surface/30 py-16 framer:py-24 overflow-hidden">
       <Container className="max-w-[1360px]">
         <div className="text-center mb-10 framer:mb-14">
           <p className="text-[12px] framer:text-[14px] font-semibold tracking-[0.2em] uppercase text-accent mb-3 framer:mb-5">
@@ -31,14 +31,14 @@ export const RentTestimonials = () => {
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 framer:w-24 bg-linear-to-r from-white to-transparent" aria-hidden />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 framer:w-24 bg-linear-to-l from-white to-transparent" aria-hidden />
 
-        <div className="flex w-max animate-marquee gap-5 framer:gap-6 hover:[animation-play-state:paused]">
+        <div className="group flex w-max animate-marquee gap-6 framer:gap-8 hover:[animation-play-state:paused]">
           {items.map((testimonial, idx) => (
             <article
               key={`${testimonial.id}-${idx}`}
-              className="flex flex-col w-[340px] framer:w-[400px] shrink-0 rounded-2xl bg-white border border-border/20 shadow-[0_4px_20px_rgba(0,0,0,0.08)] overflow-hidden"
+              className="flex flex-col w-[340px] framer:w-[400px] shrink-0 rounded-2xl framer:rounded-3xl bg-white border-2 border-border/50 overflow-hidden transition-all duration-300 ease-out shadow-[0_20px_50px_-15px_rgba(0,0,0,0.18),0_0_0_1px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.95)] hover:shadow-[0_28px_60px_-16px_rgba(0,0,0,0.22),0_0_0_1px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 hover:border-border/70"
             >
               {/* Image strip */}
-              <div className="relative h-[120px] framer:h-[140px] overflow-hidden">
+              <div className="relative h-[120px] framer:h-[140px] overflow-hidden bg-surface">
                 <Image
                   src={testimonial.image}
                   alt=""

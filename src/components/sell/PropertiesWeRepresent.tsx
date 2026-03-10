@@ -100,6 +100,7 @@ export const PropertiesWeRepresent = ({ hideHeader, filters }: PropertiesWeRepre
               t={t}
               tCard={tCard}
               className="bg-[#EEF0F3]"
+              linkToDetail={!!filters}
             />
           ))}
         </div>

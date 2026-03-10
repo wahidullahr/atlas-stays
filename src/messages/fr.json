@@ -352,19 +352,40 @@
       "title": "Perspective Internationale",
       "body1": "Notre équipe apporte une expérience des marchés internationaux et des parcours professionnels diversifiés.",
       "body2": "Cette perspective mondiale nous permet de comprendre les attentes et les préférences culturelles des différents acheteurs. En appliquant des standards internationaux, nous créons des annonces qui séduisent les acheteurs locaux et internationaux.",
-      "body3": "Cette approche aide les vendeurs à atteindre un public plus large et garantit une expérience immobilière plus professionnelle."
+      "body3": "Cette approche aide les vendeurs à atteindre un public plus large et garantit une expérience immobilière plus professionnelle.",
+      "highlight_local": "Acheteurs locaux et internationaux",
+      "highlight_standards": "Standards internationaux"
     },
     "commitment": {
       "eyebrow": "NOTRE ENGAGEMENT",
       "title": "Nos Clients Passent en Premier",
       "body1": "Notre travail repose sur la confiance et les relations à long terme.",
       "body2": "Nous prenons le temps de comprendre les objectifs de nos clients et les accompagnons à chaque étape du processus avec honnêteté, transparence et des conseils professionnels.",
-      "body3": "Offrir un service exceptionnel et représenter chaque propriété avec le plus haut niveau de professionnalisme."
+      "body3": "Offrir un service exceptionnel et représenter chaque propriété avec le plus haut niveau de professionnalisme.",
+      "highlight_trust": "Confiance et transparence",
+      "highlight_guidance": "Accompagnement à chaque étape"
+    },
+    "digitalPartner": {
+      "eyebrow": "PARTENAIRE DIGITAL",
+      "title": "Propulsé par Xala Technologies",
+      "body1": "AtlasStays s'associe à Xala Technologies — leader norvégien de l'innovation, partenaire de l'ONU, UNICEF, USAID, Statistics Norway et des grandes entreprises nordiques — pour alimenter notre infrastructure numérique.",
+      "body2": "Xala combine l'IA, le cloud et le développement web moderne pour offrir des solutions sécurisées et évolutives. Leur expertise en React, Next.js et TypeScript garantit une plateforme rapide, fiable et conçue pour grandir avec votre activité.",
+      "body3": "Pour les propriétaires, cela signifie une sécurité de niveau entreprise, la conformité RGPD et une plateforme pensée pour le long terme. Vos annonces, données et communications avec les voyageurs sont protégées par les mêmes standards que les institutions mondiales.",
+      "badge_iso": "ISO 27001 & 27701",
+      "badge_gdpr": "Conforme RGPD",
+      "badge_partners": "Partenaire Microsoft & AWS",
+      "cta": "En savoir plus sur Xala Technologies",
+      "card_ai": "IA & Machine Learning",
+      "card_ai_desc": "Automatisation intelligente et insights pour optimiser les opérations et l'expérience voyageur.",
+      "card_cloud": "Infrastructure Cloud",
+      "card_cloud_desc": "Hébergement sécurisé et évolutif sur Azure et AWS avec 99,9 % de disponibilité.",
+      "card_trust": "Reconnu par les institutions mondiales",
+      "card_trust_desc": "La même stack technologique qui sert les agences de l'ONU, les banques nordiques et les réseaux de santé alimente AtlasStays."
     },
     "cta": {
       "title": "Travaillez avec une Équipe Immobilière Professionnelle",
       "description": "Que vous vendiez une propriété ou que vous cherchiez votre prochain logement, notre équipe est prête à vous accompagner.",
-      "button": "Voir les propriétés"
+      "button": "Nous contacter"
     }
   },
   "Trust": {

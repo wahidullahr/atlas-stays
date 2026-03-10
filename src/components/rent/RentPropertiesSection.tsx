@@ -92,9 +92,9 @@ export const RentPropertiesSection = ({ hideHeader, filters }: RentPropertiesSec
     ? Math.min(Math.max(0, parseInt(pageParam || '1', 10) - 1), totalPages - 1)
     : 0;
 
-  const visibleListings = isPropertiesPage
-    ? filtered.slice(page * CARDS_PER_PAGE, page * CARDS_PER_PAGE + CARDS_PER_PAGE)
-    : ALL_RENT_LISTINGS.slice(0, PREVIEW_COUNT);
+  const start = isPropertiesPage ? page * CARDS_PER_PAGE : 0;
+  const count = isPropertiesPage ? CARDS_PER_PAGE : PREVIEW_COUNT;
+  const visibleListings = filtered.slice(start, start + count);
 
   return (
     <section id="properties" className="bg-white py-20 framer:py-28 overflow-hidden">
@@ -128,6 +128,7 @@ export const RentPropertiesSection = ({ hideHeader, filters }: RentPropertiesSec
                   t={t}
                   tCard={tCard}
                   className="bg-[#EEF0F3]"
+                  linkToDetail={isPropertiesPage}
                 />
               ))}
             </div>
@@ -138,10 +139,10 @@ export const RentPropertiesSection = ({ hideHeader, filters }: RentPropertiesSec
               <div className="flex justify-center">
                 <Link
                   href="/areas?tab=rent"
-                  className="inline-flex items-center gap-2.5 px-8 py-3.5 framer:px-10 framer:py-4 bg-accent text-white rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-accent/90 transition-all duration-200 shadow-[0_4px_16px_rgba(5,150,105,0.25)]"
+                  className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-accent text-white text-[14px] font-semibold hover:bg-accent/90 transition-all duration-200 shadow-[0_4px_16px_rgba(5,150,105,0.25)] framer:px-10 framer:py-4 framer:text-[15px]"
                 >
                   {t('view_all')}
-                  <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+                  <ArrowRight className="w-4 h-4 rtl:rotate-180 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
                 </Link>
               </div>
             )}
