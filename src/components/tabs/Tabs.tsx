@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useRef, useCallback } from 'react';
 import { cn } from '@/lib/utils';
 
 export interface TabItem {
@@ -23,7 +23,6 @@ export const Tabs: React.FC<TabsProps> = ({
   children,
   label = 'Tabs',
 }) => {
-  const [focusedIndex, setFocusedIndex] = useState(0);
   const tabListRef = useRef<HTMLDivElement>(null);
 
   const handleKeyDown = useCallback(
@@ -51,7 +50,6 @@ export const Tabs: React.FC<TabsProps> = ({
         return;
       }
 
-      setFocusedIndex(nextIndex);
       onChange(tabs[nextIndex].key);
     },
     [activeKey, onChange, tabs]
@@ -66,7 +64,7 @@ export const Tabs: React.FC<TabsProps> = ({
         className="inline-flex p-1 bg-surface rounded-xl overflow-x-auto max-w-full border border-border"
         onKeyDown={handleKeyDown}
       >
-        {tabs.map((tab, index) => {
+        {tabs.map((tab) => {
           const isSelected = activeKey === tab.key;
           return (
             <button
@@ -83,10 +81,7 @@ export const Tabs: React.FC<TabsProps> = ({
                   ? 'bg-foreground text-background [box-shadow:var(--shadow-card)]'
                   : 'text-muted hover:text-foreground'
               )}
-              onClick={() => {
-                onChange(tab.key);
-                setFocusedIndex(index);
-              }}
+              onClick={() => onChange(tab.key)}
             >
               {tab.label}
             </button>

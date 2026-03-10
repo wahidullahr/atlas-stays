@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@splinetool/react-spline": "^4.1.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.34.3",
     "leaflet": "^1.9.4",

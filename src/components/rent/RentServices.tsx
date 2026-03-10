@@ -129,7 +129,7 @@ export const RentServices = () => {
 
           {/* Right: Service cards list */}
           <div className="flex flex-col gap-3 framer:gap-3.5">
-            {SERVICES.map(({ key, icon: Icon, color, iconBg }, i) => (
+            {SERVICES.map(({ key, icon: Icon, iconBg }, i) => (
               <button
                 key={key}
                 type="button"

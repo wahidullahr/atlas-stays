@@ -137,7 +137,7 @@ export const RentPropertiesSection = ({ hideHeader, filters }: RentPropertiesSec
             ) : (
               <div className="flex justify-center">
                 <Link
-                  href="/properties?tab=rent"
+                  href="/areas?tab=rent"
                   className="inline-flex items-center gap-2.5 px-8 py-3.5 framer:px-10 framer:py-4 bg-accent text-white rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-accent/90 transition-all duration-200 shadow-[0_4px_16px_rgba(5,150,105,0.25)]"
                 >
                   {t('view_all')}

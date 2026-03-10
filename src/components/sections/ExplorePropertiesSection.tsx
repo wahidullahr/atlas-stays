@@ -55,7 +55,7 @@ export const ExplorePropertiesSection = () => {
             </div>
 
             <Link
-              href="/properties"
+              href="/areas"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 framer:px-10 framer:py-4.5 bg-accent text-white rounded-xl font-semibold text-[14px] framer:text-[16px] hover:bg-accent/90 transition-all duration-200 w-full sm:w-auto shadow-[0_6px_24px_rgba(5,150,105,0.35)]"
             >
               {t('cta')}

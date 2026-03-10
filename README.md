@@ -32,7 +32,7 @@ Copy `.env.example` to `.env.local` and set:
 
 - `SITE_URL` – Base URL for SEO and links.
 - `BUSINESS_EMAIL` – Inbox for contact form submissions (required for form to succeed).
-- `WHATSAPP_NUMBER` – E.164 number for WhatsApp CTAs (e.g. `4741351547`).
+- `NEXT_PUBLIC_WHATSAPP_NUMBER` – E.164 number for WhatsApp CTAs (e.g. `4741351547`).
 - `RESEND_API_KEY` (optional) – For sending welcome emails to customers via Resend. When set, the contact form sends a professional welcome/confirmation email to each customer.
 - `EMAIL_FROM` (optional) – Sender address for welcome emails (e.g. `AtlasStays <hello@yourdomain.com>`). Defaults to Resend's onboarding address if unset.
 - `SMTP_*` (optional) – Alternative to Resend for sending email.

@@ -3,21 +3,71 @@ export type ListingStatus = 'available' | 'sold' | 'under_negotiation' | 'recent
 export type PropertyListing = {
   id: string;
   image: string;
+  images: string[];
   nameKey: string;
   cityKey: string;
   typeKey: string;
   status: ListingStatus;
-  priceKey: string; // e.g. "price_sale_250" for 250k
+  priceKey: string;
   bedrooms: number;
   bathrooms: number;
-  area: number; // m²
+  area: number;
 };
 
-/** Currently available properties. Replace with real listings when ready. */
+const GALLERY = {
+  riad_palm: [
+    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?q=80&w=1200',
+  ],
+  villa_atlas: [
+    'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?q=80&w=1200',
+  ],
+  medina_view: [
+    'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?q=80&w=1200',
+  ],
+  kasbah_house: [
+    'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200',
+  ],
+  ocean_retreat: [
+    'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200',
+    'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?q=80&w=1200',
+  ],
+  city_residence: [
+    'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200',
+    'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200',
+  ],
+} as const;
+
+function imgs(key: keyof typeof GALLERY): string[] {
+  return [...GALLERY[key]];
+}
+
 export const AVAILABLE_LISTINGS: PropertyListing[] = [
   {
     id: '1',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800',
+    images: imgs('riad_palm'),
     nameKey: 'riad_palm',
     cityKey: 'marrakech',
     typeKey: 'apartment',
@@ -30,6 +80,7 @@ export const AVAILABLE_LISTINGS: PropertyListing[] = [
   {
     id: '2',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800',
+    images: imgs('villa_atlas'),
     nameKey: 'villa_atlas',
     cityKey: 'casablanca',
     typeKey: 'villa',
@@ -42,6 +93,7 @@ export const AVAILABLE_LISTINGS: PropertyListing[] = [
   {
     id: '3',
     image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800',
+    images: imgs('medina_view'),
     nameKey: 'medina_view',
     cityKey: 'tangier',
     typeKey: 'apartment',
@@ -53,11 +105,11 @@ export const AVAILABLE_LISTINGS: PropertyListing[] = [
   },
 ];
 
-/** Recently sold properties. Replace with real listings when ready. */
 export const SOLD_LISTINGS: PropertyListing[] = [
   {
     id: '4',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800',
+    images: imgs('kasbah_house'),
     nameKey: 'kasbah_house',
     cityKey: 'marrakech',
     typeKey: 'apartment',
@@ -70,6 +122,7 @@ export const SOLD_LISTINGS: PropertyListing[] = [
   {
     id: '5',
     image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=800',
+    images: imgs('ocean_retreat'),
     nameKey: 'ocean_retreat',
     cityKey: 'agadir',
     typeKey: 'villa',
@@ -82,6 +135,7 @@ export const SOLD_LISTINGS: PropertyListing[] = [
   {
     id: '6',
     image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=800',
+    images: imgs('city_residence'),
     nameKey: 'city_residence',
     cityKey: 'casablanca',
     typeKey: 'apartment',
@@ -93,14 +147,13 @@ export const SOLD_LISTINGS: PropertyListing[] = [
   },
 ];
 
-/** All listings mixed (available + sold) for the grid with pagination. */
 export const ALL_LISTINGS: PropertyListing[] = [
   ...AVAILABLE_LISTINGS,
   ...SOLD_LISTINGS,
-  // Extra listings for page 2 (optional; add real data later)
   {
     id: '7',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800',
+    images: imgs('riad_palm'),
     nameKey: 'riad_palm',
     cityKey: 'marrakech',
     typeKey: 'villa',
@@ -113,6 +166,7 @@ export const ALL_LISTINGS: PropertyListing[] = [
   {
     id: '8',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800',
+    images: imgs('villa_atlas'),
     nameKey: 'villa_atlas',
     cityKey: 'agadir',
     typeKey: 'villa',
@@ -125,6 +179,7 @@ export const ALL_LISTINGS: PropertyListing[] = [
   {
     id: '9',
     image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800',
+    images: imgs('medina_view'),
     nameKey: 'medina_view',
     cityKey: 'tangier',
     typeKey: 'apartment',
@@ -137,6 +192,7 @@ export const ALL_LISTINGS: PropertyListing[] = [
   {
     id: '10',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800',
+    images: imgs('kasbah_house'),
     nameKey: 'kasbah_house',
     cityKey: 'casablanca',
     typeKey: 'apartment',
@@ -149,6 +205,7 @@ export const ALL_LISTINGS: PropertyListing[] = [
   {
     id: '11',
     image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=800',
+    images: imgs('ocean_retreat'),
     nameKey: 'ocean_retreat',
     cityKey: 'marrakech',
     typeKey: 'villa',
@@ -161,6 +218,7 @@ export const ALL_LISTINGS: PropertyListing[] = [
   {
     id: '12',
     image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=800',
+    images: imgs('city_residence'),
     nameKey: 'city_residence',
     cityKey: 'tangier',
     typeKey: 'apartment',

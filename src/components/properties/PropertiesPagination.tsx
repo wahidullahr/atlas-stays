@@ -17,22 +17,20 @@ export function PropertiesPagination({ currentPage, totalPages, tab }: Props) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
 
-  // Sale: only "Browse all" button, no pagination
   if (tab === 'sale') {
     return (
       <div className="flex justify-center">
         <Link
           href="/areas?tab=sale"
-          className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-accent text-white text-[15px] font-semibold hover:bg-accent/90 hover:shadow-lg active:scale-[0.98] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 framer:px-10 framer:py-4 framer:text-[16px] framer:rounded-2xl"
+          className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-accent text-white text-[14px] font-semibold hover:bg-accent/90 transition-all duration-200 shadow-[0_4px_16px_rgba(5,150,105,0.25)] framer:px-10 framer:py-4 framer:text-[15px]"
         >
           {t('browseAllForSale')}
-          <ArrowRight className="w-4 h-4 rtl:rotate-180 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 framer:w-5 framer:h-5" />
+          <ArrowRight className="w-4 h-4 rtl:rotate-180 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
         </Link>
       </div>
     );
   }
 
-  // Rent: pagination when multiple pages
   if (totalPages <= 1) return null;
 
   const buildHref = (page: number) => {
@@ -49,13 +47,13 @@ export function PropertiesPagination({ currentPage, totalPages, tab }: Props) {
 
   return (
     <nav
-      className="flex items-center justify-center gap-3 framer:gap-4"
+      className="flex items-center justify-center gap-2 framer:gap-3"
       aria-label={t('ariaLabel')}
     >
       <Link
         href={buildHref(prevPage)}
-        className={`inline-flex items-center justify-center w-10 h-10 rounded-full border border-border bg-white text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 ${
-          currentPage <= 0 ? 'pointer-events-none opacity-50' : 'hover:bg-surface hover:border-border/80'
+        className={`inline-flex items-center justify-center w-10 h-10 framer:w-11 framer:h-11 rounded-xl border border-border/60 bg-white text-foreground transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 ${
+          currentPage <= 0 ? 'pointer-events-none opacity-40' : 'hover:bg-surface hover:border-border'
         }`}
         aria-label={t('prev')}
         aria-disabled={currentPage <= 0}
@@ -67,8 +65,10 @@ export function PropertiesPagination({ currentPage, totalPages, tab }: Props) {
           <Link
             key={i}
             href={buildHref(i)}
-            className={`min-w-[2.25rem] h-10 px-3 rounded-lg flex items-center justify-center text-[14px] font-medium transition-colors ${
-              i === currentPage ? 'bg-accent text-white' : 'text-muted hover:text-foreground hover:bg-surface'
+            className={`min-w-10 h-10 framer:h-11 px-3 rounded-xl flex items-center justify-center text-[14px] font-semibold transition-all ${
+              i === currentPage
+                ? 'bg-accent text-white shadow-sm'
+                : 'text-muted hover:text-foreground hover:bg-surface'
             }`}
             aria-current={i === currentPage ? 'page' : undefined}
           >
@@ -78,8 +78,8 @@ export function PropertiesPagination({ currentPage, totalPages, tab }: Props) {
       </div>
       <Link
         href={buildHref(nextPage)}
-        className={`inline-flex items-center justify-center w-10 h-10 rounded-full border border-border bg-white text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 ${
-          currentPage >= totalPages - 1 ? 'pointer-events-none opacity-50' : 'hover:bg-surface hover:border-border/80'
+        className={`inline-flex items-center justify-center w-10 h-10 framer:w-11 framer:h-11 rounded-xl border border-border/60 bg-white text-foreground transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 ${
+          currentPage >= totalPages - 1 ? 'pointer-events-none opacity-40' : 'hover:bg-surface hover:border-border'
         }`}
         aria-label={t('next')}
         aria-disabled={currentPage >= totalPages - 1}

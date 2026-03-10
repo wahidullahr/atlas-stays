@@ -170,8 +170,8 @@
   },
   "Properties": {
     "eyebrow": "Propriétés",
-    "title": "Maisons à louer et à vendre au Maroc.",
-    "subtitle": "Nous gérons les visites, les contrats et les transactions jusqu'au notaire.",
+    "title": "Trouvez Votre Prochain Logement au Maroc",
+    "subtitle": "Parcourez des biens vérifiés à louer et à vendre à Marrakech, Casablanca, Tanger et Agadir.",
     "key_line": "Parcourez les annonces. Louez ou achetez — nous gérons tout.",
     "cta_primary": "Planifier une visite",
     "cta_secondary": "Nous contacter",
@@ -180,34 +180,23 @@
     "highlight_cities": "Villes au Maroc",
     "tab_rent": "Location",
     "tab_sale": "À vendre",
-    "count_rent": "Location",
-    "count_sale": "À vendre",
-    "trustStrip": {
-      "ariaLabel": "Points clés",
-      "rent": { "value": "24", "label": "À louer" },
-      "sale": { "value": "12", "label": "À vendre" },
-      "cities": { "value": "4", "label": "Villes" },
-      "owners": { "value": "150+", "label": "Propriétaires satisfaits" }
-    },
+    "results_label": "propriétés trouvées",
     "filters": {
       "filters_button": "Filtres",
       "filters_panel": "Filtres",
       "close": "Fermer",
-      "apply": "Appliquer",
-      "reset": "Réinitialiser",
-      "city": "Ville",
-      "city_all": "Toutes les villes",
-      "type": "Type",
-      "type_all": "Tous les types",
-      "bedrooms": "Chambres",
-      "bedrooms_all": "Toutes",
+      "reset": "Tout réinitialiser",
+      "all": "Tous",
+      "beds": "ch.",
       "price_min": "Min",
       "price_max": "Max",
-      "search": "Recherche",
-      "search_placeholder": "Titre ou lieu…",
+      "price_range": "Fourchette de prix",
+      "city": "Ville",
+      "type": "Type",
+      "bedrooms": "Chambres",
       "furnished": "Meublé",
-      "available_from": "Disponible à partir de",
       "under_offer": "En cours de vente",
+      "show_results": "Afficher {count} résultats",
       "cities": {
         "marrakech": "Marrakech",
         "casablanca": "Casablanca",
@@ -226,23 +215,10 @@
       "next": "Page suivante",
       "browseAllForSale": "Voir tous les biens à vendre"
     },
-    "browseIntro": {
-      "headline": "Trouvez votre prochain logement. Parcourez des biens vérifiés au Maroc.",
-      "tab_rent": "Location",
-      "tab_sale": "À vendre",
-      "count_rent": "Location",
-      "count_sale": "À vendre"
-    },
     "ownerCta": {
       "headline": "Vous possédez un bien au Maroc et souhaitez le louer ou le vendre ?",
       "valuation": "Demander une estimation",
       "whatsapp": "Discuter sur WhatsApp"
-    },
-    "howWeHelp": {
-      "ariaLabel": "Comment nous aidons",
-      "viewings": "Nous organisons les visites",
-      "qualify": "Nous qualifions locataires et acheteurs",
-      "contracts": "Nous gérons contrats et coordination notariale"
     },
     "card": {
       "status_rent": "Location",
@@ -251,7 +227,7 @@
       "status_rented": "Loué",
       "status_under_offer": "En cours",
       "view_details": "Voir les détails",
-      "whatsapp": "WhatsApp pour ce bien",
+      "whatsapp": "WhatsApp",
       "whatsapp_prefill": "Bonjour, je suis intéressé(e) par {name}."
     }
   },
@@ -1002,6 +978,46 @@
       "subtitle": "Nous gérons tout, du listing au support voyageur. Vous gagnez. Nous gérons.",
       "cta_primary": "Lister mon bien",
       "cta_secondary": "Parler sur WhatsApp"
+    }
+  },
+  "PropertyDetail": {
+    "back": "Retour aux propriétés",
+    "all_photos": "Toutes les photos",
+    "close": "Fermer",
+    "prev_photo": "Photo précédente",
+    "next_photo": "Photo suivante",
+    "bedrooms": "Chambres",
+    "bathrooms": "Salles de bain",
+    "area": "Surface habitable",
+    "about_property": "À propos de ce bien",
+    "features_title": "Caractéristiques clés",
+    "location": "Emplacement",
+    "per_month": "par mois",
+    "asking_price": "Prix demandé",
+    "contact_whatsapp": "Contacter via WhatsApp",
+    "schedule_viewing": "Planifier une visite",
+    "response_time": "Nous répondons généralement dans les 2 heures",
+    "descriptions": {
+      "riad_palm": "Riad Palm est un riad marocain traditionnel magnifiquement restauré, situé au cœur de la médina de Marrakech. La propriété dispose d'un patio ouvert avec fontaine centrale, de détails en plâtre sculpté et de zellige dans tout l'espace. Avec des pièces spacieuses disposées autour du patio, ce riad offre une expérience de vie authentique combinée au confort moderne.",
+      "villa_atlas": "Villa Atlas est une résidence contemporaine avec des vues panoramiques et des finitions haut de gamme. Les espaces de vie ouverts donnent sur une terrasse paysagée avec piscine privée. La villa combine architecture moderne et artisanat marocain traditionnel, avec des murs en tadelakt, des carreaux de ciment artisanaux et des baies vitrées qui inondent chaque pièce de lumière naturelle.",
+      "medina_view": "Medina View est un appartement lumineux et aéré perché au-dessus de la vieille ville, offrant des vues panoramiques sur les toits de la médina et la mer au-delà. Récemment rénové avec des matériaux contemporains tout en préservant le caractère historique du bâtiment, l'appartement dispose d'une cuisine ouverte, d'un salon généreux et d'une terrasse privée sur le toit.",
+      "kasbah_house": "Kasbah House est une propriété de caractère située à quelques pas du quartier historique de la kasbah. Les épais murs en pisé gardent l'intérieur frais en été et chaud en hiver. La maison a été soigneusement mise à jour avec une cuisine moderne, des salles de bain privatives et un chauffage au sol, tout en conservant les portes en cèdre sculpté et les plafonds en bois peint d'origine.",
+      "ocean_retreat": "Ocean Retreat est une villa côtière conçue pour une vie décontractée, avec vue directe sur l'Atlantique depuis chaque pièce principale. Le terrain comprend une piscine à débordement chauffée, des jardins matures et un coin repas extérieur couvert. À l'intérieur, les intérieurs sont finis en pierre naturelle, bois récupéré et textiles locaux.",
+      "city_residence": "City Residence est un appartement moderne dans un immeuble bien entretenu au cœur commercial de la ville. L'agencement privilégie la fonctionnalité avec un bureau séparé, une cuisine lumineuse avec appareils intégrés et un rangement généreux. Des baies vitrées apportent beaucoup de lumière et l'immeuble offre un parking sécurisé et une terrasse commune sur le toit."
+    },
+    "features": {
+      "riad_palm": ["Patio traditionnel avec fontaine", "Détails en plâtre sculpté", "Zellige artisanal", "Terrasse sur le toit", "Cuisine moderne rénovée", "À distance de marche de Jemaa el-Fna"],
+      "villa_atlas": ["Piscine privée", "Terrasse panoramique", "Salon ouvert", "Murs en tadelakt", "Double garage", "Jardin paysager"],
+      "medina_view": ["Terrasse sur le toit", "Vues mer et médina", "Cuisine ouverte", "Récemment rénové", "Hauts plafonds", "Bâtiment historique"],
+      "kasbah_house": ["Construction en pisé", "Portes en cèdre sculpté", "Chauffage au sol", "Salles de bain privatives", "Plafonds en bois peint", "Proche de la kasbah historique"],
+      "ocean_retreat": ["Position en front de mer", "Piscine à débordement chauffée", "Jardins matures", "Coin repas extérieur couvert", "Intérieurs en pierre naturelle", "Design style resort"],
+      "city_residence": ["Espace bureau", "Cuisine équipée intégrée", "Parking sécurisé", "Terrasse commune sur le toit", "Baies vitrées", "Emplacement central"]
+    },
+    "locations": {
+      "marrakech": "Situé à Marrakech, la destination la plus prisée du Maroc pour l'investissement immobilier. La ville allie charme historique, communauté internationale grandissante, restaurants de classe mondiale et excellentes liaisons de transport via l'aéroport de Menara.",
+      "casablanca": "Situé à Casablanca, capitale économique et plus grande ville du Maroc. La zone offre d'excellentes infrastructures, des écoles internationales, un quartier d'affaires dynamique et des connexions directes vers l'Europe.",
+      "tangier": "Basé à Tanger, ville portuaire cosmopolite au point de rencontre de l'Atlantique et de la Méditerranée. La ville a connu une modernisation significative tout en conservant son patrimoine artistique et sa position stratégique à seulement 14 km de l'Espagne.",
+      "agadir": "Situé à Agadir, première station balnéaire du Maroc sur la côte atlantique. Connue pour son ensoleillement toute l'année, sa marina moderne et son style de vie détendu, Agadir attire aussi bien les acheteurs de vacances que les résidents permanents."
     }
   }
 }

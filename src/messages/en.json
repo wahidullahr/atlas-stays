@@ -169,8 +169,8 @@
   },
   "Properties": {
     "eyebrow": "Properties",
-    "title": "Homes for rent and sale in Morocco.",
-    "subtitle": "We manage viewings, contracts, and complete transactions to notary.",
+    "title": "Find Your Next Home in Morocco",
+    "subtitle": "Browse verified properties for rent and sale across Marrakech, Casablanca, Tangier, and Agadir.",
     "key_line": "Browse available listings. Rent or buy — we handle everything.",
     "cta_primary": "Schedule a viewing",
     "cta_secondary": "Speak with us",
@@ -179,34 +179,23 @@
     "highlight_cities": "Cities in Morocco",
     "tab_rent": "Rent",
     "tab_sale": "For Sale",
-    "count_rent": "Rent",
-    "count_sale": "For Sale",
-    "trustStrip": {
-      "ariaLabel": "Key highlights",
-      "rent": { "value": "24", "label": "For rent" },
-      "sale": { "value": "12", "label": "For sale" },
-      "cities": { "value": "4", "label": "Cities" },
-      "owners": { "value": "150+", "label": "Happy owners" }
-    },
+    "results_label": "properties found",
     "filters": {
       "filters_button": "Filters",
       "filters_panel": "Filters",
       "close": "Close",
-      "apply": "Apply",
-      "reset": "Reset",
-      "city": "City",
-      "city_all": "All cities",
-      "type": "Type",
-      "type_all": "All types",
-      "bedrooms": "Bedrooms",
-      "bedrooms_all": "Any",
+      "reset": "Reset all",
+      "all": "All",
+      "beds": "bed",
       "price_min": "Min",
       "price_max": "Max",
-      "search": "Search",
-      "search_placeholder": "Title or location…",
+      "price_range": "Price range",
+      "city": "City",
+      "type": "Type",
+      "bedrooms": "Bedrooms",
       "furnished": "Furnished",
-      "available_from": "Available from",
       "under_offer": "Under offer",
+      "show_results": "Show {count} results",
       "cities": {
         "marrakech": "Marrakech",
         "casablanca": "Casablanca",
@@ -225,23 +214,10 @@
       "next": "Next page",
       "browseAllForSale": "Browse all properties for sale"
     },
-    "browseIntro": {
-      "headline": "Find your next home. Browse verified properties across Morocco.",
-      "tab_rent": "Rent",
-      "tab_sale": "For Sale",
-      "count_rent": "Rent",
-      "count_sale": "For Sale"
-    },
     "ownerCta": {
       "headline": "Own a property in Morocco and want to rent or sell?",
       "valuation": "Request valuation",
       "whatsapp": "Talk on WhatsApp"
-    },
-    "howWeHelp": {
-      "ariaLabel": "How we help",
-      "viewings": "We arrange viewings",
-      "qualify": "We qualify tenants & buyers",
-      "contracts": "We handle contracts & notary coordination"
     },
     "card": {
       "status_rent": "Rent",
@@ -250,7 +226,7 @@
       "status_rented": "Rented",
       "status_under_offer": "Under offer",
       "view_details": "View details",
-      "whatsapp": "WhatsApp about this property",
+      "whatsapp": "WhatsApp",
       "whatsapp_prefill": "Hi, I'm interested in {name}."
     }
   },
@@ -1001,6 +977,46 @@
       "subtitle": "We handle everything from listing to guest support. You earn. We manage.",
       "cta_primary": "List my property",
       "cta_secondary": "Talk on WhatsApp"
+    }
+  },
+  "PropertyDetail": {
+    "back": "Back to properties",
+    "all_photos": "All photos",
+    "close": "Close",
+    "prev_photo": "Previous photo",
+    "next_photo": "Next photo",
+    "bedrooms": "Bedrooms",
+    "bathrooms": "Bathrooms",
+    "area": "Living area",
+    "about_property": "About This Property",
+    "features_title": "Key Features",
+    "location": "Location",
+    "per_month": "per month",
+    "asking_price": "Asking price",
+    "contact_whatsapp": "Contact via WhatsApp",
+    "schedule_viewing": "Schedule a Viewing",
+    "response_time": "We typically respond within 2 hours",
+    "descriptions": {
+      "riad_palm": "Riad Palm is a beautifully restored traditional Moroccan riad located in the heart of the Marrakech medina. The property features an open courtyard with a central fountain, hand-carved plaster detailing, and zellige tilework throughout. With spacious rooms arranged around the courtyard, this riad offers an authentic living experience combined with modern comfort.",
+      "villa_atlas": "Villa Atlas is a contemporary residence with panoramic views and premium finishes. The open-plan living spaces flow seamlessly onto a landscaped terrace with a private pool. The villa combines modern architecture with traditional Moroccan craftsmanship, featuring tadelakt walls, handmade cement tiles, and floor-to-ceiling windows that flood every room with natural light.",
+      "medina_view": "Medina View is a bright and airy apartment perched above the old town, offering sweeping views of the medina rooftops and the sea beyond. Recently renovated with contemporary materials while preserving the building's historic character, the apartment features an open kitchen, generous living space, and a private rooftop terrace ideal for entertaining.",
+      "kasbah_house": "Kasbah House is a characterful property situated within walking distance of the historic kasbah quarter. Thick rammed-earth walls keep the interior cool in summer and warm in winter. The house has been thoughtfully updated with a modern kitchen, en-suite bathrooms, and underfloor heating, while retaining original carved cedar doors and painted wooden ceilings.",
+      "ocean_retreat": "Ocean Retreat is a coastal villa designed for relaxed living, with direct views of the Atlantic from every principal room. The grounds include a heated infinity pool, mature gardens, and a covered outdoor dining area. Inside, the interiors are finished with natural stone, reclaimed wood, and locally sourced textiles that create a calm, resort-like atmosphere.",
+      "city_residence": "City Residence is a modern apartment in a well-maintained building in the commercial heart of the city. The layout prioritizes functionality with a separate home office, a bright kitchen with integrated appliances, and generous storage throughout. Floor-to-ceiling windows bring in plenty of light, and the building offers secure parking and a rooftop communal terrace."
+    },
+    "features": {
+      "riad_palm": ["Traditional courtyard with fountain", "Hand-carved plaster detailing", "Zellige tilework", "Rooftop terrace", "Modern kitchen renovation", "Walking distance to Jemaa el-Fna"],
+      "villa_atlas": ["Private swimming pool", "Panoramic terrace views", "Open-plan living", "Tadelakt wall finishes", "Double garage", "Landscaped garden"],
+      "medina_view": ["Rooftop terrace", "Sea and medina views", "Open-plan kitchen", "Recently renovated", "High ceilings", "Historic building"],
+      "kasbah_house": ["Rammed-earth construction", "Carved cedar doors", "Underfloor heating", "En-suite bathrooms", "Painted wooden ceilings", "Near historic kasbah"],
+      "ocean_retreat": ["Ocean-front position", "Heated infinity pool", "Mature gardens", "Covered outdoor dining", "Natural stone interiors", "Resort-style design"],
+      "city_residence": ["Home office space", "Integrated kitchen appliances", "Secure parking", "Rooftop communal terrace", "Floor-to-ceiling windows", "Central location"]
+    },
+    "locations": {
+      "marrakech": "Located in Marrakech, Morocco's most popular destination for property investment. The city combines historic charm with a growing international community, world-class restaurants, and excellent transport links via Menara Airport.",
+      "casablanca": "Situated in Casablanca, Morocco's economic capital and largest city. The area offers excellent infrastructure, international schools, a thriving business district, and direct connections to Europe and beyond.",
+      "tangier": "Based in Tangier, a cosmopolitan port city at the meeting point of the Atlantic and Mediterranean. The city has undergone significant modernization while retaining its artistic heritage and strategic position just 14km from Spain.",
+      "agadir": "Located in Agadir, Morocco's premier beach resort city on the Atlantic coast. Known for its year-round sunshine, modern marina, and relaxed lifestyle, Agadir attracts both holiday buyers and long-term residents."
     }
   }
 }

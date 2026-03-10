@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Container } from '@/components/layout/Container';
 import { Section } from '@/components/layout/Section';
 import { CTA } from '@/components/layout/CTA';
@@ -11,7 +11,7 @@ export default async function CityPage({
   params: Promise<{ city: string }>;
 }) {
   const { city } = await params;
-  const t = useTranslations('Areas');
+  const t = await getTranslations('Areas');
 
   const validCities = ['marrakech', 'casablanca', 'tangier', 'agadir'];
   if (!validCities.includes(city)) {

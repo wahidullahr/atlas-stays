@@ -94,20 +94,23 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isLight = !scrolled;
+  const isPropertyDetail = pathname.includes("/property/");
+  const isLight = isPropertyDetail ? false : !scrolled;
 
   return (
     <header
       className={clsx(
         "sticky top-0 z-40 transition-all duration-300 pt-2 pb-2 px-4 framer:px-6",
-        !scrolled && "bg-transparent border-b border-transparent"
+        isPropertyDetail
+          ? "bg-white border-b border-sky-200"
+          : !scrolled && "bg-transparent border-b border-transparent"
       )}
     >
       <div
         className={clsx(
           "mx-auto h-[72px] flex items-center justify-between relative px-6 framer:px-10 transition-all duration-300",
-          isLight ? "max-w-[1360px]" : "max-w-[1200px]",
-          scrolled && "rounded-full bg-white/95 backdrop-blur shadow-md"
+          isPropertyDetail ? "max-w-[1200px]" : isLight ? "max-w-[1360px]" : "max-w-[1200px]",
+          !isPropertyDetail && scrolled && "rounded-full bg-white/95 backdrop-blur shadow-md"
         )}
       >
         <div className="flex items-center shrink-0">

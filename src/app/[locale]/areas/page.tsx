@@ -46,8 +46,8 @@ export default async function AreasPage() {
     <>
       <Navbar />
       <main className="-mt-[88px]">
+        <PropertiesHero />
         <Suspense fallback={null}>
-          <PropertiesHero />
           <PropertiesContent />
         </Suspense>
         <OwnerCTA />
